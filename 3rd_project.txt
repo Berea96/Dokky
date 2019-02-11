@@ -35,6 +35,12 @@ DB
 - MySql로 진행
 - 후에 시간이 된다면 NodeJS사용할 때 MongoDB사용
 
+형상관리
+- git
+
+의존성관리
+- maven
+
 사용 버전
 - Eclipse: Photon
 
