@@ -50,7 +50,7 @@ DB
 - Linux: CentOS 6
 
 설계 툴
-- starUml, draw.io
+- starUml
 
 기능
 1. 회원 
