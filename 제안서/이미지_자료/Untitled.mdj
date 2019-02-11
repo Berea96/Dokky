@@ -907,11 +907,30 @@
 									"model": {
 										"$ref": "AAAAAAFo26fh9BXUHOQ="
 									},
+									"subViews": [
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFo27DkcRZhTyw=",
+											"_parent": {
+												"$ref": "AAAAAAFo26fh+RXdL/Q="
+											},
+											"model": {
+												"$ref": "AAAAAAFo27DkHBZezM8="
+											},
+											"font": "Arial;13;0",
+											"left": 53,
+											"top": 480,
+											"width": 190,
+											"height": 13,
+											"text": "+joinMember(Member): void",
+											"horizontalAlignment": 0
+										}
+									],
 									"font": "Arial;13;0",
 									"left": 48,
 									"top": 475,
 									"width": 200,
-									"height": 10
+									"height": 23
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -1673,7 +1692,37 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "MemberService"
+					"name": "MemberService",
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFo27DkHBZezM8=",
+							"_parent": {
+								"$ref": "AAAAAAFo26fh9BXUHOQ="
+							},
+							"name": "joinMember",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFo27D02BZl1eM=",
+									"_parent": {
+										"$ref": "AAAAAAFo27DkHBZezM8="
+									},
+									"name": "Member",
+									"type": ""
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFo27D02RZmuZE=",
+									"_parent": {
+										"$ref": "AAAAAAFo27DkHBZezM8="
+									},
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						}
+					]
 				},
 				{
 					"_type": "UMLClass",
