@@ -241,7 +241,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFo2kMisC/UdOc="
 					},
-					"name": "ERDDiagram1",
+					"name": "Dokky",
 					"ownedViews": [
 						{
 							"_type": "ERDEntityView",
@@ -802,7 +802,7 @@
 										"$ref": "AAAAAAFo2l++rjEJ/9c="
 									},
 									"font": "Arial;13;1",
-									"left": 448,
+									"left": 456,
 									"top": 517,
 									"width": 272,
 									"height": 13,
@@ -828,21 +828,21 @@
 												"$ref": "AAAAAAFo2pLxjTEWnVQ="
 											},
 											"font": "Arial;13;0",
-											"left": 453,
+											"left": 461,
 											"top": 540,
 											"width": 262,
 											"height": 13
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 448,
+									"left": 456,
 									"top": 535,
 									"width": 272,
 									"height": 23
 								}
 							],
 							"font": "Arial;13;0",
-							"left": 448,
+							"left": 456,
 							"top": 512,
 							"width": 272,
 							"height": 176,
@@ -1127,7 +1127,8 @@
 							},
 							"name": "basic_comment_no",
 							"type": "int",
-							"length": 0
+							"length": 0,
+							"primaryKey": true
 						}
 					]
 				},
@@ -1147,7 +1148,8 @@
 							},
 							"name": "qna_comment_no",
 							"type": "int",
-							"length": 0
+							"length": 0,
+							"primaryKey": true
 						}
 					]
 				}
