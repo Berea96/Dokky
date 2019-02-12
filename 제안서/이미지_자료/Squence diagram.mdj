@@ -15249,7 +15249,7 @@
 												"$ref": "AAAAAAFo226B6UJbhk8="
 											},
 											"edgePosition": 1,
-											"text": "17 : editComment(comment_num)"
+											"text": "17 : editComment(comment)"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -15360,7 +15360,7 @@
 												"$ref": "AAAAAAFo227GW0Jx0xI="
 											},
 											"edgePosition": 1,
-											"text": "18 : editComment(comment_num)"
+											"text": "18 : editComment(comment)"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -15471,7 +15471,7 @@
 												"$ref": "AAAAAAFo2279MkKHzDQ="
 											},
 											"edgePosition": 1,
-											"text": "19 : updateComment(comment_num)"
+											"text": "19 : updateComment(comment)"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -15809,7 +15809,7 @@
 							"target": {
 								"$ref": "AAAAAAFo22DATz+cFoI="
 							},
-							"arguments": "comment_num"
+							"arguments": "comment"
 						},
 						{
 							"_type": "UMLMessage",
@@ -15824,7 +15824,7 @@
 							"target": {
 								"$ref": "AAAAAAFo22FDFj+9jS0="
 							},
-							"arguments": "comment_num"
+							"arguments": "comment"
 						},
 						{
 							"_type": "UMLMessage",
@@ -15839,7 +15839,7 @@
 							"target": {
 								"$ref": "AAAAAAFo22F/ej/d2Cs="
 							},
-							"arguments": "comment_num"
+							"arguments": "comment"
 						}
 					],
 					"participants": [
