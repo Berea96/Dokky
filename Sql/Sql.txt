@@ -13,10 +13,10 @@ create table member_tb(
 	mem_email varchar(100),
 	mem_name varchar(50),
 	mem_nickname varchar(50),
-	mem_image varchar,
+	mem_image varchar(200),
 	mem_exp int,
 	mem_date timestamp default current_timestamp,
-	constraint mem_id_pk primary key(mem_id),
+	primary key(mem_id),
 	constraint mem_email_un unique(mem_email),
 	constraint mem_nickname_un unique(mem_nickname)
 );
@@ -66,7 +66,7 @@ create table basic_board_tb(
 	basic_board_like_cnt int,
 	basic_board_date timestamp default current_timestamp,
 	basic_board_scrap_cnt int,
-	constraint basic_board_no_pk primary key(basic_board_no),
+	primary key(basic_board_no),
 	constraint basic_board_writer_fk foreign key(basic_board_writer)
 	references member_td(mem_id) on delete cascade
 );
@@ -79,7 +79,7 @@ create table basic_comment_tb(
 	basic_comment_content varchar(3003),
 	basic_comment_writer varchar(50),
 	basic_comment_date timestamp default current_timestamp,
-	constraint basic_comment_no_pk primary key(basic_comment_no),
+	primary key(basic_comment_no),
 	constraint basic_board_no_fk foreign key(basic_board_no)
 	references basic_board(basic_board_no) on delete cascade,
 	constraint basic_comment_writer_fk foreign key(basic_comment_writer)
@@ -98,7 +98,7 @@ create table qna_board_tb(
 	qna_board_like_cnt int,
 	qna_board_date timestamp default current_timestamp,
 	qna_board_scrap_cnt int,
-	constraint qna_board_no_pk primary key(qna_board_no),
+	primary key(qna_board_no),
 	constraint qna_board_writer_fk foreign key(qna_board_writer)
 	references member_td(mem_id) on delete cascade
 );
@@ -112,7 +112,7 @@ create table qna_comment_tb(
 	qna_comment_writer varchar(50),
 	qna_comment_date timestamp default current_timestamp,
 	qna_comment_select int(1) default 0,
-	constraint qna_comment_no_pk primary key(qna_comment_no),
+	primary key(qna_comment_no),
 	constraint qna_board_no_fk foreign key(qna_board_no)
 	references qna_board(basic_board_no) on delete cascade,
 	constraint qna_comment_writer_fk foreign key(qna_comment_writer)
@@ -125,7 +125,7 @@ create table board_like_tb(
 	board_no int,
 	mem_id varchar(50),
 	board_like_date timestamp default current_timestamp,
-	constraint board_like_no_pk primary key(board_like_no),
+	primary key(board_like_no),
 	constraint basic_board_no_like_fk foreign key(board_no)
 	references basic_board(basic_board_no) on delete cascade,
 	constraint qna_board_no_like_fk foreign key(board_no)
@@ -140,7 +140,7 @@ create table board_scrap_tb(
 	board_no int,
 	mem_id varchar(50),
 	board_scrap_date timestamp default current_timestamp,
-	constraint board_scrap_no_pk primary key(board_scrap_no),
+	primary key(board_scrap_no),
 	onstraint basic_board_no_scrap_fk foreign key(board_no)
 	references basic_board(basic_board_no) on delete cascade,
 	constraint qna_board_no_scrap_fk foreign key(board_no)
@@ -155,7 +155,7 @@ create table comment_like_tb(
 	comment_no int,
 	mem_id varchar(50),
 	comment_like_date timestamp default current_timestamp,
-	constraint comment_like_no_pk primary key(comment_like_no),
+	primary key(comment_like_no),
 	constraint basic_comment_no_like_fk foreign key(comment_no)
 	references basic_comment(basic_comment_no) on delete cascade,
 	constraint qna_comment_no_like_fk foreign key(comment_no)
