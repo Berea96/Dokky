@@ -16921,7 +16921,7 @@
 												"$ref": "AAAAAAFo23WnlEOpUS8="
 											},
 											"edgePosition": 1,
-											"text": "4 : inserLIket(like)"
+											"text": "4 : insertLike(like)"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -17244,9 +17244,9 @@
 												"$ref": "AAAAAAFo23dKf0P0/+Y="
 											},
 											"font": "Arial;13;0",
-											"left": 560,
+											"left": 543,
 											"top": 246,
-											"width": 78.04443359375,
+											"width": 112.01708984375,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 10,
@@ -17254,7 +17254,7 @@
 												"$ref": "AAAAAAFo23dKf0P1bS0="
 											},
 											"edgePosition": 1,
-											"text": "7 : hate(hate)"
+											"text": "7 : hateBoard(hate)"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -19171,7 +19171,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFo23KIqUKpHPs="
 							},
-							"name": "inserLIket",
+							"name": "insertLike",
 							"source": {
 								"$ref": "AAAAAAFo23NX30Mfj+8="
 							},
@@ -19218,7 +19218,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFo23KIqUKpHPs="
 							},
-							"name": "hate",
+							"name": "hateBoard",
 							"source": {
 								"$ref": "AAAAAAFo23MzJEL/DGE="
 							},
