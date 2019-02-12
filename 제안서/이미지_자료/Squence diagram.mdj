@@ -9195,14 +9195,14 @@
 											"left": 468,
 											"top": 80,
 											"width": 1,
-											"height": 655
+											"height": 665
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 408,
 									"top": 40,
 									"width": 119.6708984375,
-									"height": 695,
+									"height": 705,
 									"nameCompartment": {
 										"$ref": "AAAAAAFo20ze5TxLLc4="
 									},
@@ -9311,14 +9311,14 @@
 											"left": 697,
 											"top": 80,
 											"width": 1,
-											"height": 647
+											"height": 665
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 632,
 									"top": 40,
 									"width": 130.54443359375,
-									"height": 687,
+									"height": 705,
 									"nameCompartment": {
 										"$ref": "AAAAAAFo200Jyjxre6U="
 									},
@@ -9427,14 +9427,14 @@
 											"left": 905,
 											"top": 80,
 											"width": 1,
-											"height": 637
+											"height": 665
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 864,
 									"top": 40,
 									"width": 82.1181640625,
-									"height": 677,
+									"height": 705,
 									"nameCompartment": {
 										"$ref": "AAAAAAFo200txTyL2wE="
 									},
@@ -25789,7 +25789,8 @@
 					"_parent": {
 						"$ref": "AAAAAAFo30Fb/R5nAaY="
 					},
-					"name": "Role1"
+					"name": "Role1",
+					"type": ""
 				},
 				{
 					"_type": "UMLAttribute",
@@ -25797,7 +25798,8 @@
 					"_parent": {
 						"$ref": "AAAAAAFo30Fb/R5nAaY="
 					},
-					"name": "Role2"
+					"name": "Role2",
+					"type": ""
 				},
 				{
 					"_type": "UMLAttribute",
@@ -25805,7 +25807,8 @@
 					"_parent": {
 						"$ref": "AAAAAAFo30Fb/R5nAaY="
 					},
-					"name": "Role3"
+					"name": "Role3",
+					"type": ""
 				},
 				{
 					"_type": "UMLAttribute",
@@ -25813,7 +25816,8 @@
 					"_parent": {
 						"$ref": "AAAAAAFo30Fb/R5nAaY="
 					},
-					"name": "Role4"
+					"name": "Role4",
+					"type": ""
 				},
 				{
 					"_type": "UMLAttribute",
@@ -25821,7 +25825,8 @@
 					"_parent": {
 						"$ref": "AAAAAAFo30Fb/R5nAaY="
 					},
-					"name": "Role5"
+					"name": "Role5",
+					"type": ""
 				}
 			]
 		}
