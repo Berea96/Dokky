@@ -69,7 +69,6 @@
 		float: left;
 		width: 50px;
 		height: 50px;
-		padding-top: 18px;
 	}
 	.memberNickName {
 		float: left;
@@ -140,7 +139,10 @@
 			<c:if test="${!empty sessionScope.loginInfo}">
 				<div class="memberCard">
 					<div class="memberInfo">
-						<div class="memberImage">${sessionScope.loginInfo.mem_image}이미지</div>
+						<%-- <div class="memberImage">${sessionScope.loginInfo.mem_image}이미지</div> --%>
+						<div class="memberImage">
+							<img src='https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50'>
+						</div>
 						<div class="memberNickName">${sessionScope.loginInfo.mem_nickname}</div>
 						<div>
 						<a class="btn btn-primary sign-out" href="${pageContext.request.contextPath}/member/logoutMember?mem_id=${sessionScope.loginInfo.mem_id}">
