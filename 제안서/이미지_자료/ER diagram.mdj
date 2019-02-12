@@ -185,20 +185,35 @@
 											"top": 374,
 											"width": 247,
 											"height": 13
+										},
+										{
+											"_type": "ERDColumnView",
+											"_id": "AAAAAAFo3xDDWzo5Ato=",
+											"_parent": {
+												"$ref": "AAAAAAFo2kM5DC/dKh8="
+											},
+											"model": {
+												"$ref": "AAAAAAFo3xDDPzo29J4="
+											},
+											"font": "Arial;13;0",
+											"left": 645,
+											"top": 389,
+											"width": 247,
+											"height": 13
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 640,
 									"top": 279,
 									"width": 257,
-									"height": 113
+									"height": 128
 								}
 							],
 							"font": "Arial;13;0",
 							"left": 640,
 							"top": 256,
 							"width": 257,
-							"height": 136,
+							"height": 151,
 							"nameLabel": {
 								"$ref": "AAAAAAFo2kM5DC/cwkk="
 							},
@@ -2605,6 +2620,16 @@
 							},
 							"name": "mem_exp",
 							"type": "int",
+							"length": 0
+						},
+						{
+							"_type": "ERDColumn",
+							"_id": "AAAAAAFo3xDDPzo29J4=",
+							"_parent": {
+								"$ref": "AAAAAAFo2kM5Cy/ZrEY="
+							},
+							"name": "mem_date",
+							"type": "timestamp",
 							"length": 0
 						}
 					]
