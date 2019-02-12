@@ -1,9 +1,12 @@
---MySql--
+#MySql
 
+#데이터 베이스 생성
 create database dokky;
 
+#데이터 베이스 사용
 use database dokky;
 
+#회원테이블 생성
 create table member_tb(
 	mem_id varchar(50),
 	mem_pw varchar(50),
@@ -18,13 +21,40 @@ create table member_tb(
 	constraint mem_nickname_un unique(mem_nickname)
 );
 
-CREATE TABLE sequence(
+#sequence 테이블 생성
+create table sequence(
       id int not null, 
       seq_name varchar(50) not null
 );
 
-insert into sequence values(1, 'board');
+#sequence테이블을 증가시킬 함수 생성
+DROP FUNCTION IF EXISTS get_seq;
+delimiter $$
 
+create function get_seq(seq_name varchar(50))
+returns int reads sql database
+
+begin
+
+	declare result_id int;
+	update sequence set id = last_insert_id(id+1)
+	where seq_name = seq_name;
+	set result_id = (select last_insert_id());
+	
+	return result_id;
+end $$
+delimiter;
+
+#board쪽 sequence 생성
+insert into sequence values(1, 'board_seq');
+
+#comment쪽 sequence 생성
+insert into sequence values(500000, 'comment_seq);
+
+#like, scrap쪽 sequence 생성
+insert into sequence values(1000000, 'likrap_seq);
+
+#basic_board테이블 생성
 create table basic_board_tb(
 	basic_board_no int,
 	basic_board_category_1 varchar(50),
@@ -41,6 +71,7 @@ create table basic_board_tb(
 	references member_td(mem_id) on delete cascade
 );
 
+#basic_comment테이블 생성
 create table basic_comment_tb(
 	basic_comment_no int,
 	basic_board_no int,
@@ -55,6 +86,7 @@ create table basic_comment_tb(
 	references member_td(mem_id) on delete cascade
 );
 
+#qna_board테이블 생성
 create table qna_board_tb(
 	qna_board_no int,
 	qna_board_category_1 varchar(50),
@@ -71,6 +103,7 @@ create table qna_board_tb(
 	references member_td(mem_id) on delete cascade
 );
 
+#qna_comment테이블 생성
 create table qna_comment_tb(
 	qna_comment_no int,
 	qna_board_no int,
@@ -86,6 +119,7 @@ create table qna_comment_tb(
 	references member_td(mem_id) on delete cascade
 );
 
+#board_like테이블 생성
 create table board_like_tb(
 	board_like_no int,
 	board_no int,
@@ -100,6 +134,7 @@ create table board_like_tb(
 	references member_td(mem_id) on delete cascade
 );
 
+#board_scrap테이블 생성
 create table board_scrap_tb(
 	board_scrap_no int,
 	board_no int,
@@ -114,6 +149,7 @@ create table board_scrap_tb(
 	references member_td(mem_id) on delete cascade
 )
 
+#comment_like테이블 생성
 create table comment_like_tb(
 	comment_like_no int,
 	comment_no int,
@@ -127,3 +163,5 @@ create table comment_like_tb(
 	constraint mem_id_comment_like_fk foreign key(mem_id)
 	references member_td(mem_id) on delete cascade
 );
+
+commit;
