@@ -247,7 +247,7 @@ body {
 			<div class="signUpInputForm">
 				<form action="${pageContext.request.contextPath}/member/login" method="POST">
 					<div class="form-group">
-						<input class="form-control" type="text" name="mem_id" placeholder="아이디">
+						<input class="form-control" type="text" name="mem_id" placeholder="아이디" value="${pageContext.request.queryString}">
 						<input class="form-control" type="text" name="mem_pw" placeholder="비밀번호">
 						<input class="form-control" type="text" name="mem_email" placeholder="이메일">
 						<input class="form-control" type="text" name="mem_name" placeholder="이름">
@@ -268,6 +268,9 @@ body {
 				</div>
 				<div class="googleSignUp">
 					<button class="btn btn-danger">Google 로 가입하기</button>
+				</div>
+				<div>
+					<a href="${facebook_url}">asdsda</a>
 				</div>
 			</div>
 		</div>

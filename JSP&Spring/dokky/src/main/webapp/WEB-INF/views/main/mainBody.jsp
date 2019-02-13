@@ -35,7 +35,7 @@
 			width: 90%;
 			height: 100px;
 			margin-right: 30px;
-			background-color: blue;
+			background-color: white;
 		}
 		.sideAdBoard {
 			display: none;
@@ -47,7 +47,7 @@
 			width: 90%;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.WeeklyBest {
@@ -56,7 +56,7 @@
 			width: 90%;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.qna {
@@ -65,7 +65,7 @@
 			width: 90%;
 			height: 380px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.tech {
@@ -74,7 +74,7 @@
 			width: 90%;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.community {
@@ -83,7 +83,7 @@
 			width: 90%;
 			height: 680px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.column {
@@ -92,7 +92,7 @@
 			width: 90%;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.study {
@@ -101,7 +101,7 @@
 			width: 90%;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		footer {
@@ -132,7 +132,7 @@
 			width: 730px;
 			height: 100px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		.sideAdBoard {
 			top: 20px;
@@ -140,7 +140,7 @@
 			width: 160px;
 			height: 590px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.editorChice {
@@ -149,7 +149,7 @@
 			width: 400px;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.WeeklyBest {
@@ -158,7 +158,7 @@
 			width: 400px;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.qna {
@@ -167,7 +167,7 @@
 			width: 530px;
 			height: 380px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.tech {
@@ -176,7 +176,7 @@
 			width: 270px;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.community {
@@ -185,7 +185,7 @@
 			width: 530px;
 			height: 680px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.column {
@@ -194,7 +194,7 @@
 			width: 270px;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.study {
@@ -203,7 +203,7 @@
 			width: 270px;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		footer {
@@ -234,7 +234,7 @@
 			width: 730px;
 			height: 100px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		.sideAdBoard {
 			top: 20px;
@@ -242,7 +242,7 @@
 			width: 160px;
 			height: 590px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.editorChice {
@@ -251,7 +251,7 @@
 			width: 400px;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.WeeklyBest {
@@ -260,7 +260,7 @@
 			width: 400px;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.qna {
@@ -269,7 +269,7 @@
 			width: 530px;
 			height: 380px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.tech {
@@ -278,7 +278,7 @@
 			width: 270px;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.community {
@@ -287,7 +287,7 @@
 			width: 530px;
 			height: 680px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.column {
@@ -296,7 +296,7 @@
 			width: 270px;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		.study {
@@ -305,7 +305,7 @@
 			width: 270px;
 			height: 200px;
 			
-			background-color: blue;
+			background-color: white;
 		}
 		
 		footer {

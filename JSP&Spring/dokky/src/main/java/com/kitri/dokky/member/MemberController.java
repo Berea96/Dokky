@@ -4,6 +4,11 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.social.facebook.connect.FacebookConnectionFactory;
+import org.springframework.social.oauth2.GrantType;
+import org.springframework.social.oauth2.OAuth2Operations;
+import org.springframework.social.oauth2.OAuth2Parameters;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +22,12 @@ public class MemberController {
 
 	@Resource(name="memberService")
 	private MemberService service;
+	
+	// 페이스북 oAuth 관련
+    @Autowired
+    private FacebookConnectionFactory connectionFactory;
+    @Autowired
+    private OAuth2Parameters oAuth2Parameters;
 
 	@RequestMapping("/home")
 	public String goHome() {
@@ -29,7 +40,13 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value="/join", method=RequestMethod.GET)
-	public String goJoin() {
+	public String goJoin(Model model) {
+		
+		OAuth2Operations oauthOperations = connectionFactory.getOAuthOperations();
+		String facebook_url = oauthOperations.buildAuthorizeUrl(GrantType.AUTHORIZATION_CODE, oAuth2Parameters);
+		
+		model.addAttribute("facebook_url", facebook_url);
+		
 		return "member/join";
 	}
 	

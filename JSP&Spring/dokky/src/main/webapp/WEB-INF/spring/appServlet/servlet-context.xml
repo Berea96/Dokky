@@ -65,5 +65,17 @@
 		<beans:constructor-arg name="sqlSessionFactory"
 			ref="sqlSessionFactory" />
 	</beans:bean>
+	
+	<beans:bean id="connectionFactory"
+        class="org.springframework.social.facebook.connect.FacebookConnectionFactory">
+        <beans:constructor-arg value="415840235855549" />
+        <beans:constructor-arg value="14c198f795de5a73904f95cb57a3e8b6" />
+    </beans:bean>
+ 
+    <beans:bean id="oAuth2Parameters"
+        class="org.springframework.social.oauth2.OAuth2Parameters">
+        <beans:property name="scope" value="user_photos" />
+        <beans:property name="redirectUri" value="http://localhost/dokky/member/join" />
+    </beans:bean>
 
 </beans:beans>
