@@ -36,6 +36,10 @@
 		font-size: 20px
 	}
 	
+	.googleSearch {
+		display: none;
+	}
+	
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
@@ -90,15 +94,30 @@
 	.memberDiv > a > i {
 		font-size:14px
 	}
+	.googleSearch {
+		position: absolute;
+		top: 80px;
+		left: 8px;
+		color: black;
+	}
+	.memberAct {
+		position: absolute;
+		top: 60px;
+		left: -8px;
+		width: 200px;
+	}
 	.memberAct div {
 		float: left;
+	}
+	.memberAct div a {
+		width: 100px;
 	}
 	.memberCard {
 		position: absolute;
 		left: -8px;
 		width: 200px;
 		height: 53px;
-		border-top: 1px solid; 
+		border-top: 1px solid;
 		border-bottom: 1px solid;
 	}
 	.memberInfo div {
@@ -152,6 +171,21 @@
 	}
 }
 </style>
+<script type="text/javascript">
+	$.googleSearch = function(key) {
+		var googleInputText = $("#googleSearchText").val();
+		
+		if(key.keyCode == 13) {
+			location.href = "https://www.google.com/search?q=" + googleInputText;
+		}
+	}
+	
+	$(document).ready(() => {
+		$("#googleSearchText").keydown((key) => {
+			$.googleSearch(key);
+		});
+	});
+</script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -160,6 +194,9 @@
 			<a class="navbar-brand"
 				href="${pageContext.request.contextPath}/member/home">DOKKY</a>
 		</div>
+		<div class="googleSearch">
+			<input id="googleSearchText" type="text" placeholder="Google 검색">
+		</div>		
 		<div class="memberDiv">
 			<c:if test="${empty sessionScope.loginInfo}">
 				<div class="memberAct">
@@ -171,7 +208,9 @@
 						</a>
 					</div>
 					<div>
-						<a class="btn btn-primary sign-up"> <i class="fa fa-user"></i> <span
+						<a class="btn btn-primary sign-up"
+							href="${pageContext.request.contextPath}/member/join"> 
+							<i class="fa fa-user"></i> <span
 							class="noLogin" style="font-size: 14px">회원가입</span>
 						</a>
 					</div>

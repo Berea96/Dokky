@@ -1,6 +1,6 @@
-주제
+﻿주제
 - okky를 모방한 dokky
-- w3school, geeks for geeks, stackofflow를 참고
+- w3school, geeks for geeks, stackoverflow를 참고
 - w3school의 코드 실행 페이지를 만들어보자(선택사항)
 - 웹 컴파일러를 구현해보자(선택사항)
 

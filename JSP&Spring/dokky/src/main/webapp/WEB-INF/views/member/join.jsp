@@ -18,13 +18,13 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-	.loginDIv {
+	.signUpDiv {
 		position: relative;
 		top: 50px;
 		width: 100%;
 		height: 2860px;
 	}
-	.loginDIv div {
+	.signUpDiv div {
 		position: absolute;
 	}
 	footer {
@@ -38,53 +38,62 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1273px) {
-	.loginDiv {
+	.signUpDiv {
 		position: relative;
 		left: 200px;
 		width: 1060px;
 		height: 800px;
 	}
 	
-	.loginDiv div {
+	.signUpDiv div {
 		position: absolute;
 	}
 	
-	.loginLogo {
+	.signUpLogo {
 		top: 10px;
 		left: 40px;
 	}
 	
-	.loginForm {
+	.signUpForm {
 		top: 90px;
 		left: 40px;
 		width: 400px;
-		height: 250px;
+		height: 480px;
 		background-color: white;
 		border: 1px solid gray;
 	}
 	
-	.loginForm-logo div:nth-child(1) {
+	.signUpForm-logo div:nth-child(1) {
 		width: 400px;
 		height: 60px;
 		padding-top: 20px;
-		padding-left: 165px;
+		padding-left: 150px;
 		border-bottom: 1px solid gray;
 	}
 	
-	.loginInputForm {
+	.signUpInputForm {
 		top: 80px;
-		left: 50px;
+		left:25px;
 	}
 	
-	.loginInputForm input{
+	.signUpInputForm input {
+		width: 350px;
+	}
+	
+	#signUpButton {
+		margin-top: 150px;
+	}
+	
+	.reCAPTCHA {
+		top: 210px;
 		width: 300px;
+		height: 80px;
+		background-color: gray;
+		border: 1px solid gray;
+		margin-left: 25px;
 	}
 	
-	#loginButton {
-		margin-top: 20px;
-	}
-	
-	.snsLogin {
+	.snsSignUp {
 		top: 90px;
 		left: 470px;
 		width: 400px;
@@ -93,25 +102,25 @@ body {
 		border: 1px solid gray;
 	}
 	
-	.snsLogin-logo div:nth-child(1) {
+	.snsSignUp-logo div:nth-child(1) {
 		width: 400px;
 		height: 60px;
 		padding-top: 20px;
-		padding-left: 165px;
+		padding-left: 155px;
 		border-bottom: 1px solid gray;
 	}
 	
-	.facebookLogin {
+	.facebookSignUp {
 		top: 100px;
 		left: 50px;
 	}
 	
-	.googleLogin {
+	.googleSignUp {
 		top: 150px;
 		left: 50px;
 	}
 	
-	.facebookLogin button, .googleLogin button {
+	.facebookSignUp button, .googleSignUp button {
 		width: 300px;
 	}
 	
@@ -126,52 +135,52 @@ body {
 }
 
 @media screen and (min-width: 1273px) {
-	.loginDiv {
+	.signUpDiv {
 		position: relative;
 		left: 200px;
 		width: 1060px;
 		height: 1850px;
 	}
-	.loginDIv div {
+	.signUpDiv div {
 		position: absolute;
 	}
 	
-	.loginLogo {
+	.signUpLogo {
 		top: 10px;
 		left: 40px;
 	}
 	
-	.loginForm {
+	.signUpForm {
 		top: 90px;
 		left: 40px;
 		width: 400px;
-		height: 250px;
+		height: 350px;
 		background-color: white;
 		border: 1px solid gray;
 	}
 	
-	.loginForm-logo div:nth-child(1) {
+	.signUpForm-logo div:nth-child(1) {
 		width: 400px;
 		height: 60px;
 		padding-top: 20px;
-		padding-left: 165px;
+		padding-left: 155px;
 		border-bottom: 1px solid gray;
 	}
 	
-	.loginInputForm {
+	.signUpInputForm {
 		top: 80px;
 		left: 50px;
 	}
 	
-	.loginInputForm input {
+	.signUpInputForm input {
 		width: 300px;
 	}
 	
-	#loginButton {
+	#signUpButton {
 		margin-top: 20px;
 	}
 	
-	.snsLogin {
+	.snsSignUp {
 		top: 90px;
 		left: 470px;
 		width: 400px;
@@ -180,25 +189,25 @@ body {
 		border: 1px solid gray;
 	}
 	
-	.snsLogin-logo div:nth-child(1) {
+	.snsSignUp-logo div:nth-child(1) {
 		width: 400px;
 		height: 60px;
 		padding-top: 20px;
-		padding-left: 165px;
+		padding-left: 155px;
 		border-bottom: 1px solid gray;
 	}
 	
-	.facebookLogin {
+	.facebookSignUp {
 		top: 100px;
 		left: 50px;
 	}
 	
-	.googleLogin {
+	.googleSignUp {
 		top: 150px;
 		left: 50px;
 	}
 	
-	.facebookLogin button, .googleLogin button {
+	.facebookSignUp button, .googleSignUp button {
 		width: 300px;
 	}
 	
@@ -218,7 +227,7 @@ body {
 	}
 
 	$(document).ready(() => {
-		$("#loginButton").click($.loginAction());
+		$("#signUpButton").click($.loginAction());
 	})
 </script>
 <title>Login</title>
@@ -227,33 +236,38 @@ body {
 	<div class="menu">
 		<%@ include file="../main/menu.jsp"%>
 	</div>
-	<div class="loginDiv">
-		<div class="loginLogo">
+	<div class="signUpDiv">
+		<div class="signUpLogo">
 			<h2>로그인</h2>
 		</div>
-		<div class="loginForm">
-			<div class="loginForm-logo">
-				<div>아이디 로그인</div>
+		<div class="signUpForm">
+			<div class="signUpForm-logo">
+				<div>이메일로 가입하기</div>
 			</div>
-			<div class="loginInputForm">
+			<div class="signUpInputForm">
 				<form action="${pageContext.request.contextPath}/member/login" method="POST">
 					<div class="form-group">
-						<input class="form-control" type="text" placeholder="아이디">
-						<input class="form-control" type="text" placeholder="비밀번호">
-						<input id="loginButton" type="button" class="btn btn-primary" value="로그인">
+						<input class="form-control" type="text" name="mem_id" placeholder="아이디">
+						<input class="form-control" type="text" name="mem_pw" placeholder="비밀번호">
+						<input class="form-control" type="text" name="mem_email" placeholder="이메일">
+						<input class="form-control" type="text" name="mem_name" placeholder="이름">
+						<input class="form-control" type="text" name="mem_nickname" placeholder="닉네임">
+						<input id="signUpButton" type="button" class="btn btn-primary" value="아래 약관을 동의하며 회원 가입">
+					</div>
+					<div class="reCAPTCHA">
 					</div>
 				</form>
 			</div>
 		</div>
 		
-		<div class="snsLogin">
-			<div class="snsLogin-logo">
-				<div>SNS 로그인</div>
-				<div class="facebookLogin">
-					<button class="btn btn-primary">Facebook 로그인</button>
+		<div class="snsSignUp">
+			<div class="snsSignUp-logo">
+				<div>SNS로 가입하기</div>
+				<div class="facebookSignUp">
+					<button class="btn btn-primary">Facebook 으로 가입하기</button>
 				</div>
-				<div class="googleLogin">
-					<button class="btn btn-danger">Google 로그인</button>
+				<div class="googleSignUp">
+					<button class="btn btn-danger">Google 로 가입하기</button>
 				</div>
 			</div>
 		</div>

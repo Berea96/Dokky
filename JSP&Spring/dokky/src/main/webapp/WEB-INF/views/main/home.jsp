@@ -28,8 +28,9 @@
 <title>Home</title>
 </head>
 <body>
-	<c:set var="home" value="/dokky/WEB-INF/views/main/home.jsp"></c:set>
+	<c:set var="home" value="/dokky/WEB-INF/views/main/mainBody.jsp"></c:set>
 	<c:set var="login" value="/dokky/WEB-INF/views/member/login.jsp"></c:set>
+	<c:set var="join" value="/dokky/WEB-INF/views/member/join.jsp"></c:set>
 	<div class="menu">
 		<%@ include file="menu.jsp" %>
 	</div>
@@ -39,6 +40,9 @@
 		</c:if>
 		<c:if test="${pageContext.request.requestURI eq login}">
 			<%@ include file="../member/login.jsp" %>
+		</c:if>
+		<c:if test="${pageContext.request.requestURI eq join}">
+			<%@ include file="../member/join.jsp" %>
 		</c:if>
 	</div>
 </body>

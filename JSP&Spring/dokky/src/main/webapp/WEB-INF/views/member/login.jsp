@@ -215,6 +215,8 @@ body {
 </style>
 <script type="text/javascript">
 	$.loginAction = function() {
+		var mem_id = $("#loginId").val();
+		var mem_pw = $("#loginPw").val();
 	}
 
 	$(document).ready(() => {
@@ -238,8 +240,8 @@ body {
 			<div class="loginInputForm">
 				<form action="${pageContext.request.contextPath}/member/login" method="POST">
 					<div class="form-group">
-						<input class="form-control" type="text" placeholder="아이디">
-						<input class="form-control" type="text" placeholder="비밀번호">
+						<input class="form-control" type="text" id="loginId" name="mem_id" placeholder="아이디">
+						<input class="form-control" type="text" id="loginPw" name="mem_pw" placeholder="비밀번호">
 						<input id="loginButton" type="button" class="btn btn-primary" value="로그인">
 					</div>
 				</form>
