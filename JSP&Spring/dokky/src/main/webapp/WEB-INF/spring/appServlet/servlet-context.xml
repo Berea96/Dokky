@@ -65,17 +65,33 @@
 		<beans:constructor-arg name="sqlSessionFactory"
 			ref="sqlSessionFactory" />
 	</beans:bean>
-	
+
 	<beans:bean id="connectionFactory"
-        class="org.springframework.social.facebook.connect.FacebookConnectionFactory">
-        <beans:constructor-arg value="415840235855549" />
-        <beans:constructor-arg value="14c198f795de5a73904f95cb57a3e8b6" />
-    </beans:bean>
- 
-    <beans:bean id="oAuth2Parameters"
-        class="org.springframework.social.oauth2.OAuth2Parameters">
-        <beans:property name="scope" value="user_photos" />
-        <beans:property name="redirectUri" value="http://localhost/dokky/member/join" />
-    </beans:bean>
+		class="org.springframework.social.facebook.connect.FacebookConnectionFactory">
+		<beans:constructor-arg value="415840235855549" />
+		<beans:constructor-arg
+			value="14c198f795de5a73904f95cb57a3e8b6" />
+	</beans:bean>
+
+	<beans:bean id="oAuth2Parameters"
+		class="org.springframework.social.oauth2.OAuth2Parameters">
+		<beans:property name="scope" value="email" />
+		<beans:property name="redirectUri"
+			value="https://localhost:8444/dokky/member//facebookSignInCallback" />
+	</beans:bean>
+
+	<beans:bean id="googleConnectionFactory"
+		class="org.springframework.social.google.connect.GoogleConnectionFactory">
+		<beans:constructor-arg value="870495152047-8its6qv3vk6p3ud1v6sp88m2qddoe7rt.apps.googleusercontent.com" />
+		<beans:constructor-arg value="EEAqmNHvVSY_Y4gytRrQcibI" />
+	</beans:bean>
+
+	<!-- 승인된 자바스크립트 원본과 승인된 리디렉션 URI -->
+	<beans:bean id="googleOAuth2Parameters"
+		class="org.springframework.social.oauth2.OAuth2Parameters">
+		<beans:property name="scope"
+			value="https://www.googleapis.com/auth/plus.login" />
+		<beans:property name="redirectUri" value="https://localhost:8444/dokky/google/googleLogin" />
+	</beans:bean>
 
 </beans:beans>

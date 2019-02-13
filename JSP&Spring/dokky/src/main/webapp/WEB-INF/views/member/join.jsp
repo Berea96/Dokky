@@ -247,14 +247,34 @@ body {
 			<div class="signUpInputForm">
 				<form action="${pageContext.request.contextPath}/member/login" method="POST">
 					<div class="form-group">
-						<input class="form-control" type="text" name="mem_id" placeholder="아이디" value="${pageContext.request.queryString}">
-						<input class="form-control" type="text" name="mem_pw" placeholder="비밀번호">
-						<input class="form-control" type="text" name="mem_email" placeholder="이메일">
-						<input class="form-control" type="text" name="mem_name" placeholder="이름">
-						<input class="form-control" type="text" name="mem_nickname" placeholder="닉네임">
-						<input id="signUpButton" type="button" class="btn btn-primary" value="아래 약관을 동의하며 회원 가입">
+						<c:if test="${!empty userProfile}">
+							<input class="form-control" type="text" name="mem_id" placeholder="아이디" value="${userProfile.id}">
+							<input class="form-control" type="text" name="mem_pw" placeholder="비밀번호">
+							<input class="form-control" type="text" name="mem_email" placeholder="이메일" value="${userProfile.email}">
+							<input class="form-control" type="text" name="mem_name" placeholder="이름" value="${userProfile.name}">
+							<input class="form-control" type="text" name="mem_nickname" placeholder="닉네임">
+							<input id="signUpButton" type="button" class="btn btn-primary" value="아래 약관을 동의하며 회원 가입">
+						</c:if>
+						<c:if test="${!empty googleProfile}">
+							<input class="form-control" type="text" name="mem_id" placeholder="아이디" value="${googleLogin.id}">
+							<input class="form-control" type="text" name="mem_pw" placeholder="비밀번호">
+							<input class="form-control" type="text" name="mem_email" placeholder="이메일" value="${googleLogin.email}">
+							<input class="form-control" type="text" name="mem_name" placeholder="이름" value="${googleLogin.name}">
+							<input class="form-control" type="text" name="mem_nickname" placeholder="닉네임">
+							<input id="signUpButton" type="button" class="btn btn-primary" value="아래 약관을 동의하며 회원 가입">
+						</c:if>
+						<c:if test="${empty googleProfile && empty userProfile}">
+							<input class="form-control" type="text" name="mem_id" placeholder="아이디" value="">
+							<input class="form-control" type="text" name="mem_pw" placeholder="비밀번호">
+							<input class="form-control" type="text" name="mem_email" placeholder="이메일" value="">
+							<input class="form-control" type="text" name="mem_name" placeholder="이름" value="">
+							<input class="form-control" type="text" name="mem_nickname" placeholder="닉네임">
+							<input id="signUpButton" type="button" class="btn btn-primary" value="아래 약관을 동의하며 회원 가입">
+						</c:if>
 					</div>
 					<div class="reCAPTCHA">
+						<img src="http://graph.facebook.com/${userProfile.id}/picture?width=50&height=50">
+						<img src="" width="50px" height="50px">
 					</div>
 				</form>
 			</div>
@@ -270,7 +290,8 @@ body {
 					<button class="btn btn-danger">Google 로 가입하기</button>
 				</div>
 				<div>
-					<a href="${facebook_url}">asdsda</a>
+					<a href="${facebook_url}">facebook</a>
+					<a href="${google_url}">google</a>
 				</div>
 			</div>
 		</div>
