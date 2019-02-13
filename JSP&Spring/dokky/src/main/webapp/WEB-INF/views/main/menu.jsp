@@ -15,10 +15,17 @@
 		width: 100%;
 		height: 50px;
 		align-content: center;
+		z-index: 1;
 	}
 	.brand {
 		position: absolute;
 		text-align: center;
+	}
+	
+	.brand a {
+		margin-left: 5px;
+		font-size: 30px;
+		color: white;
 	}
 	.memberDiv {
 		position: absolute;
@@ -65,9 +72,15 @@
 		top: 0px;
 		width: 200px;
 		height: 100%;
+		z-index: 1;
 	}
 	.brand {
 		text-align: center;
+	}
+	.brand a {
+		margin-left: 15px;
+		font-size: 40px;
+		color: white;
 	}
 	.memberDiv {
 		position: absolute;
@@ -131,7 +144,7 @@
 	.gihub {
 		position: absolute;
 		/* left: 65px; */
-		bottom: 50px;
+		top: 610px;
 		width: 100%;
 	}
 	.gihub a {
@@ -144,7 +157,7 @@
 <body>
 	<div class="main-menu bg-primary">
 		<div class="brand">
-			<a class="navbar-brand text-danger"
+			<a class="navbar-brand"
 				href="${pageContext.request.contextPath}/member/home">DOKKY</a>
 		</div>
 		<div class="memberDiv">
