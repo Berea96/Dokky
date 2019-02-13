@@ -25,8 +25,25 @@
 		top: 8px;
 		right: 10px;
 	}
-	.memberDiv > a > i {
+	.sign-in, .sign-up {
 		font-size: 20px
+	}
+	
+	.memberInfo div, .memberAct div {
+		float: left;
+	}
+	.memberImage {
+		display: none;
+	}
+	.memberNickName {
+		display: none;
+	}
+	.memberExp {
+		display: none;
+	}
+	.sign-out, .mem-info {
+		width: 45px;
+		font-size: 20px;
 	}
 	.noLogin {
 		display: none;
@@ -46,7 +63,6 @@
 	.main-menu {
 		position: fixed;
 		top: 0px;
-		background-color: violet;
 		width: 200px;
 		height: 100%;
 	}
@@ -60,6 +76,9 @@
 	}
 	.memberDiv > a > i {
 		font-size:14px
+	}
+	.memberAct div {
+		float: left;
 	}
 	.memberCard {
 		position: absolute;
@@ -104,12 +123,19 @@
 	.act {
 		position: absolute;
 		top: 300px;
-		width: 100px;
+		width: 100%;
+	}
+	.act a {
+		width: 100%;
 	}
 	.gihub {
 		position: absolute;
-		left: 65px;
+		/* left: 65px; */
 		bottom: 50px;
+		width: 100%;
+	}
+	.gihub a {
+		width: 100%;
 	}
 }
 </style>
@@ -123,14 +149,20 @@
 		</div>
 		<div class="memberDiv">
 			<c:if test="${empty sessionScope.loginInfo}">
-				<a class="btn btn-primary"
-					href="${pageContext.request.contextPath}/member/login?mem_id=qwe&mem_pw=qwe">
-					<i class="fa fa-sign-in"></i> <span class="noLogin"
-					style="font-size: 14px">로그인</span>
-				</a>
-				<a class="btn btn-primary"> <i class="fa fa-user"></i> <span
-					class="noLogin" style="font-size: 14px">회원가입</span>
-				</a>
+				<div class="memberAct">
+					<div>
+						<a class="btn btn-primary sign-in"
+							href="${pageContext.request.contextPath}/member/login?mem_id=qwe&mem_pw=qwe">
+							<i class="fa fa-sign-in"></i> <span class="noLogin"
+							style="font-size: 14px">로그인</span>
+						</a>
+					</div>
+					<div>
+						<a class="btn btn-primary sign-up"> <i class="fa fa-user"></i> <span
+							class="noLogin" style="font-size: 14px">회원가입</span>
+						</a>
+					</div>
+				</div>
 			</c:if>
 			<c:if test="${!empty sessionScope.loginInfo}">
 				<div class="memberCard">
