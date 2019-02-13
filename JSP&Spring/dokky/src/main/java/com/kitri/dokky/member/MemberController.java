@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -21,14 +22,20 @@ public class MemberController {
 	public String goHome() {
 		return "main/home";
 	}
-	@RequestMapping("/gologin")
+	
+	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String goLogin() {
 		return "member/login";
 	}
 	
+	@RequestMapping(value="/join", method=RequestMethod.GET)
+	public String goJoin() {
+		return "member/join";
+	}
+	
 	//회원 가입
 	@ResponseBody
-	@RequestMapping("/join")
+	@RequestMapping(value="/join", method=RequestMethod.POST)
 	public String joinMember(Member member) {
 
 		service.joinMember(member);
@@ -56,7 +63,7 @@ public class MemberController {
 	
 	//로그인
 	//@ResponseBody
-	@RequestMapping("/login")
+	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String loginMember(@RequestParam("mem_id")String mem_id,
 							  @RequestParam("mem_pw")String mem_pw,
 							  HttpServletRequest req) {
@@ -75,7 +82,7 @@ public class MemberController {
 		}
 		
 		//return result;
-		return "redirect:/member/home";
+		return result;
 	}
 	
 	//회원 정보

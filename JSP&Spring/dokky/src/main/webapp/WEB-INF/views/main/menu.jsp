@@ -165,7 +165,7 @@
 				<div class="memberAct">
 					<div>
 						<a class="btn btn-primary sign-in"
-							href="${pageContext.request.contextPath}/member/login?mem_id=qwe&mem_pw=qwe">
+							href="${pageContext.request.contextPath}/member/login">
 							<i class="fa fa-sign-in"></i> <span class="noLogin"
 							style="font-size: 14px">로그인</span>
 						</a>
