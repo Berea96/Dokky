@@ -27,7 +27,7 @@
 	</script>
 <title>Home</title>
 </head>
-<body>
+<body class="bg-light">
 	<c:set var="home" value="/dokky/WEB-INF/views/main/home.jsp"></c:set>
 	<c:set var="login" value="/dokky/WEB-INF/views/member/login.jsp"></c:set>
 	<c:set var="join" value="/dokky/WEB-INF/views/member/join.jsp"></c:set>
