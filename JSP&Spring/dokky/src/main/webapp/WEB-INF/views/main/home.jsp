@@ -21,7 +21,7 @@
 <script type="text/javascript">
 		$(document).ready(() => {
 			$("#loginButton").click(() => {
-				location.href = "${pageContext.request.contextPath}/member/gologin";
+				location.href = "${pageContext.request.contextPath}/member/login";
 			});
 		})
 	</script>

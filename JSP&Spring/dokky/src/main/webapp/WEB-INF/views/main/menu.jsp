@@ -110,7 +110,8 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		right: 20%;
+		right: 15%;
+		margin-right: 10px;
 	}
 	.memberInfo div, .memberAct div {
 		float: left;
@@ -130,6 +131,7 @@
 	.sign-out, .mem-info {
 		width: 45px;
 		font-size: 20px;
+		margin-right: 4px;
 		background-color: #ff9966;
 	}
 	.noLogin {
@@ -146,111 +148,190 @@
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 870px) {
 	.main-menu {
 		position: fixed;
 		top: 0px;
-		width: 200px;
-		height: 100%;
+		width: 100%;
+		height: 50px;
+		align-content: center;
 		z-index: 1;
 		background-color: white;
 		box-shadow: 1px 1px 3px gray;
+	}
+	.main-menu div div {
+		position: absolute;
+	}
+	.main-menu div div {
 	}
 	.brand {
 		text-align: center;
 	}
 	.brand a {
-		margin-left: 15px;
-		font-size: 40px;
+		margin-left: 5px;
+		font-size: 30px;
 		color: #ff9966;
 	}
 	.memberDiv {
 		position: absolute;
-		top: 100px;
-		left: 8px;
+		right: 10px;
 	}
-	.memberDiv>a>i {
-		font-size: 14px
+	.memberAct div a {
+		background-color: #ff9966;
+	}
+	.sign-in, .sign-up {
+		font-size: 20px;
+		background-color: #ff9966;
 	}
 	.googleSearch {
 		position: absolute;
-		top: 80px;
-		left: 8px;
-		color: black;
+		top: 10px;
+		left: 500px;
 	}
-	.memberAct {
-		position: absolute;
-		top: 60px;
-		left: -8px;
-		width: 200px;
+	.memberInfo {
+		top: 8px;
+		right: 45px;
 	}
-	.memberAct div {
-		float: left;
+	.memberInfo div:nth-child(3) {
+		right: 4px;
 	}
-	.memberAct div a {
-		width: 100px;
-		background-color: #ff9966;
+	.memberInfo div:nth-child(4) {
+		right: 0px;
 	}
-	.memberCard {
-		position: absolute;
-		top: 50px;
-		left: -8px;
-		width: 200px;
-		height: 53px;
-		border-top: 1px solid;
-		border-bottom: 1px solid;
-	}
-	.memberInfo div {
+	.memberInfo div, .memberAct div {
 		float: left;
 	}
 	.memberInfo div a {
 		background-color: #ff9966;
 	}
 	.memberImage {
-		float: left;
-		width: 50px;
-		height: 50px;
+		top: -5px;
+		left: 60px;
 	}
-	.memberImage>img {
+	.memberImage img {
+		width: 45px;
+		height: 45px;
 		border-radius: 50%;
 	}
 	.memberNickName {
-		float: left;
-		width: 110px;
-		height: 25px;
-	}
-	.sign-out {
-		width: 40px;
-		height: 25px;
-		background-color: #ff9966;
+		display: none;
 	}
 	.memberExp {
-		float: left;
-		width: 110px;
-		height: 25px;
+		display: none;
 	}
-	.mem-info {
-		width: 40px;
-		height: 25px;
+	.sign-out, .mem-info {
+		width: 45px;
+		font-size: 20px;
 		background-color: #ff9966;
 	}
 	.noLogin {
-		display: inline;
+		display: none;
 	}
 	.act {
-		position: absolute;
-		top: 300px;
-		width: 100%;
+		top: 8px;
+		left: 150px;
 	}
 	.act a {
-		width: 100%;
 		background-color: #ff9966;
 	}
 	.gihub {
-		position: absolute;
-		/* left: 65px; */
-		top: 610px;
+		display: none;
+		left: 65px;
+		bottom: 50px;
+	}
+	.gihub a {
 		width: 100%;
+		background-color: #ff9966;
+	}
+}
+@media screen and (min-width: 870px) {
+	.main-menu {
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		height: 50px;
+		align-content: center;
+		z-index: 1;
+		background-color: white;
+		box-shadow: 1px 1px 3px gray;
+	}
+	.main-menu div div {
+		position: absolute;
+	}
+	.brand {
+		text-align: center;
+	}
+	.brand a {
+		margin-left: 5px;
+		font-size: 30px;
+		color: #ff9966;
+	}
+	.memberDiv {
+		position: absolute;
+		right: 10px;
+	}
+	.memberAct div a {
+		background-color: #ff9966;
+	}
+	.sign-in, .sign-up {
+		font-size: 20px;
+		background-color: #ff9966;
+	}
+	.googleSearch {
+		position: absolute;
+		top: 10px;
+		left: 500px;
+	}
+	.memberInfo {
+		top: 8px;
+		right: 45px;
+	}
+	.memberInfo div:nth-child(3) {
+		right: 4px;
+	}
+	.memberInfo div:nth-child(4) {
+		right: 0px;
+	}
+	.memberInfo div, .memberAct div {
+		float: left;
+	}
+	.memberInfo div a {
+		background-color: #ff9966;
+	}
+	.memberImage {
+		top: -5px;
+		right: 60px;
+	}
+	.memberImage img {
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+	}
+	.memberNickName {
+		display: none;
+	}
+	.memberExp {
+		display: none;
+	}
+	.sign-out, .mem-info {
+		width: 45px;
+		font-size: 20px;
+		background-color: #ff9966;
+	}
+	.noLogin {
+		display: none;
+	}
+	.act {
+		top: 8px;
+		left: 150px;
+	}
+	.act a {
+		background-color: #ff9966;
+	}
+	.gihub {
+		display: none;
+		left: 65px;
+		bottom: 50px;
 	}
 	.gihub a {
 		width: 100%;
@@ -277,6 +358,7 @@
 </head>
 <body>
 	<div class="main-menu">
+		<div>
 		<div class="brand">
 			<a class="navbar-brand"
 				href="${pageContext.request.contextPath}/member/home">DOKKY</a>
@@ -334,6 +416,7 @@
 		<div class="gihub">
 			<a class="btn btn-danger" href="https://github.com/Berea96/Dokky">
 				Github</a>
+		</div>
 		</div>
 	</div>
 </body>

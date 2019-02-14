@@ -25,14 +25,15 @@
 			background-color: #fbf0db;
 		}
 		
-		.mainBody div {
+		.mainBody div div {
 			position: absolute;
 		}
 		
 		.adBoard {
 			top: 20px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 100px;
 			margin-right: 30px;
 			background-color: white;
@@ -43,8 +44,9 @@
 		
 		.editorChice {
 			top: 180px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 200px;
 			
 			background-color: white;
@@ -52,8 +54,9 @@
 		
 		.WeeklyBest {
 			top: 440px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 200px;
 			
 			background-color: white;
@@ -61,8 +64,9 @@
 		
 		.qna {
 			top: 700px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 380px;
 			
 			background-color: white;
@@ -70,8 +74,9 @@
 		
 		.tech {
 			top: 1880px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 200px;
 			
 			background-color: white;
@@ -79,8 +84,9 @@
 		
 		.community {
 			top: 1140px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 680px;
 			
 			background-color: white;
@@ -88,8 +94,9 @@
 		
 		.column {
 			top: 2140px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 200px;
 			
 			background-color: white;
@@ -97,8 +104,9 @@
 		
 		.study {
 			top: 2400px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 200px;
 			
 			background-color: white;
@@ -122,7 +130,7 @@
 			background-color: #fbf0db;
 		}
 		
-		.mainBody div {
+		.mainBody div div {
 			position: absolute;
 		}
 		
@@ -140,8 +148,9 @@
 		
 		.editorChice {
 			top: 180px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 200px;
 			
 			background-color: white;
@@ -149,8 +158,9 @@
 		
 		.WeeklyBest {
 			top: 440px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 200px;
 			
 			background-color: white;
@@ -158,8 +168,9 @@
 		
 		.qna {
 			top: 700px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 380px;
 			
 			background-color: white;
@@ -167,8 +178,9 @@
 		
 		.tech {
 			top: 1880px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 200px;
 			
 			background-color: white;
@@ -185,8 +197,9 @@
 		
 		.column {
 			top: 2140px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 200px;
 			
 			background-color: white;
@@ -194,8 +207,9 @@
 		
 		.study {
 			top: 2400px;
-			left: 30px;
 			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
 			height: 200px;
 			
 			background-color: white;
@@ -210,96 +224,46 @@
 			padding: 50px;
 		}
 	}
-	@media screen and (min-width: 768px) and (max-width: 1273px) {
+	@media screen and (min-width: 768px) and (max-width: 870px) {
 		.mainBody {
-			position: relative;
-			left: 200px;
-			width: 1060px;
+			position: absolute;
+			top: 30px;
 			height: 1850px;
-			background-color: #fbf0db;
 		}
 		
 		.mainBody div {
+			position: relative;
+		}
+		
+		.mainBody div div {
 			position: absolute;
 		}
 		
-		.adBoard {
-			top: 20px;
-			left: 80px;
-			width: 730px;
-			height: 100px;
-			
-			background-color: white;
-		}
-		.sideAdBoard {
-			top: 20px;
-			left: 890px;
-			width: 160px;
+		.leftCategory {
+			position: absolute;
+			top: 50px;
+			left: 8px;
+			width: 200px;
 			height: 590px;
 			
-			background-color: white;
+			background-color: gray;
 		}
 		
-		.editorChice {
-			top: 170px;
-			left: 30px;
-			width: 400px;
-			height: 200px;
+		.rightCategory {
+			position: absolute;
+			top: 50px;
+			left: 724px;
+			width: 200px;
+			height: 590px;
 			
-			background-color: white;
-		}
-		
-		.WeeklyBest {
-			top: 170px;
-			left: 460px;
-			width: 400px;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		.qna {
-			top: 450px;
-			left: 30px;
-			width: 530px;
-			height: 380px;
-			
-			background-color: white;
-		}
-		
-		.tech {
-			top: 450px;
-			left: 590px;
-			width: 270px;
-			height: 200px;
-			
-			background-color: white;
+			background-color: gray;
 		}
 		
 		.community {
-			top: 910px;
-			left: 30px;
-			width: 530px;
-			height: 680px;
-			
-			background-color: white;
-		}
-		
-		.column {
-			top: 730px;
-			left: 590px;
-			width: 270px;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		.study {
-			top: 1010px;
-			left: 590px;
-			width: 270px;
-			height: 200px;
-			
+			top: 50px;
+			left: 216px;
+			width: 500px;
+			height: 800px;
 			background-color: white;
 		}
 		
@@ -307,101 +271,53 @@
 			position: absolute;
 			border-top: 1px solid;
 			bottom: 0px;
-			width: 1000px;
+			width: 800px;
 			height: 150px;
 			margin-left: 25px;
 			padding: 50px;
 		}
 	}
-	@media screen and (min-width: 1273px){
+	@media screen and (min-width: 870px) and (max-width: 970px) {
 		.mainBody {
-			position: relative;
-			left: 200px;
-			width: 1060px;
+			position: absolute;
+			top: 30px;
+			width: 855px;
 			height: 1850px;
 		}
 		
-		.mainBody div {
+		.mainBody > div {
+			position: relative;
+		}
+		
+		.mainBody div div {
 			position: absolute;
 		}
 		
-		.adBoard {
-			top: 20px;
-			left: 80px;
-			width: 730px;
-			height: 100px;
-			
-			background-color: white;
-		}
-		.sideAdBoard {
-			top: 20px;
-			left: 890px;
-			width: 160px;
+		.leftCategory {
+			position: absolute;
+			top: 50px;
+			left: 8px;
+			width: 200px;
 			height: 590px;
 			
-			background-color: white;
+			background-color: gray;
 		}
 		
-		.editorChice {
-			top: 170px;
-			left: 30px;
-			width: 400px;
-			height: 200px;
+		.rightCategory {
+			position: absolute;
+			top: 50px;
+			left: 724px;
+			width: 200px;
+			height: 590px;
 			
-			background-color: white;
-		}
-		
-		.WeeklyBest {
-			top: 170px;
-			left: 460px;
-			width: 400px;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		.qna {
-			top: 450px;
-			left: 30px;
-			width: 530px;
-			height: 380px;
-			
-			background-color: white;
-		}
-		
-		.tech {
-			top: 450px;
-			left: 590px;
-			width: 270px;
-			height: 200px;
-			
-			background-color: white;
+			background-color: gray;
 		}
 		
 		.community {
-			top: 910px;
-			left: 30px;
-			width: 530px;
-			height: 680px;
-			
-			background-color: white;
-		}
-		
-		.column {
-			top: 730px;
-			left: 590px;
-			width: 270px;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		.study {
-			top: 1010px;
-			left: 590px;
-			width: 270px;
-			height: 200px;
-			
+			top: 50px;
+			left: 216px;
+			width: 500px;
+			height: 800px;
 			background-color: white;
 		}
 		
@@ -409,7 +325,175 @@
 			position: absolute;
 			border-top: 1px solid;
 			bottom: 0px;
-			width: 1000px;
+			width: 800px;
+			height: 150px;
+			margin-left: 25px;
+			padding: 50px;
+		}
+	}
+	@media screen and (min-width: 970px) and (max-width: 1100px) {
+		.mainBody {
+			position: absolute;
+			top: 30px;
+			left: 30%;
+			width: 855px;
+			height: 1850px;
+		}
+		
+		.mainBody > div {
+			position: relative;
+			left: -30%;
+		}
+		
+		.mainBody div div {
+			position: absolute;
+		}
+		
+		.leftCategory {
+			position: absolute;
+			top: 50px;
+			left: 8px;
+			width: 200px;
+			height: 590px;
+			
+			background-color: gray;
+		}
+		
+		.rightCategory {
+			position: absolute;
+			top: 50px;
+			left: 724px;
+			width: 200px;
+			height: 590px;
+			
+			background-color: gray;
+		}
+		
+		.community {
+			top: 50px;
+			left: 216px;
+			width: 500px;
+			height: 800px;
+			background-color: white;
+		}
+		
+		footer {
+			position: absolute;
+			border-top: 1px solid;
+			bottom: 0px;
+			width: 800px;
+			height: 150px;
+			margin-left: 25px;
+			padding: 50px;
+		}
+	}
+	@media screen and (min-width: 1100px) and (max-width: 1273px) {
+		.mainBody {
+			position: absolute;
+			top: 30px;
+			left: 40%;
+			width: 855px;
+			height: 1850px;
+		}
+		
+		.mainBody > div {
+			position: relative;
+			left: -40%;
+		}
+		
+		.mainBody div div {
+			position: absolute;
+		}
+		
+		.leftCategory {
+			position: absolute;
+			top: 50px;
+			left: 8px;
+			width: 200px;
+			height: 590px;
+			
+			background-color: gray;
+		}
+		
+		.rightCategory {
+			position: absolute;
+			top: 50px;
+			left: 724px;
+			width: 200px;
+			height: 590px;
+			
+			background-color: gray;
+		}
+		
+		.community {
+			top: 50px;
+			left: 216px;
+			width: 500px;
+			height: 800px;
+			background-color: white;
+		}
+		
+		footer {
+			position: absolute;
+			border-top: 1px solid;
+			bottom: 0px;
+			width: 800px;
+			height: 150px;
+			margin-left: 25px;
+			padding: 50px;
+		}
+	}
+	@media screen and (min-width: 1100px) and (min-width: 1273px){
+		.mainBody {
+			position: absolute;
+			top: 30px;
+			left: 50%;
+			width: 855px;
+			height: 1850px;
+		}
+		
+		.mainBody > div {
+			position: relative;
+			left: -50%;
+		}
+		
+		.mainBody div div {
+			position: absolute;
+		}
+		
+		.leftCategory {
+			position: absolute;
+			top: 50px;
+			left: 8px;
+			width: 200px;
+			height: 590px;
+			
+			background-color: gray;
+		}
+		
+		.rightCategory {
+			position: absolute;
+			top: 50px;
+			left: 724px;
+			width: 200px;
+			height: 590px;
+			
+			background-color: gray;
+		}
+		
+		.community {
+			top: 50px;
+			left: 216px;
+			width: 500px;
+			height: 800px;
+			background-color: white;
+		}
+		
+		footer {
+			position: absolute;
+			border-top: 1px solid;
+			bottom: 0px;
+			width: 800px;
 			height: 150px;
 			margin-left: 25px;
 			padding: 50px;
@@ -421,20 +505,24 @@
 </head>
 <body>
 	<div class="mainBody">
-		<div class="adBoard"></div>
-		<div class="sideAdBoard"></div>
-		<div class="editorChice"></div>
-		<div class="WeeklyBest"></div>
-		<div class="qna"></div>
-		<div class="tech"></div>
-		<div class="community"></div>
-		<div class="column"></div>
-		<div class="study"></div>
-		
-		<footer>
-			원작자 김규정 <br>
-			그외 ...
-		</footer>
+		<div>
+			<div class="leftCategory"></div>
+			<div class="rightCategory"></div>
+			<div class="adBoard"></div>
+			<div class="sideAdBoard"></div>
+			<div class="editorChice"></div>
+			<div class="WeeklyBest"></div>
+			<div class="qna"></div>
+			<div class="tech"></div>
+			<div class="community"></div>
+			<div class="column"></div>
+			<div class="study"></div>
+			
+			<footer>
+				원작자 김규정 <br>
+				그외 ...
+			</footer>
+		</div>
 	</div>
 </body>
 </html>
