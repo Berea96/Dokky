@@ -77,21 +77,21 @@
 		class="org.springframework.social.oauth2.OAuth2Parameters">
 		<beans:property name="scope" value="email" />
 		<beans:property name="redirectUri"
-			value="https://localhost:8444/dokky/member//facebookSignInCallback" />
+			value="https://localhost:8444/dokky/main/facebookLogin" />
 	</beans:bean>
 
 	<beans:bean id="googleConnectionFactory"
 		class="org.springframework.social.google.connect.GoogleConnectionFactory">
-		<beans:constructor-arg value="870495152047-8its6qv3vk6p3ud1v6sp88m2qddoe7rt.apps.googleusercontent.com" />
-		<beans:constructor-arg value="EEAqmNHvVSY_Y4gytRrQcibI" />
+		<beans:constructor-arg value="870495152047-c2rn57ifaivb1dqisaiil7vvjd1u4n4p.apps.googleusercontent.com" />
+		<beans:constructor-arg value="EUEm3bKZaoToTTAOuStSbrx9" />
 	</beans:bean>
 
 	<!-- 승인된 자바스크립트 원본과 승인된 리디렉션 URI -->
 	<beans:bean id="googleOAuth2Parameters"
 		class="org.springframework.social.oauth2.OAuth2Parameters">
 		<beans:property name="scope"
-			value="https://www.googleapis.com/auth/plus.login" />
-		<beans:property name="redirectUri" value="https://localhost:8444/dokky/google/googleLogin" />
+			value="https://www.googleapis.com/auth/userinfo.email" />
+		<beans:property name="redirectUri" value="https://localhost:8444/dokky/main/googleLogin" />
 	</beans:bean>
 
 </beans:beans>

@@ -30,12 +30,11 @@ public class MemberController {
 	@Resource(name="memberService")
 	private MemberService service;
 	
-	// 페이스북 oAuth 관련
-    @Autowired
-    private FacebookConnectionFactory connectionFactory;
-    @Autowired
-    private OAuth2Parameters oAuth2Parameters;
-
+    @RequestMapping("/main")
+    public String goMain() {
+    	return "main/main";
+    }
+    
 	@RequestMapping("/home")
 	public String goHome() {
 		return "main/home";
@@ -48,11 +47,6 @@ public class MemberController {
 	
 	@RequestMapping(value="/join", method=RequestMethod.GET)
 	public String goJoin(Model model) {
-		
-		OAuth2Operations oauthOperations = connectionFactory.getOAuthOperations();
-		String facebook_url = oauthOperations.buildAuthorizeUrl(GrantType.AUTHORIZATION_CODE, oAuth2Parameters);
-		
-		model.addAttribute("facebook_url", facebook_url);
 		
 		return "member/join";
 	}
@@ -170,49 +164,6 @@ public class MemberController {
 		return "redirect:/member/home";
 	}
 	
-	@RequestMapping(value = "/facebookSignInCallback", method = { RequestMethod.GET, RequestMethod.POST })
-    public String facebookSignInCallback(@RequestParam String code, Model model) throws Exception {
- 
-        try {
-             String redirectUri = oAuth2Parameters.getRedirectUri();
-            System.out.println("Redirect URI : " + redirectUri);
-            System.out.println("Code : " + code);
- 
-            OAuth2Operations oauthOperations = connectionFactory.getOAuthOperations();
-            AccessGrant accessGrant = oauthOperations.exchangeForAccess(code, redirectUri, null);
-            String accessToken = accessGrant.getAccessToken();
-            System.out.println("AccessToken: " + accessToken);
-            Long expireTime = accessGrant.getExpireTime();
-        
-            
-            if (expireTime != null && expireTime < System.currentTimeMillis()) {
-                accessToken = accessGrant.getRefreshToken();
-            };
-            
-        
-            Connection<Facebook> connection = connectionFactory.createConnection(accessGrant);
-            Facebook facebook = connection == null ? new FacebookTemplate(accessToken) : connection.getApi();
-            UserOperations userOperations = facebook.userOperations();
-            
-            try
- 
-            {            
-                String [] fields = { "id", "email",  "name"};
-                User userProfile = facebook.fetchObject("me", User.class, fields);
-                model.addAttribute("userProfile", userProfile);
-                System.out.println("유저이메일 : " + userProfile.getEmail());
-                System.out.println("유저 id : " + userProfile.getId());
-                System.out.println("유저 name : " + userProfile.getName());
-                
-            } catch (MissingAuthorizationException e) {
-                e.printStackTrace();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return "member/join";
-    }
-
 	
 	//로그아웃, 회원 탈퇴시 세션 비워주는 기능
 	public void sessionInvalidate(HttpServletRequest req) {
