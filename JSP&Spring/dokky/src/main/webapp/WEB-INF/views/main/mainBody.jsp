@@ -121,7 +121,7 @@
 			padding: 50px;
 		}
 	}
-	@media screen and (min-width: 630px) and (max-width: 768px) {
+	@media screen and (min-width: 630px) and (max-width: 769px) {
 		.mainBody {
 			position: relative;
 			top: 50px;
@@ -336,12 +336,12 @@
 			position: absolute;
 			top: 30px;
 			left: 30%;
-			width: 855px;
 			height: 1850px;
 		}
 		
 		.mainBody > div {
 			position: relative;
+			width: 855px;
 			left: -30%;
 		}
 		
@@ -352,7 +352,6 @@
 		.leftCategory {
 			position: absolute;
 			top: 50px;
-			left: 8px;
 			width: 200px;
 			height: 590px;
 			
@@ -387,7 +386,7 @@
 			padding: 50px;
 		}
 	}
-	@media screen and (min-width: 1100px) and (max-width: 1273px) {
+	@media screen and (min-width: 1100px) and (max-width: 1200px) {
 		.mainBody {
 			position: absolute;
 			top: 30px;
@@ -443,7 +442,7 @@
 			padding: 50px;
 		}
 	}
-	@media screen and (min-width: 1100px) and (min-width: 1273px){
+	@media screen and (min-width: 1200px){
 		.mainBody {
 			position: absolute;
 			top: 30px;
