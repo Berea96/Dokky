@@ -615,11 +615,11 @@ body {
 					<div>SNS 로그인</div>
 				</div>
 				<div class="facebookLogin">
-					<a class="btn btn-primary" href="${sessionScope.facebook_url}">Facebook으로 연결</a>
+					<a class="btn btn-primary" href="${sessionScope.facebook_url}">Facebook으로 시작하기</a>
 				</div>
 				<div class="buttonOr">or</div>
 				<div class="googleLogin">
-					<a class="btn btn-danger" href="${sessionScope.google_url}">Google로 연결</a>
+					<a class="btn btn-danger" href="${sessionScope.google_url}">Google로 시작하기</a>
 				</div>
 			</div>
 			<div class="footer">
