@@ -224,7 +224,7 @@
 			padding: 50px;
 		}
 	}
-	@media screen and (min-width: 768px) and (max-width: 870px) {
+	@media screen and (min-width: 768px) and (max-width: 970px) {
 		.mainBody {
 			position: absolute;
 			top: 30px;
@@ -252,18 +252,28 @@
 		.rightCategory {
 			position: absolute;
 			top: 50px;
-			left: 724px;
+			left: 824px;
 			width: 200px;
 			height: 590px;
 			
 			background-color: gray;
 		}
 		
-		.community {
+		.currnetCategory {
 			top: 50px;
 			left: 216px;
-			width: 500px;
+			width: 600px;
+			height: 200px;
+			border-radius: 5px;
+			background-color: white;
+		}
+		
+		.community {
+			top: 260px;
+			left: 216px;
+			width: 600px;
 			height: 800px;
+			border-radius: 5px;
 			background-color: white;
 		}
 		
@@ -277,7 +287,7 @@
 			padding: 50px;
 		}
 	}
-	@media screen and (min-width: 870px) and (max-width: 970px) {
+	@media screen and (min-width: 970px) and (max-width: 1070px) {
 		.mainBody {
 			position: absolute;
 			top: 30px;
@@ -306,18 +316,28 @@
 		.rightCategory {
 			position: absolute;
 			top: 50px;
-			left: 724px;
+			left: 824px;
 			width: 200px;
 			height: 590px;
 			
 			background-color: gray;
 		}
 		
-		.community {
+		.currnetCategory {
 			top: 50px;
 			left: 216px;
-			width: 500px;
+			width: 600px;
+			height: 200px;
+			border-radius: 5px;
+			background-color: white;
+		}
+		
+		.community {
+			top: 260px;
+			left: 216px;
+			width: 600px;
 			height: 800px;
+			border-radius: 5px;
 			background-color: white;
 		}
 		
@@ -331,18 +351,18 @@
 			padding: 50px;
 		}
 	}
-	@media screen and (min-width: 970px) and (max-width: 1100px) {
+	@media screen and (min-width: 1070px) and (max-width: 1200px) {
 		.mainBody {
 			position: absolute;
 			top: 30px;
-			left: 30%;
+			left: 23%;
+			width: 800px;
 			height: 1850px;
 		}
 		
 		.mainBody > div {
 			position: relative;
-			width: 855px;
-			left: -30%;
+			left: -27%;
 		}
 		
 		.mainBody div div {
@@ -361,18 +381,28 @@
 		.rightCategory {
 			position: absolute;
 			top: 50px;
-			left: 724px;
+			left: 824px;
 			width: 200px;
 			height: 590px;
 			
 			background-color: gray;
 		}
 		
-		.community {
+		.currnetCategory {
 			top: 50px;
 			left: 216px;
-			width: 500px;
+			width: 600px;
+			height: 200px;
+			border-radius: 5px;
+			background-color: white;
+		}
+		
+		.community {
+			top: 260px;
+			left: 216px;
+			width: 600px;
 			height: 800px;
+			border-radius: 5px;
 			background-color: white;
 		}
 		
@@ -386,74 +416,18 @@
 			padding: 50px;
 		}
 	}
-	@media screen and (min-width: 1100px) and (max-width: 1200px) {
+	@media screen and (min-width: 1200px) and (max-width: 1300px) {
 		.mainBody {
 			position: absolute;
 			top: 30px;
-			left: 40%;
-			width: 855px;
+			left: 32%;
+			width: 780px;
 			height: 1850px;
 		}
 		
 		.mainBody > div {
 			position: relative;
-			left: -40%;
-		}
-		
-		.mainBody div div {
-			position: absolute;
-		}
-		
-		.leftCategory {
-			position: absolute;
-			top: 50px;
-			left: 8px;
-			width: 200px;
-			height: 590px;
-			
-			background-color: gray;
-		}
-		
-		.rightCategory {
-			position: absolute;
-			top: 50px;
-			left: 724px;
-			width: 200px;
-			height: 590px;
-			
-			background-color: gray;
-		}
-		
-		.community {
-			top: 50px;
-			left: 216px;
-			width: 500px;
-			height: 800px;
-			background-color: white;
-		}
-		
-		footer {
-			position: absolute;
-			border-top: 1px solid;
-			bottom: 0px;
-			width: 800px;
-			height: 150px;
-			margin-left: 25px;
-			padding: 50px;
-		}
-	}
-	@media screen and (min-width: 1200px){
-		.mainBody {
-			position: absolute;
-			top: 30px;
-			left: 50%;
-			width: 855px;
-			height: 1850px;
-		}
-		
-		.mainBody > div {
-			position: relative;
-			left: -50%;
+			left: -38%;
 		}
 		
 		.mainBody div div {
@@ -473,18 +447,157 @@
 		.rightCategory {
 			position: absolute;
 			top: 50px;
-			left: 724px;
+			left: 824px;
+			width: 200px;
+			height: 590px;
+			background-color: gray;
+		}
+		
+		.currnetCategory {
+			top: 50px;
+			left: 216px;
+			width: 600px;
+			height: 200px;
+			border-radius: 5px;
+			background-color: white;
+		}
+		
+		.community {
+			top: 260px;
+			left: 216px;
+			width: 600px;
+			height: 800px;
+			border-radius: 5px;
+			background-color: white;
+		}
+		
+		footer {
+			position: absolute;
+			border-top: 1px solid;
+			bottom: 0px;
+			width: 800px;
+			height: 150px;
+			margin-left: 25px;
+			padding: 50px;
+		}
+	}
+	@media screen and (min-width: 1300px) and (max-width: 1400px){
+		.mainBody {
+			position: absolute;
+			top: 30px;
+			left: 27%;
+			width: 800px;
+			height: 1850px;
+		}
+		
+		.mainBody > div {
+			position: relative;
+			left: -22%;
+		}
+		
+		.mainBody div div {
+			position: absolute;
+		}
+		
+		.leftCategory {
+			position: absolute;
+			top: 50px;
+			left: 8px;
 			width: 200px;
 			height: 590px;
 			
 			background-color: gray;
 		}
 		
-		.community {
+		.rightCategory {
+			position: absolute;
+			top: 50px;
+			left: 824px;
+			width: 200px;
+			height: 590px;
+			
+			background-color: gray;
+		}
+		
+		.currnetCategory {
 			top: 50px;
 			left: 216px;
-			width: 500px;
+			width: 600px;
+			height: 200px;
+			border-radius: 5px;
+			background-color: white;
+		}
+		
+		.community {
+			top: 260px;
+			left: 216px;
+			width: 600px;
 			height: 800px;
+			border-radius: 5px;
+			background-color: white;
+		}
+		
+		footer {
+			position: absolute;
+			border-top: 1px solid;
+			bottom: 0px;
+			width: 800px;
+			height: 150px;
+			margin-left: 25px;
+			padding: 50px;
+		}
+	}
+	@media screen and (min-width: 1400px) {
+		.mainBody {
+			position: absolute;
+			top: 30px;
+			left: 29%;
+			width: 800px;
+			height: 1850px;
+		}
+		
+		.mainBody > div {
+			position: relative;
+			left: -26%;
+		}
+		
+		.mainBody div div {
+			position: absolute;
+		}
+		
+		.leftCategory {
+			position: absolute;
+			top: 50px;
+			left: 8px;
+			width: 200px;
+			height: 590px;
+			background-color: gray;
+		}
+		
+		.rightCategory {
+			position: absolute;
+			top: 50px;
+			left: 824px;
+			width: 200px;
+			height: 590px;
+			background-color: gray;
+		}
+		
+		.currnetCategory {
+			top: 50px;
+			left: 216px;
+			width: 600px;
+			height: 200px;
+			border-radius: 5px;
+			background-color: white;
+		}
+		
+		.community {
+			top: 260px;
+			left: 216px;
+			width: 600px;
+			height: 800px;
+			border-radius: 5px;
 			background-color: white;
 		}
 		
@@ -505,15 +618,18 @@
 <body>
 	<div class="mainBody">
 		<div>
-			<div class="leftCategory"></div>
+			<div class="leftCategory">
+			<a class="btn btn-primary"><i class="fa fa-github"></i></a>
+			</div>
 			<div class="rightCategory"></div>
+			<div class="currnetCategory"></div>
+			<div class="community"></div>
 			<div class="adBoard"></div>
 			<div class="sideAdBoard"></div>
 			<div class="editorChice"></div>
 			<div class="WeeklyBest"></div>
 			<div class="qna"></div>
 			<div class="tech"></div>
-			<div class="community"></div>
 			<div class="column"></div>
 			<div class="study"></div>
 			

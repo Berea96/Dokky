@@ -39,11 +39,12 @@
 			<%@ include file="mainBody.jsp" %>
 		</c:if>
 		<c:if test="${pageContext.request.requestURI eq login}">
-			<%@ include file="../member/login.jsp" %>
+			<%@ include file="../member/mainLogin.jsp" %>
 		</c:if>
 		<c:if test="${pageContext.request.requestURI eq join}">
 			<%@ include file="../member/join.jsp" %>
 		</c:if>
 	</div>
+	<a class="btn btn-primary"><i class="fa fa-github"></i></a>
 </body>
 </html>

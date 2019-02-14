@@ -160,7 +160,7 @@ public class MemberController {
 		
 		sessionInvalidate(req);
 		
-		return "redirect:/member/home";
+		return "redirect:/main/login";
 	}
 	
 	
