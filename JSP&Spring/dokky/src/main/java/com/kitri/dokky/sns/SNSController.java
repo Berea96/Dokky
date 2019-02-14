@@ -48,6 +48,11 @@ public class SNSController {
 	
 	private OAuth2Operations oauthOperations;
 	
+	@RequestMapping("/center")
+	public String goCenter() {
+		return "main/center";
+	}
+	
 	@RequestMapping("/login")
 	public String goLogin(HttpSession session) {
 

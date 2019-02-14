@@ -19,19 +19,9 @@
 		background-size: 50%;
 	}
 </style>
-
-<script type="text/javascript">
-		$(document).ready(() => {
-			$("#loginButton").click(() => {
-				location.href = "${pageContext.request.contextPath}/member/gologin";
-			});
-		})
-	</script>
 <title>Home</title>
 </head>
 <body>
-	<div class="body">
 		<%@ include file="../member/mainLogin.jsp" %>
-	</div>
 </body>
 </html>

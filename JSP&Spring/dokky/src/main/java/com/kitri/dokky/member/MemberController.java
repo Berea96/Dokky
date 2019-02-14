@@ -80,7 +80,7 @@ public class MemberController {
 	}
 	
 	//로그인
-	//@ResponseBody
+	@ResponseBody
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String loginMember(@RequestParam("mem_id")String mem_id,
 							  @RequestParam("mem_pw")String mem_pw,
@@ -99,7 +99,6 @@ public class MemberController {
 			result = "{'result':'success'}";
 		}
 		
-		//return result;
 		return result;
 	}
 	
