@@ -75,8 +75,7 @@
 		border-radius: 50%;
 	}
 	.memberMenuList {
-		position: absolute;
-		top: 60px;
+		position: absolute; top : 60px;
 		right: -25px;
 		width: 100px;
 		height: 200px;
@@ -84,6 +83,7 @@
 		font-size: 16px;
 		background-color: #e4e4e4;
 		box-shadow: 2px 2px 2px gray;
+		top: 60px;
 	}
 	.memberMenuList div:nth-child(1) {
 		top: 10px;
@@ -187,8 +187,7 @@
 		border-radius: 50%;
 	}
 	.memberMenuList {
-		position: absolute;
-		top: 60px;
+		position: absolute; top : 60px;
 		right: -25px;
 		width: 100px;
 		height: 200px;
@@ -196,6 +195,7 @@
 		font-size: 16px;
 		background-color: #e4e4e4;
 		box-shadow: 2px 2px 2px gray;
+		top: 60px;
 	}
 	.memberMenuList div:nth-child(1) {
 		top: 10px;
@@ -414,7 +414,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo > div:nth-child(n + 2) a {
+	.memberInfo>div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -426,7 +426,6 @@
 		height: 45px;
 		border-radius: 50%;
 	}
-	
 	.memberMenuList {
 		top: 60px;
 		right: -25px;
@@ -453,7 +452,6 @@
 	.memberMenuList div a {
 		background-color: #e4e4e4;
 	}
-	
 	.memberNickName {
 		display: none;
 	}
@@ -550,7 +548,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo > div:nth-child(n + 2) a {
+	.memberInfo>div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -684,7 +682,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo > div:nth-child(n + 2) a {
+	.memberInfo>div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -818,7 +816,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo > div:nth-child(n + 2) a {
+	.memberInfo>div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -882,6 +880,7 @@
 		background-color: #ff9966;
 	}
 }
+
 @media screen and (min-width: 1300px) and (max-width: 1400px) {
 	.main-menu {
 		position: fixed;
@@ -951,7 +950,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo > div:nth-child(n + 2) a {
+	.memberInfo>div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -1015,6 +1014,7 @@
 		background-color: #ff9966;
 	}
 }
+
 @media screen and (min-width: 1400px) {
 	.main-menu {
 		position: fixed;
@@ -1084,7 +1084,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo > div:nth-child(n + 2) a {
+	.memberInfo>div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -1194,7 +1194,8 @@
 				<input id="googleSearchText" type="text" placeholder="Google 검색">
 			</div>
 			<div class="memberDiv">
-				<c:if test="${empty sessionScope.loginInfo && empty sessionScope.facebookProfile && empty sessionScope.googleProfile}">
+				<c:if
+					test="${empty sessionScope.loginInfo && empty sessionScope.facebookProfile && empty sessionScope.googleProfile}">
 					<div class="memberAct">
 						<div>
 							<a class="btn btn-danger sign-in"
@@ -1212,29 +1213,39 @@
 						</div>
 					</div>
 				</c:if>
-				<c:if test="${!empty sessionScope.loginInfo || !empty sessionScope.facebookProfile || !empty sessionScope.googleProfile}">
+				<c:if
+					test="${!empty sessionScope.loginInfo || !empty sessionScope.facebookProfile || !empty sessionScope.googleProfile}">
 					<div class="memberCard">
 						<div class="memberInfo">
 							<div class="memberImage">
 								<c:if test="${!empty sessionScope.facebookProfile}">
 									<a class="memberMenu" href=""><img
-									src='http://graph.facebook.com/${sessionScope.facebookProfile.id}/picture?width=250&height=250'>
+										src='http://graph.facebook.com/${sessionScope.facebookProfile.id}/picture?width=250&height=250'>
 									</a>
 								</c:if>
 								<c:if test="${!empty sessionScope.googleProfile}">
 									<a class="memberMenu" href=""><img
-									src='${sessionScope.googleProfile.getImageUrl()}'>
-									</a>
+										src='${sessionScope.googleProfile.getImageUrl()}'> </a>
 								</c:if>
 								<div class="memberMenuList" style="display: none;">
-									<div><a href="">프로필</a></div>
-									<div><a href="">정보확인</a></div>
-									<div><a href="${pageContext.request.contextPath}/member/logoutMember">로그아웃</a></div>
+									<div>
+										<a href="">프로필</a>
+									</div>
+									<div>
+										<a href="">정보확인</a>
+									</div>
+									<div>
+										<a
+											href="${pageContext.request.contextPath}/member/logoutMember">로그아웃</a>
+									</div>
 								</div>
 							</div>
 							<div class="memberNickName">${sessionScope.loginInfo.mem_nickname}</div>
 							<div class="quickWrite">
-								<a class="btn btn-danger write-board"><i class="fa fa-pencil-square-o"></i>작성</a>
+								<a class="btn btn-danger write-board" data-toggle="modal"
+									data-target="#exampleModal"> <i
+									class="fa fa-pencil-square-o"></i> 작성
+								</a>
 							</div>
 							<div style="display: none;">
 								<a class="btn btn-danger sign-out"
@@ -1252,9 +1263,32 @@
 				</c:if>
 			</div>
 			<div class="act">
-				<a class="btn btn-danger">Qna</a> <a class="btn btn-danger">Tech</a>
-				<a class="btn btn-danger">Community</a> <a class="btn btn-danger">Jobs</a>
-				<a href="https://github.com/Berea96/Dokky" class="btn btn-danger"><i class="fa fa-github"></i></a>
+				<a
+					href="${pageContext.request.contextPath}/board/getBoardByCategory?cate=qna"
+					class="btn btn-danger">Qna</a> <a class="btn btn-danger">Tech</a> <a
+					class="btn btn-danger">Community</a> <a class="btn btn-danger">Jobs</a>
+				<a href="https://github.com/Berea96/Dokky" class="btn btn-danger"><i
+					class="fa fa-github"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">글 작성</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">...</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
 			</div>
 		</div>
 	</div>
