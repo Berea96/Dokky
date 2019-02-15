@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kitri.dokky.qna.comment.QnaCommentDao">
+
+	<resultMap id="qnaCommentResult" type="com.kitri.dokky.qna.comment.QnaComment">
+		<result column="qna_comment_no" property="qna_comment_no" />
+		<result column="qna_board_no" property="qna_board_no" />
+		<result column="qna_comment_like_cnt" property="qna_comment_like_cnt" />
+		<result column="qna_comment_content" property="qna_comment_content" />
+		<result column="qna_comment_writer" property="qna_comment_writer" />
+		<result column="qna_comment_date" property="qna_comment_date" />
+		<result column="qna_comment_select" property="qna_comment_select" />
+	</resultMap>
+	
+	<insert id="insertComment" parameterType="com.kitri.dokky.qna.comment.QnaComment">
+		insert into qna_comment_tb values(0, #{qna_board_no}, 
+										  0, #{qna_comment_content},
+										  #{qna_comment_writer}, now(), 0)
+	</insert>
+	
+	<select id="selectComment" parameterType="String" resultMap="qnaCommentResult">
+		select * from qna_comment_tb where qna_board_no=#{qna_board_no}
+	</select>
+	
+	<delete id="deleteComment" parameterType="int">
+		delete from qna_comment_tb where qna_comment_no=#{qna_comment_no}
+	</delete>
+	
+	<update id="updateComment" parameterType="com.kitri.dokky.qna.comment.QnaComment">
+		update qna_comment_tb set qna_comment_content=#{qna_comment_content},
+								  qna_comment_select=#{qna_comment_select}
+							  where qna_comment_no=#{qna_comment_no}
+	</update>
+</mapper>
