@@ -121,15 +121,15 @@ body {
 		border-top: 1px solid;
 	}
 	
-	.facebookLogin {
-		top: 100px;
+	.googleLogin {
+		top: 80px;
 		width: 90%;
 		margin-left: 5%; 
 		margin-right: 5%;
 	}
 	
-	.googleLogin {
-		top: 160px;
+	.facebookLogin {
+		top: 140px;
 		width: 90%;
 		margin-left: 5%; 
 		margin-right: 5%;
@@ -140,7 +140,7 @@ body {
 	}
 	
 	.buttonOr {
-		top: 134px;
+		top: 114px;
 		width: 100%;
 		text-align: center;
 		font-size: 17px;
@@ -236,13 +236,13 @@ body {
 		padding-left: 115px;
 	}
 	
-	.facebookLogin {
-		top: 100px;
+	.googleLogin {
+		top: 80px;
 		left: 10px;
 	}
 	
-	.googleLogin {
-		top: 160px;
+	.facebookLogin {
+		top: 140px;
 		left: 10px;
 	}
 	
@@ -251,9 +251,50 @@ body {
 	}
 	
 	.buttonOr {
-		top: 134px;
+		top: 114px;
 		left: 144px;
 		font-size: 17px;
+	}
+	
+	.emailSignUpForm {
+		top: 150px;
+		left: 0px;
+		width: 300px;
+		height: 250px;
+		border-right: 1px solid gray;
+	}
+	
+	.emailSignUpLogo {
+		width: 90%;
+		height: 60px;
+		text-align: center;
+		margin-left: 5%;
+		margin-right: 5%;
+		padding-top: 20px;
+	}
+	
+	.emailSignUpForm input {
+		position: relative;
+		top: 75px;
+		left: 10px;
+		width: 280px;
+		margin-top: 5px;
+	}
+	
+	.emailSignUpForm a {
+		position: relative;
+		top: 79px;
+		left: 64px;
+		width: 140px;
+		margin-top: 5px;
+	}
+	
+	.emailSignUpForm input:nth-child(5) {
+		position: relative;
+		top: 75px;
+		left: 118px;
+		width: 140px;
+		margin-top: 5px;
 	}
 	
 	.footer {
@@ -347,13 +388,13 @@ body {
 		padding-left: 115px;
 	}
 	
-	.facebookLogin {
-		top: 100px;
+	.googleLogin {
+		top: 80px;
 		left: 10px;
 	}
 	
-	.googleLogin {
-		top: 160px;
+	.facebookLogin {
+		top: 140px;
 		left: 10px;
 	}
 	
@@ -362,9 +403,55 @@ body {
 	}
 	
 	.buttonOr {
-		top: 134px;
+		top: 114px;
 		left: 144px;
 		font-size: 17px;
+	}
+	
+	.startForEmail {
+		top: 190px;
+		left: 30px;
+	}
+	
+	.emailSignUpForm {
+		top: 150px;
+		left: 0px;
+		width: 300px;
+		height: 250px;
+		border-right: 1px solid gray;
+	}
+	
+	.emailSignUpLogo {
+		width: 90%;
+		height: 60px;
+		text-align: center;
+		margin-left: 5%;
+		margin-right: 5%;
+		padding-top: 20px;
+	}
+	
+	.emailSignUpForm input {
+		position: relative;
+		top: 75px;
+		left: 10px;
+		width: 280px;
+		margin-top: 5px;
+	}
+	
+	.emailSignUpForm a {
+		position: relative;
+		top: 79px;
+		left: 64px;
+		width: 140px;
+		margin-top: 5px;
+	}
+	
+	.emailSignUpForm input:nth-child(5) {
+		position: relative;
+		top: 75px;
+		left: 118px;
+		width: 140px;
+		margin-top: 5px;
 	}
 	
 	.footer {
@@ -383,17 +470,6 @@ body {
 		width: 900px;
 		height: 150px;
 		padding: 50px;
-	}
-	
-	.centered { 
-	    position:absolute;
-	    z-index: 100; 
-	    top:50%; 
-	    left:50%; 
-	    margin:-100px 0 0 -100px; 
-	    width:200px; 
-	    height:200px; 
-	    background-color: red;
 	}
 }
 
@@ -464,7 +540,7 @@ body {
 	
 	.snsLogin {
 		top: 150px;
-		left: px;
+		left: 0px;
 		width: 300px;
 		height: 250px;
 		background-color: white;
@@ -478,13 +554,13 @@ body {
 		padding-left: 115px;
 	}
 	
-	.facebookLogin {
-		top: 100px;
+	.googleLogin {
+		top: 80px;
 		left: 10px;
 	}
 	
-	.googleLogin {
-		top: 160px;
+	.facebookLogin {
+		top: 140px;
 		left: 10px;
 	}
 	
@@ -493,9 +569,50 @@ body {
 	}
 	
 	.buttonOr {
-		top: 134px;
+		top: 114px;
 		left: 144px;
 		font-size: 17px;
+	}
+	
+	.emailSignUpForm {
+		top: 150px;
+		left: 0px;
+		width: 300px;
+		height: 250px;
+		border-right: 1px solid gray;
+	}
+	
+	.emailSignUpLogo {
+		width: 90%;
+		height: 60px;
+		text-align: center;
+		margin-left: 5%;
+		margin-right: 5%;
+		padding-top: 20px;
+	}
+	
+	.emailSignUpForm input {
+		position: relative;
+		top: 75px;
+		left: 10px;
+		width: 280px;
+		margin-top: 5px;
+	}
+	
+	.emailSignUpForm a {
+		position: relative;
+		top: 79px;
+		left: 64px;
+		width: 140px;
+		margin-top: 5px;
+	}
+	
+	.emailSignUpForm input:nth-child(5) {
+		position: relative;
+		top: 75px;
+		left: 118px;
+		width: 140px;
+		margin-top: 5px;
 	}
 	
 	.footer {
@@ -567,11 +684,35 @@ body {
 			});
 		}
 	}
+	
+	$.ContinueWithEmail = function(e) {
+		$(".snsLogin").css("display", "none");
+		$(".emailSignUpForm").css("display", "block");
+		
+		e.preventDefault();
+		console.log("성공");
+	}
+	
+	$.ContinueWithSNS = function(e) {
+		$(".snsLogin").css("display", "block");
+		$(".emailSignUpForm").css("display", "none");
+		
+		e.preventDefault();
+		console.log("성공");
+	}
 
 	$(document).ready(() => {
 		$("#loginButton").click(() => {
 			$.loginAction();
 		});
+
+		$(".startForEmail > a").click((e) => {
+			$.ContinueWithEmail(e);
+		});
+		
+		$(".emailSignUpForm a").click((e) => {
+			$.ContinueWithSNS(e);
+		})
 	})
 </script>
 <title>Login</title>
@@ -585,7 +726,7 @@ body {
 			</div>
 			<div class="loginForm">
 				<div class="loginForm-logo">
-					<div>이메일 로그인</div>
+					<div>이메일로 시작</div>
 				</div>
 				<div class="loginInputForm">
 					<form id="loginAction" action="${pageContext.request.contextPath}/member/login" method="POST">
@@ -612,7 +753,7 @@ body {
 			
 			<div class="snsLogin">
 				<div class="snsLogin-logo">
-					<div>SNS 로그인</div>
+					<div>SNS로 시작</div>
 				</div>
 				<div class="facebookLogin">
 					<a class="btn btn-primary" href="${sessionScope.facebook_url}">Facebook으로 시작하기</a>
@@ -621,6 +762,21 @@ body {
 				<div class="googleLogin">
 					<a class="btn btn-danger" href="${sessionScope.google_url}">Google로 시작하기</a>
 				</div>
+				<div class="startForEmail">
+					<a href="">Email로 시작</a>하실 분은 클릭해주세요.
+				</div>
+			</div>
+			<div class="emailSignUpForm" style="display:none">
+				<div class="emailSignUpLogo">회원가입</div>
+				<form action="">
+					<div class="form-group">
+						<input class="form-control" type="text" name="name" placeholder="Name">
+						<input class="form-control" type="text" name="email" placeholder="Email">
+						<input class="form-control" type="password" name="pass" placeholder="Password">
+						<a href="#">취소</a>
+						<input class="btn btn-primary" type="button" value="가입">
+					</div>
+				</form>
 			</div>
 			<div class="footer">
 				원작자: 김규정

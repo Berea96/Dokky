@@ -45,6 +45,5 @@
 			<%@ include file="../member/join.jsp" %>
 		</c:if>
 	</div>
-	<a class="btn btn-primary"><i class="fa fa-github"></i></a>
 </body>
 </html>

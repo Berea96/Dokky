@@ -975,7 +975,7 @@
 							</div>
 							<div class="memberExp"># ${sessionScope.loginInfo.mem_exp}</div>
 							<div>
-								<a class="btn btn-danger mem-info"> <i class="fa fa-vcard"></i>
+								<a class="btn btn-danger mem-info"><i class="fa fa-vcard"></i>
 								</a>
 							</div>
 						</div>
