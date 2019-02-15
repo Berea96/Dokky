@@ -5,6 +5,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style>
 @media screen and (max-width: 630px) {
 	.main-menu {
@@ -47,10 +55,13 @@
 	.googleSearch {
 		display: none;
 	}
+	.googleSearch input {
+		width: 300px;
+	}
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div a {
+	.memberInfo div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -128,7 +139,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div a {
+	.memberInfo div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -184,7 +195,7 @@
 	}
 	.memberDiv {
 		position: absolute;
-		right: 10px;
+		left: 1000px;
 	}
 	.memberAct {
 		top: 11px;
@@ -203,11 +214,14 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 500px;
+		left: 450px;
+	}
+	.googleSearch input {
+		width: 300px;
 	}
 	.memberInfo {
 		top: 8px;
-		right: 45px;
+		left: 0px;
 	}
 	.memberInfo div:nth-child(3) {
 		right: 4px;
@@ -218,12 +232,12 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div a {
+	.memberInfo div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
 		top: -5px;
-		left: 60px;
+		right: 60px;
 	}
 	.memberImage img {
 		width: 45px;
@@ -286,7 +300,7 @@
 	}
 	.memberDiv {
 		position: absolute;
-		right: 10px;
+		left: 1000px;
 	}
 	.memberAct {
 		top: 11px;
@@ -305,11 +319,14 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 500px;
+		left: 450px;
+	}
+	.googleSearch input {
+		width: 300px;
 	}
 	.memberInfo {
 		top: 8px;
-		right: 45px;
+		left: 0px;
 	}
 	.memberInfo div:nth-child(3) {
 		right: 4px;
@@ -320,7 +337,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div a {
+	.memberInfo > div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -332,6 +349,34 @@
 		height: 45px;
 		border-radius: 50%;
 	}
+	
+	.memberMenuList {
+		top: 60px;
+		right: -25px;
+		width: 100px;
+		height: 200px;
+		text-align: center;
+		font-size: 16px;
+		background-color: #e4e4e4;
+		box-shadow: 2px 2px 2px gray;
+	}
+	.memberMenuList div:nth-child(1) {
+		top: 10px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(2) {
+		top: 30px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(3) {
+		top: 50px;
+		left: 1px;
+		width: 100%;
+	}
+	.memberMenuList div a {
+		background-color: #e4e4e4;
+	}
+	
 	.memberNickName {
 		display: none;
 	}
@@ -415,7 +460,10 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 500px;
+		left: 450px;
+	}
+	.googleSearch input {
+		width: 300px;
 	}
 	.memberInfo {
 		top: 8px;
@@ -430,7 +478,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div a {
+	.memberInfo div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -525,7 +573,10 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 500px;
+		left: 450px;
+	}
+	.googleSearch input {
+		width: 300px;
 	}
 	.memberInfo {
 		top: 8px;
@@ -540,7 +591,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div a {
+	.memberInfo div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -635,7 +686,10 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 500px;
+		left: 450px;
+	}
+	.googleSearch input {
+		width: 300px;
 	}
 	.memberInfo {
 		top: 8px;
@@ -650,7 +704,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div a {
+	.memberInfo div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -744,7 +798,10 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 500px;
+		left: 450px;
+	}
+	.googleSearch input {
+		width: 300px;
 	}
 	.memberInfo {
 		top: 8px;
@@ -759,7 +816,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div a {
+	.memberInfo div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -853,7 +910,10 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 500px;
+		left: 450px;
+	}
+	.googleSearch input {
+		width: 300px;
 	}
 	.memberInfo {
 		top: 8px;
@@ -868,7 +928,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div a {
+	.memberInfo div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -910,7 +970,6 @@
 		width: 100%;
 		background-color: #ff9966;
 	}
-
 }
 </style>
 <script type="text/javascript">
@@ -922,9 +981,26 @@
 		}
 	}
 	
+	function memberMenu(e) {
+		e.preventDefault();
+		
+		var displayNone = $(".memberMenuList").css("display");
+		
+		if(displayNone == "none") {
+			$(".memberMenuList").css("display", "block");		
+		}
+		else {
+			$(".memberMenuList").css("display", "none");		
+		}
+	}
+	
 	$(document).ready(() => {
 		$("#googleSearchText").keydown((key) => {
 			googleSearch(key);
+		});
+		
+		$(".memberMenu").click((e) => {
+			memberMenu(e)
 		});
 	});
 </script>
@@ -964,18 +1040,25 @@
 						<div class="memberInfo">
 							<div class="memberImage">
 								<c:if test="${!empty sessionScope.facebookProfile}">
-									<img
+									<a class="memberMenu" href=""><img
 									src='http://graph.facebook.com/${sessionScope.facebookProfile.id}/picture?width=250&height=250'>
+									</a>
 								</c:if>
 								<c:if test="${!empty sessionScope.googleProfile}">
-									<img
+									<a class="memberMenu" href=""><img
 									src='${sessionScope.googleProfile.getImageUrl()}'>
+									</a>
 								</c:if>
+								<div class="memberMenuList" style="display: none;">
+									<div><a href="">프로필</a></div>
+									<div><a href="">정보확인</a></div>
+									<div><a href="${pageContext.request.contextPath}/member/logoutMember">로그아웃</a></div>
+								</div>
 							</div>
 							<div class="memberNickName">${sessionScope.loginInfo.mem_nickname}</div>
 							<div>
 								<a class="btn btn-danger sign-out"
-									href="${pageContext.request.contextPath}/member/logoutMember?mem_id=${sessionScope.loginInfo.mem_id}">
+									href="${pageContext.request.contextPath}/member/logoutMember">
 									<i class="fa fa-sign-out"></i>
 								</a>
 							</div>
@@ -990,8 +1073,8 @@
 			</div>
 			<div class="act">
 				<a class="btn btn-danger">Qna</a> <a class="btn btn-danger">Tech</a>
-				<a class="btn btn-danger">Community</a> <a class="btn btn-danger">칼럼</a>
-				<a class="btn btn-danger">Jobs</a>
+				<a class="btn btn-danger">Community</a> <a class="btn btn-danger">Jobs</a>
+				<a href="https://github.com/Berea96/Dokky" class="btn btn-danger"><i class="fa fa-github"></i></a>
 			</div>
 			<div class="gihub">
 				<a class="btn btn-danger" href="https://github.com/Berea96/Dokky">
