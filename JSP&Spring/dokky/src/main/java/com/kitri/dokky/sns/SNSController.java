@@ -59,11 +59,17 @@ public class SNSController {
 		session.setAttribute("google_url", google_url);
 		session.setAttribute("facebook_url", facebook_url);
 		
+		if(session.getAttribute("facebookProfile") != null ||
+		   session.getAttribute("googleProfile") != null) {
+			return "redirect:/member/home";
+		}
+		
 		return "main/main";
 	}
 	
 	@RequestMapping("/facebookLogin")
-    public String facebookSignInCallback(@RequestParam String code, Model model) throws Exception {
+    public String facebookCallback(@RequestParam String code, 
+    		HttpSession session) throws Exception {
  
         try {
              String redirectUri = oAuth2Parameters.getRedirectUri();
@@ -75,26 +81,23 @@ public class SNSController {
             String accessToken = accessGrant.getAccessToken();
             System.out.println("AccessToken: " + accessToken);
             Long expireTime = accessGrant.getExpireTime();
-        
             
             if (expireTime != null && expireTime < System.currentTimeMillis()) {
                 accessToken = accessGrant.getRefreshToken();
             };
-            
         
             Connection<Facebook> connection = connectionFactory.createConnection(accessGrant);
             Facebook facebook = connection == null ? new FacebookTemplate(accessToken) : connection.getApi();
             UserOperations userOperations = facebook.userOperations();
             
-            try
- 
-            {            
+            try {            
                 String [] fields = { "id", "email",  "name"};
                 User userProfile = facebook.fetchObject("me", User.class, fields);
-                model.addAttribute("facebookProfile", userProfile);
                 System.out.println("유저이메일 : " + userProfile.getEmail());
                 System.out.println("유저 id : " + userProfile.getId());
                 System.out.println("유저 name : " + userProfile.getName());
+                
+                session.setAttribute("facebookProfile", userProfile);
                 
             } catch (MissingAuthorizationException e) {
                 e.printStackTrace();
@@ -102,11 +105,12 @@ public class SNSController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "main/main";
+        return "redirect:/member/home";
     }
 	
 	@RequestMapping("/googleLogin")
-	public String googleCallback(Model model, @RequestParam String code) throws IOException {
+	public String googleCallback(@RequestParam String code, 
+			HttpSession session) throws IOException {
 		
 		oauthOperations = googleConnectionFactory.getOAuthOperations();
         AccessGrant accessGrant = oauthOperations.exchangeForAccess(code, googleOAuth2Parameters.getRedirectUri(),
@@ -132,7 +136,7 @@ public class SNSController {
         System.out.println("User Email : " + profile.getAccountEmail());
         System.out.println("User Profile : " + profile.getImageUrl());
         
-        model.addAttribute("googleProfile", profile);
+        session.setAttribute("googleProfile", profile);
  
         // Access Token 취소
         try {
@@ -154,6 +158,6 @@ public class SNSController {
  
             e.printStackTrace();
         }
-		return "main/main";
+		return "redirect:/member/home";
 	}
 }

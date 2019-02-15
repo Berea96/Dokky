@@ -146,6 +146,64 @@ body {
 		font-size: 17px;
 	}
 	
+	.startForEmail {
+		top: 190px;
+		text-align: center;
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	
+	.emailSignUpForm {
+		top: 400px;
+		width: 100%;
+		height: 250px;
+	}
+	
+	.emailSignUpForm form, .emailSignUpForm form div {
+		width: 100%;
+	}
+	
+	.emailSignUpLogo {
+		width: 90%;
+		height: 60px;
+		text-align: center;
+		margin-left: 5%;
+		margin-right: 5%;
+		padding-top: 20px;
+		border-top: 1px solid;
+	}
+	
+	.emailSignUpForm input {
+		position: relative;
+		top: 75px;
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top: 5px;
+	}
+	
+	.emailSignUpForm form div div {
+		position: relative;
+		float: left;
+		top: 79px;
+		width: 40%;
+		margin-left: 5%;
+		margin-right: 5%;
+		text-align: center;
+		margin-top: 5px;
+		padding-top: 3px;
+	}
+	
+	.emailSignUpForm input:nth-child(5) {
+		position: relative;
+		top: 75px;
+		width: 40%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top: 5px;
+	}
+	
 	.footer {
 		bottom: 0px;
 		width: 100%;
@@ -222,7 +280,7 @@ body {
 	
 	.snsLogin {
 		top: 150px;
-		left: px;
+		left: 0px;
 		width: 300px;
 		height: 250px;
 		background-color: white;
@@ -256,6 +314,11 @@ body {
 		font-size: 17px;
 	}
 	
+	.startForEmail {
+		top: 190px;
+		left: 30px;
+	}
+	
 	.emailSignUpForm {
 		top: 150px;
 		left: 0px;
@@ -281,18 +344,18 @@ body {
 		margin-top: 5px;
 	}
 	
-	.emailSignUpForm a {
+	.emailSignUpForm form div div {
 		position: relative;
+		float: left;
 		top: 79px;
-		left: 64px;
 		width: 140px;
-		margin-top: 5px;
+		text-align: center;
+		margin-top: 8px;
 	}
 	
 	.emailSignUpForm input:nth-child(5) {
 		position: relative;
 		top: 75px;
-		left: 118px;
 		width: 140px;
 		margin-top: 5px;
 	}
@@ -438,18 +501,18 @@ body {
 		margin-top: 5px;
 	}
 	
-	.emailSignUpForm a {
+	.emailSignUpForm form div div {
 		position: relative;
+		float: left;
 		top: 79px;
-		left: 64px;
 		width: 140px;
-		margin-top: 5px;
+		text-align: center;
+		margin-top: 8px;
 	}
 	
 	.emailSignUpForm input:nth-child(5) {
 		position: relative;
 		top: 75px;
-		left: 118px;
 		width: 140px;
 		margin-top: 5px;
 	}
@@ -574,6 +637,11 @@ body {
 		font-size: 17px;
 	}
 	
+	.startForEmail {
+		top: 190px;
+		left: 30px;
+	}
+	
 	.emailSignUpForm {
 		top: 150px;
 		left: 0px;
@@ -599,18 +667,18 @@ body {
 		margin-top: 5px;
 	}
 	
-	.emailSignUpForm a {
+	.emailSignUpForm form div div {
 		position: relative;
+		float: left;
 		top: 79px;
-		left: 64px;
 		width: 140px;
-		margin-top: 5px;
+		text-align: center;
+		margin-top: 8px;
 	}
 	
 	.emailSignUpForm input:nth-child(5) {
 		position: relative;
 		top: 75px;
-		left: 118px;
 		width: 140px;
 		margin-top: 5px;
 	}
@@ -726,17 +794,17 @@ body {
 			</div>
 			<div class="loginForm">
 				<div class="loginForm-logo">
-					<div>이메일로 시작</div>
+					<div>이메일 로그인</div>
 				</div>
 				<div class="loginInputForm">
 					<form id="loginAction" action="${pageContext.request.contextPath}/member/login" method="POST">
 						<div class="form-group">
-							<c:if test="${!empty facebookProfile}">
+							<c:if test="${!empty sessionScope.facebookProfile}">
 							<input class="form-control" type="text" id="loginId" name="mem_id" placeholder="이메일" value="${facebookProfile.email}">
 							<input class="form-control" type="text" id="loginPw" name="mem_pw" placeholder="비밀번호">
 							<input id="loginButton" type="button" class="btn btn-primary" value="로그인">
 							</c:if>
-							<c:if test="${!empty googleProfile}">
+							<c:if test="${!empty sessionScope.googleProfile}">
 							<input class="form-control" type="text" id="loginId" name="mem_id" placeholder="이메일" value="${googleProfile.getAccountEmail()}">
 							<input class="form-control" type="text" id="loginPw" name="mem_pw" placeholder="비밀번호">
 							<input id="loginButton" type="button" class="btn btn-primary" value="로그인">
@@ -756,11 +824,11 @@ body {
 					<div>SNS로 시작</div>
 				</div>
 				<div class="facebookLogin">
-					<a class="btn btn-primary" href="${sessionScope.facebook_url}">Facebook으로 시작하기</a>
+					<a class="btn btn-primary" href="${sessionScope.facebook_url}"><i class="fa fa-facebook-square"></i>acebook으로 시작하기</a>
 				</div>
 				<div class="buttonOr">or</div>
 				<div class="googleLogin">
-					<a class="btn btn-danger" href="${sessionScope.google_url}">Google로 시작하기</a>
+					<a class="btn btn-danger" href="${sessionScope.google_url}"><i class="fa fa-google"></i>oogle로 시작하기</a>
 				</div>
 				<div class="startForEmail">
 					<a href="">Email로 시작</a>하실 분은 클릭해주세요.
@@ -773,7 +841,7 @@ body {
 						<input class="form-control" type="text" name="name" placeholder="Name">
 						<input class="form-control" type="text" name="email" placeholder="Email">
 						<input class="form-control" type="password" name="pass" placeholder="Password">
-						<a href="#">취소</a>
+						<div><a href="#">취소</a></div>
 						<input class="btn btn-primary" type="button" value="가입">
 					</div>
 				</form>

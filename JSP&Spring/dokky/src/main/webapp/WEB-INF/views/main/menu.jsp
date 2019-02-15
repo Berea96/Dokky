@@ -941,7 +941,7 @@
 				<input id="googleSearchText" type="text" placeholder="Google 검색">
 			</div>
 			<div class="memberDiv">
-				<c:if test="${empty sessionScope.loginInfo}">
+				<c:if test="${empty sessionScope.loginInfo && empty sessionScope.facebookProfile && empty sessionScope.googleProfile}">
 					<div class="memberAct">
 						<div>
 							<a class="btn btn-danger sign-in"
@@ -959,12 +959,18 @@
 						</div>
 					</div>
 				</c:if>
-				<c:if test="${!empty sessionScope.loginInfo}">
+				<c:if test="${!empty sessionScope.loginInfo || !empty sessionScope.facebookProfile || !empty sessionScope.googleProfile}">
 					<div class="memberCard">
 						<div class="memberInfo">
 							<div class="memberImage">
-								<img
-									src='https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50'>
+								<c:if test="${!empty sessionScope.facebookProfile}">
+									<img
+									src='http://graph.facebook.com/${sessionScope.facebookProfile.id}/picture?width=250&height=250'>
+								</c:if>
+								<c:if test="${!empty sessionScope.googleProfile}">
+									<img
+									src='${sessionScope.googleProfile.getImageUrl()}'>
+								</c:if>
 							</div>
 							<div class="memberNickName">${sessionScope.loginInfo.mem_nickname}</div>
 							<div>

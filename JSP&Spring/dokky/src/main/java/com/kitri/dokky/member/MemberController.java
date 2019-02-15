@@ -163,7 +163,6 @@ public class MemberController {
 		return "redirect:/main/login";
 	}
 	
-	
 	//로그아웃, 회원 탈퇴시 세션 비워주는 기능
 	public void sessionInvalidate(HttpServletRequest req) {
 		
@@ -171,6 +170,8 @@ public class MemberController {
 		
 		if(session != null) {
 			session.removeAttribute("loginInfo");
+			session.removeAttribute("facebookProfile");
+			session.removeAttribute("googleProfile");
 			session.invalidate();
 		}
 	}
