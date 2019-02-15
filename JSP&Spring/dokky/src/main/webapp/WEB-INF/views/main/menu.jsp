@@ -65,7 +65,41 @@
 		background-color: #ff9966;
 	}
 	.memberImage {
-		display: none;
+		position: absolute;
+		top: -5px;
+		right: 75px;
+	}
+	.memberImage img {
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+	}
+	.memberMenuList {
+		position: absolute;
+		top: 60px;
+		right: -25px;
+		width: 100px;
+		height: 200px;
+		text-align: center;
+		font-size: 16px;
+		background-color: #e4e4e4;
+		box-shadow: 2px 2px 2px gray;
+	}
+	.memberMenuList div:nth-child(1) {
+		top: 10px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(2) {
+		top: 30px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(3) {
+		top: 50px;
+		left: 1px;
+		width: 100%;
+	}
+	.memberMenuList div a {
+		background-color: #e4e4e4;
 	}
 	.memberNickName {
 		display: none;
@@ -133,7 +167,7 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		right: 15%;
+		right: 20%;
 		margin-right: 10px;
 	}
 	.memberInfo div, .memberAct div {
@@ -143,7 +177,41 @@
 		background-color: #ff9966;
 	}
 	.memberImage {
-		display: none;
+		position: absolute;
+		top: -5px;
+		right: 75px;
+	}
+	.memberImage img {
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+	}
+	.memberMenuList {
+		position: absolute;
+		top: 60px;
+		right: -25px;
+		width: 100px;
+		height: 200px;
+		text-align: center;
+		font-size: 16px;
+		background-color: #e4e4e4;
+		box-shadow: 2px 2px 2px gray;
+	}
+	.memberMenuList div:nth-child(1) {
+		top: 10px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(2) {
+		top: 30px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(3) {
+		top: 50px;
+		left: 1px;
+		width: 100%;
+	}
+	.memberMenuList div a {
+		background-color: #e4e4e4;
 	}
 	.memberNickName {
 		display: none;
@@ -214,7 +282,7 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 450px;
+		left: 480px;
 	}
 	.googleSearch input {
 		width: 300px;
@@ -244,18 +312,36 @@
 		height: 45px;
 		border-radius: 50%;
 	}
+	.memberMenuList {
+		top: 60px;
+		right: -25px;
+		width: 100px;
+		height: 200px;
+		text-align: center;
+		font-size: 16px;
+		background-color: #e4e4e4;
+		box-shadow: 2px 2px 2px gray;
+	}
+	.memberMenuList div:nth-child(1) {
+		top: 10px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(2) {
+		top: 30px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(3) {
+		top: 50px;
+		left: 1px;
+		width: 100%;
+	}
+	.memberMenuList div a {
+		background-color: #e4e4e4;
+	}
 	.memberNickName {
 		display: none;
 	}
 	.memberExp {
-		display: none;
-	}
-	.sign-out, .mem-info {
-		width: 45px;
-		font-size: 20px;
-		background-color: #ff9966;
-	}
-	.noLogin {
 		display: none;
 	}
 	.act {
@@ -263,15 +349,6 @@
 		left: 150px;
 	}
 	.act a {
-		background-color: #ff9966;
-	}
-	.gihub {
-		display: none;
-		left: 65px;
-		bottom: 50px;
-	}
-	.gihub a {
-		width: 100%;
 		background-color: #ff9966;
 	}
 }
@@ -319,7 +396,7 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 450px;
+		left: 480px;
 	}
 	.googleSearch input {
 		width: 300px;
@@ -383,28 +460,23 @@
 	.memberExp {
 		display: none;
 	}
+	.quickWrite {
+		left: -56px;
+	}
+	.quickWrite a {
+		width: 100px;
+		height: 30px;
+	}
 	.sign-out, .mem-info {
 		width: 45px;
 		font-size: 20px;
 		background-color: #ff9966;
-	}
-	.noLogin {
-		display: none;
 	}
 	.act {
 		top: 8px;
 		left: 150px;
 	}
 	.act a {
-		background-color: #ff9966;
-	}
-	.gihub {
-		display: none;
-		left: 65px;
-		bottom: 50px;
-	}
-	.gihub a {
-		width: 100%;
 		background-color: #ff9966;
 	}
 }
@@ -460,7 +532,7 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 450px;
+		left: 480px;
 	}
 	.googleSearch input {
 		width: 300px;
@@ -478,7 +550,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div:nth-child(n + 2) a {
+	.memberInfo > div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -490,34 +562,55 @@
 		height: 45px;
 		border-radius: 50%;
 	}
+	.memberMenuList {
+		top: 60px;
+		right: -25px;
+		width: 100px;
+		height: 200px;
+		text-align: center;
+		font-size: 16px;
+		background-color: #e4e4e4;
+		box-shadow: 2px 2px 2px gray;
+	}
+	.memberMenuList div:nth-child(1) {
+		top: 10px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(2) {
+		top: 30px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(3) {
+		top: 50px;
+		left: 1px;
+		width: 100%;
+	}
+	.memberMenuList div a {
+		background-color: #e4e4e4;
+	}
 	.memberNickName {
 		display: none;
 	}
 	.memberExp {
 		display: none;
 	}
+	.quickWrite {
+		left: -56px;
+	}
+	.quickWrite a {
+		width: 100px;
+		height: 30px;
+	}
 	.sign-out, .mem-info {
 		width: 45px;
 		font-size: 20px;
 		background-color: #ff9966;
-	}
-	.noLogin {
-		display: none;
 	}
 	.act {
 		top: 8px;
 		left: 150px;
 	}
 	.act a {
-		background-color: #ff9966;
-	}
-	.gihub {
-		display: none;
-		left: 65px;
-		bottom: 50px;
-	}
-	.gihub a {
-		width: 100%;
 		background-color: #ff9966;
 	}
 }
@@ -573,7 +666,7 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 450px;
+		left: 480px;
 	}
 	.googleSearch input {
 		width: 300px;
@@ -591,7 +684,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div:nth-child(n + 2) a {
+	.memberInfo > div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -603,34 +696,55 @@
 		height: 45px;
 		border-radius: 50%;
 	}
+	.memberMenuList {
+		top: 60px;
+		right: -25px;
+		width: 100px;
+		height: 200px;
+		text-align: center;
+		font-size: 16px;
+		background-color: #e4e4e4;
+		box-shadow: 2px 2px 2px gray;
+	}
+	.memberMenuList div:nth-child(1) {
+		top: 10px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(2) {
+		top: 30px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(3) {
+		top: 50px;
+		left: 1px;
+		width: 100%;
+	}
+	.memberMenuList div a {
+		background-color: #e4e4e4;
+	}
 	.memberNickName {
 		display: none;
 	}
 	.memberExp {
 		display: none;
 	}
+	.quickWrite {
+		left: -56px;
+	}
+	.quickWrite a {
+		width: 100px;
+		height: 30px;
+	}
 	.sign-out, .mem-info {
 		width: 45px;
 		font-size: 20px;
 		background-color: #ff9966;
-	}
-	.noLogin {
-		display: none;
 	}
 	.act {
 		top: 8px;
 		left: 150px;
 	}
 	.act a {
-		background-color: #ff9966;
-	}
-	.gihub {
-		display: none;
-		left: 65px;
-		bottom: 50px;
-	}
-	.gihub a {
-		width: 100%;
 		background-color: #ff9966;
 	}
 }
@@ -686,7 +800,7 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 450px;
+		left: 480px;
 	}
 	.googleSearch input {
 		width: 300px;
@@ -704,7 +818,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div:nth-child(n + 2) a {
+	.memberInfo > div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -716,34 +830,55 @@
 		height: 45px;
 		border-radius: 50%;
 	}
+	.memberMenuList {
+		top: 60px;
+		right: -25px;
+		width: 100px;
+		height: 200px;
+		text-align: center;
+		font-size: 16px;
+		background-color: #e4e4e4;
+		box-shadow: 2px 2px 2px gray;
+	}
+	.memberMenuList div:nth-child(1) {
+		top: 10px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(2) {
+		top: 30px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(3) {
+		top: 50px;
+		left: 1px;
+		width: 100%;
+	}
+	.memberMenuList div a {
+		background-color: #e4e4e4;
+	}
 	.memberNickName {
 		display: none;
 	}
 	.memberExp {
 		display: none;
 	}
+	.quickWrite {
+		left: -56px;
+	}
+	.quickWrite a {
+		width: 100px;
+		height: 30px;
+	}
 	.sign-out, .mem-info {
 		width: 45px;
 		font-size: 20px;
 		background-color: #ff9966;
-	}
-	.noLogin {
-		display: none;
 	}
 	.act {
 		top: 8px;
 		left: 150px;
 	}
 	.act a {
-		background-color: #ff9966;
-	}
-	.gihub {
-		display: none;
-		left: 65px;
-		bottom: 50px;
-	}
-	.gihub a {
-		width: 100%;
 		background-color: #ff9966;
 	}
 }
@@ -798,7 +933,7 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 450px;
+		left: 480px;
 	}
 	.googleSearch input {
 		width: 300px;
@@ -816,7 +951,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div:nth-child(n + 2) a {
+	.memberInfo > div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -827,6 +962,32 @@
 		width: 45px;
 		height: 45px;
 		border-radius: 50%;
+	}
+	.memberMenuList {
+		top: 60px;
+		right: -25px;
+		width: 100px;
+		height: 200px;
+		text-align: center;
+		font-size: 16px;
+		background-color: #e4e4e4;
+		box-shadow: 2px 2px 2px gray;
+	}
+	.memberMenuList div:nth-child(1) {
+		top: 10px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(2) {
+		top: 30px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(3) {
+		top: 50px;
+		left: 1px;
+		width: 100%;
+	}
+	.memberMenuList div a {
+		background-color: #e4e4e4;
 	}
 	.memberNickName {
 		display: none;
@@ -839,23 +1000,18 @@
 		font-size: 20px;
 		background-color: #ff9966;
 	}
-	.noLogin {
-		display: none;
+	.quickWrite {
+		left: -56px;
+	}
+	.quickWrite a {
+		width: 100px;
+		height: 30px;
 	}
 	.act {
 		top: 8px;
 		left: 150px;
 	}
 	.act a {
-		background-color: #ff9966;
-	}
-	.gihub {
-		display: none;
-		left: 65px;
-		bottom: 50px;
-	}
-	.gihub a {
-		width: 100%;
 		background-color: #ff9966;
 	}
 }
@@ -910,7 +1066,7 @@
 	.googleSearch {
 		position: absolute;
 		top: 10px;
-		left: 450px;
+		left: 480px;
 	}
 	.googleSearch input {
 		width: 300px;
@@ -928,7 +1084,7 @@
 	.memberInfo div, .memberAct div {
 		float: left;
 	}
-	.memberInfo div:nth-child(n + 2) a {
+	.memberInfo > div:nth-child(n + 2) a {
 		background-color: #ff9966;
 	}
 	.memberImage {
@@ -940,34 +1096,55 @@
 		height: 45px;
 		border-radius: 50%;
 	}
+	.memberMenuList {
+		top: 60px;
+		right: -25px;
+		width: 100px;
+		height: 200px;
+		text-align: center;
+		font-size: 16px;
+		background-color: #e4e4e4;
+		box-shadow: 2px 2px 2px gray;
+	}
+	.memberMenuList div:nth-child(1) {
+		top: 10px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(2) {
+		top: 30px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(3) {
+		top: 50px;
+		left: 1px;
+		width: 100%;
+	}
+	.memberMenuList div a {
+		background-color: #e4e4e4;
+	}
 	.memberNickName {
 		display: none;
 	}
 	.memberExp {
 		display: none;
 	}
+	.quickWrite {
+		left: -56px;
+	}
+	.quickWrite a {
+		width: 100px;
+		height: 30px;
+	}
 	.sign-out, .mem-info {
 		width: 45px;
 		font-size: 20px;
 		background-color: #ff9966;
-	}
-	.noLogin {
-		display: none;
 	}
 	.act {
 		top: 8px;
 		left: 150px;
 	}
 	.act a {
-		background-color: #ff9966;
-	}
-	.gihub {
-		display: none;
-		left: 65px;
-		bottom: 50px;
-	}
-	.gihub a {
-		width: 100%;
 		background-color: #ff9966;
 	}
 }
@@ -1056,14 +1233,17 @@
 								</div>
 							</div>
 							<div class="memberNickName">${sessionScope.loginInfo.mem_nickname}</div>
-							<div>
+							<div class="quickWrite">
+								<a class="btn btn-danger write-board"><i class="fa fa-pencil-square-o"></i>작성</a>
+							</div>
+							<div style="display: none;">
 								<a class="btn btn-danger sign-out"
 									href="${pageContext.request.contextPath}/member/logoutMember">
 									<i class="fa fa-sign-out"></i>
 								</a>
 							</div>
 							<div class="memberExp"># ${sessionScope.loginInfo.mem_exp}</div>
-							<div>
+							<div style="display: none;">
 								<a class="btn btn-danger mem-info"><i class="fa fa-vcard"></i>
 								</a>
 							</div>
@@ -1075,10 +1255,6 @@
 				<a class="btn btn-danger">Qna</a> <a class="btn btn-danger">Tech</a>
 				<a class="btn btn-danger">Community</a> <a class="btn btn-danger">Jobs</a>
 				<a href="https://github.com/Berea96/Dokky" class="btn btn-danger"><i class="fa fa-github"></i></a>
-			</div>
-			<div class="gihub">
-				<a class="btn btn-danger" href="https://github.com/Berea96/Dokky">
-					Github</a>
 			</div>
 		</div>
 	</div>

@@ -228,6 +228,7 @@
 		.mainBody {
 			position: absolute;
 			top: 30px;
+			left: 10px;
 			height: 1850px;
 		}
 		
@@ -246,7 +247,7 @@
 			width: 200px;
 			height: 590px;
 			
-			background-color: gray;
+			background-color: #fae3b6;
 		}
 		
 		.rightCategory {
@@ -256,7 +257,7 @@
 			width: 200px;
 			height: 590px;
 			
-			background-color: gray;
+			background-color: #fae3b6;
 		}
 		
 		.currnetCategory {
@@ -291,6 +292,7 @@
 		.mainBody {
 			position: absolute;
 			top: 30px;
+			left: 10px;
 			width: 855px;
 			height: 1850px;
 		}
@@ -310,7 +312,7 @@
 			width: 200px;
 			height: 590px;
 			
-			background-color: gray;
+			background-color: #fae3b6;
 		}
 		
 		.rightCategory {
@@ -320,7 +322,7 @@
 			width: 200px;
 			height: 590px;
 			
-			background-color: gray;
+			background-color: #fae3b6;
 		}
 		
 		.currnetCategory {
@@ -375,7 +377,7 @@
 			width: 200px;
 			height: 590px;
 			
-			background-color: gray;
+			background-color: #fae3b6;
 		}
 		
 		.rightCategory {
@@ -385,7 +387,7 @@
 			width: 200px;
 			height: 590px;
 			
-			background-color: gray;
+			background-color: #fae3b6;
 		}
 		
 		.currnetCategory {
@@ -441,7 +443,7 @@
 			width: 200px;
 			height: 590px;
 			
-			background-color: gray;
+			background-color: #fae3b6;
 		}
 		
 		.rightCategory {
@@ -450,7 +452,7 @@
 			left: 824px;
 			width: 200px;
 			height: 590px;
-			background-color: gray;
+			background-color: #fae3b6;
 		}
 		
 		.currnetCategory {
@@ -506,7 +508,7 @@
 			width: 200px;
 			height: 590px;
 			
-			background-color: gray;
+			background-color: #fae3b6;
 		}
 		
 		.rightCategory {
@@ -516,7 +518,7 @@
 			width: 200px;
 			height: 590px;
 			
-			background-color: gray;
+			background-color: #fae3b6;
 		}
 		
 		.currnetCategory {
@@ -571,7 +573,7 @@
 			left: 8px;
 			width: 200px;
 			height: 590px;
-			background-color: gray;
+			background-color: #fae3b6;
 		}
 		
 		.rightCategory {
@@ -580,7 +582,7 @@
 			left: 824px;
 			width: 200px;
 			height: 590px;
-			background-color: gray;
+			background-color: #fae3b6;
 		}
 		
 		.currnetCategory {
