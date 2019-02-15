@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kitri.dokky.board.like.BoardLikeDao">
+
+	<resultMap id="likeResult" type="com.kitri.dokky.board.like.Like">
+		<result column="board_like_no" property="board_like_no" />
+		<result column="board_no" property="board_no" />
+		<result column="mem_id" property="mem_id" />
+		<result column="board_like_date" property="board_like_date" />
+	</resultMap>
+	
+	<insert id="insertLike" parameterType="com.kitri.dokky.board.like.Like">
+		insert into board_like_tb values(#{board_like_no}, #{board_no},
+										 #{mem_id}, now())
+	</insert>
+	
+	<select id="selectLike" parameterType="String" resultMap="likeResult">
+		select * from board_like_tb where mem_id=#{mem_id}
+	</select>
+	
+	<delete id="deleteLike" parameterType="com.kitri.dokky.board.like.Like">
+		delete from board_like_tb where board_like_no=#{board_like_no}
+	</delete>
+</mapper>

@@ -1184,11 +1184,9 @@
 			$.ajax({
 				type: "GET",
 				url: "${pageContext.request.conetxtPath}/category/getCategory",
-				data: {
-					
-				},
+				data: {},
 				success: (data) => {
-					
+					console.log(data);
 				}
 			});
 		}

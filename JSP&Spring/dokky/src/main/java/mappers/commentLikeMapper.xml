@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kitri.dokky.comment.like.CommentLikeDao">
+
+	<resultMap id="likeResult" type="com.kitri.dokky.comment.like.Like">
+		<result column="comment_like_no" property="comment_like_no" />
+		<result column="comment_no" property="comment_no" />
+		<result column="mem_id" property="mem_id" />
+		<result column="comment_like_date" property="comment_like_date" />
+	</resultMap>
+	
+	<insert id="insertLike" parameterType="com.kitri.dokky.comment.like.Like">
+		insert into comment_like_tb values(#{comment_like_no}, #{comment_no},
+										 #{mem_id}, now())
+	</insert>
+	
+	<select id="selectLike" parameterType="String" resultMap="likeResult">
+		select * from comment_like_tb where mem_id=#{mem_id}
+	</select>
+	
+	<delete id="deleteLike" parameterType="com.kitri.dokky.comment.like.Like">
+		delete from comment_like_tb where comment_like_no=#{comment_like_no}
+	</delete>
+</mapper>
