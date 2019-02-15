@@ -1171,6 +1171,29 @@
 		}
 	}
 	
+	function changeCategory(e) {
+		
+		var target = $(e.target);
+		
+		var selectedItem = $("#category_1 option:selected").val();
+		
+		console.log("바꼈다!");
+		console.log(target);
+		
+		if(selectedItem != "none") {
+			$.ajax({
+				type: "GET",
+				url: "${pageContext.request.conetxtPath}/category/getCategory",
+				data: {
+					
+				},
+				success: (data) => {
+					
+				}
+			});
+		}
+	}
+	
 	$(document).ready(() => {
 		$("#googleSearchText").keydown((key) => {
 			googleSearch(key);
@@ -1178,6 +1201,10 @@
 		
 		$(".memberMenu").click((e) => {
 			memberMenu(e)
+		});
+		
+		$("#category_1").change((e) => {
+			changeCategory(e);
 		});
 	});
 </script>
@@ -1283,7 +1310,29 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<div class="modal-body">...</div>
+				<div class="modal-body">
+					<form action="" method="POST">
+						<div class="form-group">
+							<label for="write-title">제목</label>
+							<input id="write-title" class="form-control" type="text" placeholder="title">
+							<label for="write-category-1">게시판</label>
+							<select id="category_1" class="form-control" name="category_1">
+								<option value="none"> 선택
+								<option value="qna"> Q&A
+								<option value="tech"> Tech
+								<option value="comm"> Community
+								<option value="jobs"> Jobs
+							</select>
+							<label for="write-category-2">카테고리</label>
+							<select id="category_2" class="form-control" name="category_2">
+							</select>
+							<label for="write-tags">태그</label>
+							<input class="form-control" type="text" placeholder="">
+							<label for="write-title">제목</label>
+							<textarea class="form-control" rows="10px" placeholder="content"></textarea>
+						</div>
+					</form>
+				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary"
 						data-dismiss="modal">Close</button>
