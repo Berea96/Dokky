@@ -9,13 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+//기본게시판에 대한 댓글의 컨트롤러
 @Controller
 @RequestMapping("/basicComment")
 public class BasicCommentController {
 	
+	//의존성주입
 	@Resource(name="basicCommentService")
 	private BasicCommentService service;
 	
+	//게시판 번호로 댓글 목록을 불러오는 메소드
 	@RequestMapping("/getCommentByNum")
 	public ModelAndView getCommentByNum(@RequestParam("basic_board_no")int basic_board_no,
 			ModelAndView mav) {
@@ -28,6 +31,7 @@ public class BasicCommentController {
 		return mav;
 	}
 	
+	//댓글 작성 메소드
 	@RequestMapping("/writeComment")
 	public String writeComment(BasicComment basicComment) {
 		
@@ -36,6 +40,7 @@ public class BasicCommentController {
 		return "";
 	}
 	
+	//댓글 삭제 메소드
 	@RequestMapping("/deleteComment")
 	public String deleteComment(@RequestParam("basic_comment_no")int basic_comment_no) {
 		
@@ -44,6 +49,7 @@ public class BasicCommentController {
 		return "";
 	}
 	
+	//댓글 수정 메소드
 	@RequestMapping("/editComment")
 	public String editComment(BasicComment basicComment) {
 		

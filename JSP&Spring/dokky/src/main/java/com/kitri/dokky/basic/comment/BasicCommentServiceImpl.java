@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Service;
 
+//기본게시판에 대한 댓글의 Service를 Implements
 @Service("basicCommentService")
 public class BasicCommentServiceImpl implements BasicCommentService {
 	

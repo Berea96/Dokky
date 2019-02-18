@@ -2,6 +2,7 @@ package com.kitri.dokky.basic.comment;
 
 import java.sql.Date;
 
+//기본 게시판에 대한 댓글 Bean
 public class BasicComment {
 	private int basic_comment_no;
 	private int basic_board_no;
