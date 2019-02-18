@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Service;
 
+//게시판에 대한 좋아요 Service를 Implements
 @Service("boardLikeService")
 public class BoardLikeServiceImpl implements BoardLikeService {
 

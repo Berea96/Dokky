@@ -2,6 +2,7 @@ package com.kitri.dokky.board.like;
 
 import java.sql.Date;
 
+//게시판에 대한 좋아요 Bean
 public class Like {
 	private int board_like_no;
 	private int board_no;

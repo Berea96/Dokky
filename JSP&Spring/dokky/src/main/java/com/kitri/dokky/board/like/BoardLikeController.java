@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+//게시판에 대한 좋아요 컨트롤러
 @Controller
 @RequestMapping("/boardLike")
 public class BoardLikeController {
