@@ -2,6 +2,7 @@ package com.kitri.dokky.qna.comment;
 
 import java.sql.Date;
 
+//답변 Bean
 public class QnaComment {
 	private int qna_comment_no;
 	private int qna_board_no;
