@@ -20,7 +20,7 @@ public class BasicBoardController {
 	public ModelAndView getBoardByCategory(@RequestParam("cate")String category,
 			ModelAndView mav) {
 		
-		ArrayList<Board> boardList = service.getBoardByCategory(category);
+		ArrayList<BasicBoard> boardList = service.getBoardByCategory(category);
 		
 		mav.addObject("boardList", boardList);
 		mav.setViewName("json/boardJson");
@@ -29,7 +29,7 @@ public class BasicBoardController {
 	}
 	
 	@RequestMapping("/writeBoard")
-	public String writeBoard(Board board) {
+	public String writeBoard(BasicBoard board) {
 		
 		service.writeBoard(board);
 		
@@ -45,7 +45,7 @@ public class BasicBoardController {
 	}
 	
 	@RequestMapping("/editBoard")
-	public String editBoard(Board board) {
+	public String editBoard(BasicBoard board) {
 		
 		service.editBoard(board);
 		

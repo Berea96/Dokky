@@ -2,7 +2,7 @@ package com.kitri.dokky.basic.board;
 
 import java.sql.Date;
 
-public class Board {
+public class BasicBoard {
 	private int board_no;
 	private String board_category_1;
 	private String board_category_2;
@@ -14,10 +14,10 @@ public class Board {
 	private Date board_date;
 	private int board_scrap_cnt;
 	
-	public Board() {
+	public BasicBoard() {
 	}
 
-	public Board(int board_no, String board_category_1, String board_category_2, String board_title,
+	public BasicBoard(int board_no, String board_category_1, String board_category_2, String board_title,
 			String board_writer, String board_tags, String board_content, int board_like_cnt, Date board_date,
 			int board_scrap_cnt) {
 		this.board_no = board_no;

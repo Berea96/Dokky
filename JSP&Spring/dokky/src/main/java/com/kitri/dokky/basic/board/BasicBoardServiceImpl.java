@@ -12,35 +12,35 @@ public class BasicBoardServiceImpl implements BasicBoardService {
 	
 	@Resource(name="sqlSession")
 	private SqlSession sqlSession;
-	private BoardDao dao;
+	private BasicBoardDao dao;
 
 	@Override
-	public ArrayList<Board> getBoardByCategory(String category) {
-		dao = sqlSession.getMapper(BoardDao.class);
+	public ArrayList<BasicBoard> getBoardByCategory(String category) {
+		dao = sqlSession.getMapper(BasicBoardDao.class);
 		return dao.selectByCategory(category);
 	}
 
 	@Override
-	public void writeBoard(Board board) {
-		dao = sqlSession.getMapper(BoardDao.class);
+	public void writeBoard(BasicBoard board) {
+		dao = sqlSession.getMapper(BasicBoardDao.class);
 		dao.insertBoard(board);
 	}
 
 	@Override
 	public void deleteBoard(int board_num) {
-		dao = sqlSession.getMapper(BoardDao.class);
+		dao = sqlSession.getMapper(BasicBoardDao.class);
 		dao.deleteBoard(board_num);
 	}
 
 	@Override
-	public void editBoard(Board board) {
-		dao = sqlSession.getMapper(BoardDao.class);
+	public void editBoard(BasicBoard board) {
+		dao = sqlSession.getMapper(BasicBoardDao.class);
 		dao.updateBoard(board);
 	}
 
 	@Override
-	public Board getBoardByNum(int board_num) {
-		dao = sqlSession.getMapper(BoardDao.class);
+	public BasicBoard getBoardByNum(int board_num) {
+		dao = sqlSession.getMapper(BasicBoardDao.class);
 		return dao.selectByNum(board_num);
 	}
 }
