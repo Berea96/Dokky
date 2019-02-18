@@ -2,6 +2,7 @@ package com.kitri.dokky.comment.like;
 
 import java.sql.Date;
 
+//댓글 좋아요 Bean
 public class Like {
 	private int comment_like_no;
 	private int comment_no;
