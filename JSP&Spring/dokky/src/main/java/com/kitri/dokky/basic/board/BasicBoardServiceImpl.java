@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Service;
 
+//기본 게시판에 대한 Service를 Implements 함
 @Service("basicBoardService")
 public class BasicBoardServiceImpl implements BasicBoardService {
 	

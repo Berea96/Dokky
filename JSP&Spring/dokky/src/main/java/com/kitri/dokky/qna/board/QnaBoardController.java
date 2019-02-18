@@ -55,7 +55,7 @@ public class QnaBoardController {
 	@RequestMapping("/getBoardByNum")
 	public String getBoardByNum(@RequestParam("board_num")int board_num) {
 		
-		service.getBoardByNum(board_num)
+		service.getBoardByNum(board_num);
 		
 		return "";
 	}

@@ -2,6 +2,7 @@ package com.kitri.dokky.basic.board;
 
 import java.sql.Date;
 
+//기본 게시판에 대한 Bean
 public class BasicBoard {
 	private int board_no;
 	private String board_category_1;
