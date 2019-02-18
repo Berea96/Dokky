@@ -2,6 +2,7 @@ package com.kitri.dokky.board.scrap;
 
 import java.sql.Date;
 
+//게시판 스크랩 Bean
 public class Scrap {
 	private int board_scrap_no;
 	private int board_no;

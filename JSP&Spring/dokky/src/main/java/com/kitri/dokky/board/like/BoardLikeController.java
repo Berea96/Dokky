@@ -14,9 +14,11 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/boardLike")
 public class BoardLikeController {
 
+	//의존성 주입
 	@Resource(name="boardLikeService")
 	private BoardLikeService service;
 	
+	//게시판 좋아요 메소드
 	@RequestMapping("/likeBoard")
 	public String likeBoard(Like like) {
 		
@@ -25,6 +27,7 @@ public class BoardLikeController {
 		return "";
 	}
 	
+	//게시판 싫어요 메소드
 	@RequestMapping("/hateBoard")
 	public String hateBoard(Like hate) {
 		
@@ -33,6 +36,7 @@ public class BoardLikeController {
 		return "";
 	}
 	
+	//회원 좋아요 목록을 불러오는 메소드
 	@RequestMapping("/getLikeList")
 	public ModelAndView getLikeList(@RequestParam("mem_id")String mem_id,
 			ModelAndView mav) {
@@ -45,6 +49,7 @@ public class BoardLikeController {
 		return mav;
 	}
 	
+	//좋아요 취소 메소드
 	@RequestMapping("/cancleLike")
 	public String cancleLike(Like like) {
 		
@@ -53,6 +58,7 @@ public class BoardLikeController {
 		return "";
 	}
 	
+	//싫어요 취소 메소드
 	@RequestMapping("/cancleHate")
 	public String cancleHate(Like hate) {
 		

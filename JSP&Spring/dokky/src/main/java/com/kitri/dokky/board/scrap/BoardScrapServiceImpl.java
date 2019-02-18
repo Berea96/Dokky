@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Service;
 
+//게시판 스크랩 Service를 Implements
 @Service("boardScrapService")
 public class BoardScrapServiceImpl implements BoardScrapService {
 
