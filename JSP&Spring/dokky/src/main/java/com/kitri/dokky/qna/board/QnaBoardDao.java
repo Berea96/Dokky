@@ -2,6 +2,7 @@ package com.kitri.dokky.qna.board;
 
 import java.util.ArrayList;
 
+//질문 게시판 Dao Interface
 public interface QnaBoardDao {
 	ArrayList<QnaBoard> selectByCategory(String category);
 	void insertBoard(QnaBoard Qnaoard);

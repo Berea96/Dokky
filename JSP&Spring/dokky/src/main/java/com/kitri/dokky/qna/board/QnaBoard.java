@@ -2,6 +2,7 @@ package com.kitri.dokky.qna.board;
 
 import java.sql.Date;
 
+//질문게시판 Bean
 public class QnaBoard {
 	private int qna_board_no;
 	private String qna_board_category_1;

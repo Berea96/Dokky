@@ -9,13 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+//질문게시판에 대한 컨트롤러
 @Controller
 @RequestMapping("/qnArticle")
 public class QnaBoardController {
 
+	//의존성 주입
 	@Resource(name="qnaBoardService")
 	private QnaBoardService service;
 	
+	//카테고리에 따른 게시판 목록 불러오기 메소드
 	@RequestMapping("/getBoardByCategory")
 	public ModelAndView getBoardByCategory(@RequestParam("cate")String category,
 			ModelAndView mav) {
@@ -28,6 +31,7 @@ public class QnaBoardController {
 		return mav;
 	}
 	
+	//글 작성 메소드
 	@RequestMapping("/writeBoard")
 	public String writeBoard(QnaBoard qnaBoard) {
 		
@@ -36,6 +40,7 @@ public class QnaBoardController {
 		return "";
 	}
 	
+	//글 삭제 메소드
 	@RequestMapping("/deleteBoard")
 	public String deleteBoard(@RequestParam("board_num")int board_num) {
 		
@@ -44,6 +49,7 @@ public class QnaBoardController {
 		return "";
 	}
 	
+	//글 수정 메소드
 	@RequestMapping("/editBoard")
 	public String editBoard(QnaBoard qnaBoard) {
 		
@@ -52,6 +58,7 @@ public class QnaBoardController {
 		return "";
 	}
 	
+	//글 번호에 따른 글 정보 불러오기 메소드
 	@RequestMapping("/getBoardByNum")
 	public String getBoardByNum(@RequestParam("board_num")int board_num) {
 		
