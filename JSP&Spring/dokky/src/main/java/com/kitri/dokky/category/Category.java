@@ -1,5 +1,6 @@
 package com.kitri.dokky.category;
 
+//게시물 카테고리 Bean
 public class Category {
 	private String category_1;
 	private String category_2;
