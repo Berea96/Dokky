@@ -23,18 +23,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+//회원에 대한 컨트롤러
 @Controller
 @RequestMapping("/member")
 public class MemberController {
 
+	//의존성주입
 	@Resource(name="memberService")
 	private MemberService service;
 
+	//메인 페이지로 이동
 	@RequestMapping("/main")
 	public String goMain() {
 		return "main/main";
 	}
 
+	//홈 메인으로 이동 
 	@RequestMapping("/home")
 	public String goHome(HttpSession session) {
 
@@ -46,11 +50,13 @@ public class MemberController {
 		return "main/home";
 	}
 
+	//로그인 페이지로 이동(삭제)
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String goLogin() {
 		return "member/login";
 	}
 
+	//가입 페이지로 이동(삭제)
 	@RequestMapping(value="/join", method=RequestMethod.GET)
 	public String goJoin(Model model) {
 

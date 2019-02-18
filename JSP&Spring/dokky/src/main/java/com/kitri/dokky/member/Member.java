@@ -2,6 +2,7 @@ package com.kitri.dokky.member;
 
 import java.sql.Date;
 
+//회원 Bean
 public class Member {
 	private String mem_id;
 	private String mem_pw;
