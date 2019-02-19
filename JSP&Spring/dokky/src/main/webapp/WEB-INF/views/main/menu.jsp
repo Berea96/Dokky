@@ -1281,6 +1281,9 @@
 		background-color: #ff9966;
 	}
 }
+body {
+	background-color: #fbf0db;
+}
 </style>
 <script type="text/javascript">
 	function googleSearch(key) {
@@ -1398,10 +1401,7 @@
 								</c:if>
 								<div class="memberMenuList" style="display: none;">
 									<div>
-										<a href="">프로필</a>
-									</div>
-									<div>
-										<a href="">정보확인</a>
+										<a href="${pageContext.request.contextPath}/member/profile/${sessionScope.loginInfo.mem_id}">프로필</a>
 									</div>
 									<div>
 										<a

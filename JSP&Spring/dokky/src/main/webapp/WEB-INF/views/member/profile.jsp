@@ -72,9 +72,9 @@
 			position: absolute;
 		}
 		
-		.leftCategory {
+		.prifileBoardMenu {
 			position: absolute;
-			top: 50px;
+			top: 260px;
 			left: 8px;
 			width: 200px;
 			height: 590px;
@@ -82,7 +82,7 @@
 			background-color: #fae3b6;
 		}
 		
-		.rightCategory {
+		.profileAddBox {
 			position: absolute;
 			top: 50px;
 			left: 824px;
@@ -92,16 +92,62 @@
 			background-color: #fae3b6;
 		}
 		
-		.currnetCategory {
+		.profileInfoBox {
 			top: 50px;
-			left: 216px;
-			width: 600px;
+			left: 8px;
+			width: 808px;
 			height: 200px;
 			border-radius: 5px;
 			background-color: white;
 		}
 		
-		.community {
+		.profileInfoImage {
+			top: 20px;
+			left: 20px;
+		}
+		
+		.profileInfoImage img {
+			width: 170px;
+			height: 170px;
+		}
+		
+		.profileInfoName {
+			top: 30px;
+			left: 240px;
+		}
+		
+		.profileInfoNameBox {
+			font-size: 22px;
+		}
+		
+		.profileInfoBoardList {
+			top: 120px;
+			left: 240px;
+		}
+		
+		.profileInfoBoardListBasicBox {
+			left: 0px;
+		}
+		
+		.profileInfoBoardListBasicCnt {
+		}
+		
+		.profileInfoBoardListQnaBox {
+			left: 100px;
+		}
+		
+		
+		.profileInfoBoardListQnaCnt {
+		}
+		
+		.profileInfoExpBox {
+			left: 200px;
+		}
+		
+		.profileInfoExp {
+		}
+		
+		.boardListBox {
 			top: 260px;
 			left: 216px;
 			width: 600px;
@@ -118,33 +164,6 @@
 			height: 150px;
 			margin-left: 25px;
 			padding: 50px;
-		}
-		.categoryImage {
-			position: absolute;
-			top: 20px;
-			left: 20px;
-			width: 120px;
-			height: 120px;
-		}
-		.categoryTitle {
-			top: 30px;
-			left: 170px;
-			width: 150px;
-			height: 150px;
-			font-weight: 900;
-			font-size: 20px;
-		}
-		.categoryBottomMenu {
-			bottom: 40px;
-			width: 100%;
-			border-top: 1px solid #e3e3e3;
-		}
-		.categoryByBoard a {
-			float: left;
-			height: 40px;
-		}
-		.categoryByBoard a:active {
-			color: orange;
 		}
 	}
 	@media screen and (min-width: 970px) and (max-width: 1070px) {
@@ -164,9 +183,9 @@
 			position: absolute;
 		}
 		
-		.leftCategory {
+		.prifileBoardMenu {
 			position: absolute;
-			top: 50px;
+			top: 260px;
 			left: 8px;
 			width: 200px;
 			height: 590px;
@@ -174,7 +193,7 @@
 			background-color: #fae3b6;
 		}
 		
-		.rightCategory {
+		.profileAddBox {
 			position: absolute;
 			top: 50px;
 			left: 824px;
@@ -184,16 +203,16 @@
 			background-color: #fae3b6;
 		}
 		
-		.currnetCategory {
+		.profileInfoBox {
 			top: 50px;
-			left: 216px;
-			width: 600px;
+			left: 8px;
+			width: 808px;
 			height: 200px;
 			border-radius: 5px;
 			background-color: white;
 		}
 		
-		.community {
+		.boardListBox {
 			top: 260px;
 			left: 216px;
 			width: 600px;
@@ -210,33 +229,6 @@
 			height: 150px;
 			margin-left: 25px;
 			padding: 50px;
-		}
-		.categoryImage {
-			position: absolute;
-			top: 20px;
-			left: 20px;
-			width: 120px;
-			height: 120px;
-		}
-		.categoryTitle {
-			top: 30px;
-			left: 170px;
-			width: 150px;
-			height: 150px;
-			font-weight: 900;
-			font-size: 20px;
-		}
-		.categoryBottomMenu {
-			bottom: 40px;
-			width: 100%;
-			border-top: 1px solid #e3e3e3;
-		}
-		.categoryByBoard a {
-			float: left;
-			height: 40px;
-		}
-		.categoryByBoard a:active {
-			color: orange;
 		}
 	}
 	@media screen and (min-width: 1070px) and (max-width: 1200px) {
@@ -257,16 +249,16 @@
 			position: absolute;
 		}
 		
-		.leftCategory {
+		.prifileBoardMenu {
 			position: absolute;
-			top: 50px;
+			top: 260px;
 			width: 200px;
 			height: 590px;
 			
 			background-color: #fae3b6;
 		}
 		
-		.rightCategory {
+		.profileAddBox {
 			position: absolute;
 			top: 50px;
 			left: 824px;
@@ -276,16 +268,16 @@
 			background-color: #fae3b6;
 		}
 		
-		.currnetCategory {
+		.profileInfoBox {
 			top: 50px;
-			left: 216px;
-			width: 600px;
+			left: 8px;
+			width: 808px;
 			height: 200px;
 			border-radius: 5px;
 			background-color: white;
 		}
 		
-		.community {
+		.boardListBox {
 			top: 260px;
 			left: 216px;
 			width: 600px;
@@ -302,33 +294,6 @@
 			height: 150px;
 			margin-left: 25px;
 			padding: 50px;
-		}
-		.categoryImage {
-			position: absolute;
-			top: 20px;
-			left: 20px;
-			width: 120px;
-			height: 120px;
-		}
-		.categoryTitle {
-			top: 30px;
-			left: 170px;
-			width: 150px;
-			height: 150px;
-			font-weight: 900;
-			font-size: 20px;
-		}
-		.categoryBottomMenu {
-			bottom: 40px;
-			width: 100%;
-			border-top: 1px solid #e3e3e3;
-		}
-		.categoryByBoard a {
-			float: left;
-			height: 40px;
-		}
-		.categoryByBoard a:active {
-			color: orange;
 		}
 	}
 	@media screen and (min-width: 1200px) and (max-width: 1300px) {
@@ -349,9 +314,9 @@
 			position: absolute;
 		}
 		
-		.leftCategory {
+		.prifileBoardMenu {
 			position: absolute;
-			top: 50px;
+			top: 260px;
 			left: 8px;
 			width: 200px;
 			height: 590px;
@@ -359,7 +324,7 @@
 			background-color: #fae3b6;
 		}
 		
-		.rightCategory {
+		.profileAddBox {
 			position: absolute;
 			top: 50px;
 			left: 824px;
@@ -368,16 +333,16 @@
 			background-color: #fae3b6;
 		}
 		
-		.currnetCategory {
+		.profileInfoBox {
 			top: 50px;
-			left: 216px;
-			width: 600px;
+			left: 8px;
+			width: 808px;
 			height: 200px;
 			border-radius: 5px;
 			background-color: white;
 		}
 		
-		.community {
+		.boardListBox {
 			top: 260px;
 			left: 216px;
 			width: 600px;
@@ -394,33 +359,6 @@
 			height: 150px;
 			margin-left: 25px;
 			padding: 50px;
-		}
-		.categoryImage {
-			position: absolute;
-			top: 20px;
-			left: 20px;
-			width: 120px;
-			height: 120px;
-		}
-		.categoryTitle {
-			top: 30px;
-			left: 170px;
-			width: 150px;
-			height: 150px;
-			font-weight: 900;
-			font-size: 20px;
-		}
-		.categoryBottomMenu {
-			bottom: 40px;
-			width: 100%;
-			border-top: 1px solid #e3e3e3;
-		}
-		.categoryByBoard a {
-			float: left;
-			height: 40px;
-		}
-		.categoryByBoard a:active {
-			color: orange;
 		}
 	}
 	@media screen and (min-width: 1300px) and (max-width: 1400px){
@@ -441,9 +379,9 @@
 			position: absolute;
 		}
 		
-		.leftCategory {
+		.prifileBoardMenu {
 			position: absolute;
-			top: 50px;
+			top: 260px;
 			left: 8px;
 			width: 200px;
 			height: 590px;
@@ -451,7 +389,7 @@
 			background-color: #fae3b6;
 		}
 		
-		.rightCategory {
+		.profileAddBox {
 			position: absolute;
 			top: 50px;
 			left: 824px;
@@ -461,16 +399,16 @@
 			background-color: #fae3b6;
 		}
 		
-		.currnetCategory {
+		.profileInfoBox {
 			top: 50px;
-			left: 216px;
-			width: 600px;
+			left: 8px;
+			width: 808px;
 			height: 200px;
 			border-radius: 5px;
 			background-color: white;
 		}
 		
-		.community {
+		.boardListBox {
 			top: 260px;
 			left: 216px;
 			width: 600px;
@@ -487,33 +425,6 @@
 			height: 150px;
 			margin-left: 25px;
 			padding: 50px;
-		}
-		.categoryImage {
-			position: absolute;
-			top: 20px;
-			left: 20px;
-			width: 120px;
-			height: 120px;
-		}
-		.categoryTitle {
-			top: 30px;
-			left: 170px;
-			width: 150px;
-			height: 150px;
-			font-weight: 900;
-			font-size: 20px;
-		}
-		.categoryBottomMenu {
-			bottom: 40px;
-			width: 100%;
-			border-top: 1px solid #e3e3e3;
-		}
-		.categoryByBoard a {
-			float: left;
-			height: 40px;
-		}
-		.categoryByBoard a:active {
-			color: orange;
 		}
 	}
 	@media screen and (min-width: 1400px) {
@@ -534,16 +445,16 @@
 			position: absolute;
 		}
 		
-		.leftCategory {
+		.prifileBoardMenu {
 			position: absolute;
-			top: 50px;
+			top: 260px;
 			left: 8px;
 			width: 200px;
 			height: 590px;
 			background-color: #fae3b6;
 		}
 		
-		.rightCategory {
+		.profileAddBox {
 			position: absolute;
 			top: 50px;
 			left: 824px;
@@ -552,16 +463,16 @@
 			background-color: #fae3b6;
 		}
 		
-		.currnetCategory {
+		.profileInfoBox {
 			top: 50px;
-			left: 216px;
-			width: 600px;
+			left: 8px;
+			width: 808px;
 			height: 200px;
 			border-radius: 5px;
 			background-color: white;
 		}
 		
-		.community {
+		.boardListBox {
 			top: 260px;
 			left: 216px;
 			width: 600px;
@@ -579,103 +490,19 @@
 			margin-left: 25px;
 			padding: 50px;
 		}
-		.categoryImage {
-			position: absolute;
-			top: 20px;
-			left: 20px;
-			width: 120px;
-			height: 120px;
-		}
-		.categoryTitle {
-			top: 30px;
-			left: 170px;
-			width: 150px;
-			height: 150px;
-			font-weight: 900;
-			font-size: 20px;
-		}
-		.categoryBottomMenu {
-			bottom: 40px;
-			width: 100%;
-			border-top: 1px solid #e3e3e3;
-		}
-		.categoryByBoard a {
-			float: left;
-			height: 40px;
-		}
-		.categoryByBoard a:active {
-			color: orange;
-		}
 	}
 	img {
-		border-radius: 10%;
+		border-radius: 50%;
 	}
 </style>
 <script type="text/javascript">
 	$.showCategoryList = function() {
-		var leftCategory = $(".leftCategory");
-		var addTarget = $(leftCategory).children();
-		
-		$.ajax({
-			type: "GET",
-			url: "${pageContext.request.contextPath}/category/getCategory",
-			data: {},
-			success: (data) => {
-				console.log(data);
-				var result = JSON.parse(data);
-				console.log(result);
-				
-				var str = "<a  val='0'  class='bodyA list-group-item list-group-item-action list-group-item-warning' href='#'><i class='fa fa-television'></i>전체</a>";
-				$.each(result, (id, it) => {
-					str += "<a val='" + it.category_no + "' class='bodyA list-group-item list-group-item-action list-group-item-warning' href='#'>" + 
-						   "<img src='${pageContext.request.contextPath}/resources/image/"+ 
-						   it.category_image + "' width='15px' height='15px'>" +
-						   it.category_title +
-						   "</a>";
-				})
-				
-				$(addTarget).empty
-				$(addTarget).append(str);
-				
-				$.addCategoryListAction();
-			}
-		});
 	}
 	
 	$.addCategoryListAction = function() {
-		$(".bodyA").click((e) => {
-			var target = $(e.target)
-			console.log(target);
-			var category_no = $(target).attr("val");
-			
-			if(category_no == 0) {
-				location.href = "${pageContext.request.contextPath}/member/home";
-			}
-			else {
-				$.ajax({
-					type: "GET",
-					url: "${pageContext.request.contextPath}/category/getCategoryByNum",
-					data: {
-						"category_no": category_no
-					},
-					success: (data) => {
-						var result = JSON.parse(data);
-						
-						console.log(result);
-						
-						$(".categoryImage").attr("src", "${pageContext.request.contextPath}/resources/image/" + result.category_image);
-						$(".categoryTitle").html(result.category_title);
-					}
-				})
-			}
-		});
 	}
 	
 	$.getBoardListAction = function() {
-		$(".categoryByBoard a").click((e) => {
-			var target = $(e.target);
-			$(target).attr("disabled");
-		});
 	}
 
 	$(document).ready(() => {
@@ -686,16 +513,37 @@
 <title>Home</title>
 </head>
 <body>
+	<div class="menu">
+		<%@ include file="../main/menu.jsp" %>
+	</div>
 	<div class="mainBody">
 		<div>
-			<div class="leftCategory">
-				<div class="list-group list-group-flush" style="width: 100%">
+			<div class="prifileBoardMenu">
+			</div>
+			<div class="profileAddBox"></div>
+			<div class="profileInfoBox">
+				<div class="profileInfoImage">
+					<img src="${pageContext.request.contextPath}/resources/memImage/${sessionScope.loginInfo.mem_image}">
+				</div>
+				<div class="profileInfoName">
+					<div class="profileInfoNameBox">${sessionScope.loginInfo.mem_name}</div>
+				</div>
+				<div class="profileInfoBoardList">
+					<div class="profileInfoBoardListBasicBox">
+						<div class="profileInfoBoardListBasiclabel">게시물</div>
+						<div class="profileInfoBoardListBasicCnt">0</div>
+					</div>
+					<div class="profileInfoBoardListQnaBox">
+						<div class="profileInfoBoardListQnalabel">답변</div>
+						<div class="profileInfoBoardListQnaCnt">0</div>
+					</div>
+					<div class="profileInfoExpBox">
+						<div class="profileInfoExpLabel">활동치</div>
+						<div class="profileInfoExp">${sessionScope.loginInfo.mem_exp}</div>
+					</div>
 				</div>
 			</div>
-			<div class="rightCategory"></div>
-			<div class="currnetCategory">
-			</div>
-			<div class="community"></div>
+			<div class="boardListBox"></div>
 			<footer>
 				원작자 김규정 <br>
 				그외 ...
