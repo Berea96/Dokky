@@ -379,6 +379,33 @@
 			margin-left: 25px;
 			padding: 50px;
 		}
+		.categoryImage {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			width: 120px;
+			height: 120px;
+		}
+		.categoryTitle {
+			top: 30px;
+			left: 170px;
+			width: 150px;
+			height: 150px;
+			font-weight: 900;
+			font-size: 20px;
+		}
+		.categoryBottomMenu {
+			bottom: 40px;
+			width: 100%;
+			border-top: 1px solid #e3e3e3;
+		}
+		.categoryByBoard a {
+			float: left;
+			height: 40px;
+		}
+		.categoryByBoard a:active {
+			color: orange;
+		}
 	}
 	@media screen and (min-width: 1070px) and (max-width: 1200px) {
 		.mainBody {
@@ -444,6 +471,33 @@
 			margin-left: 25px;
 			padding: 50px;
 		}
+		.categoryImage {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			width: 120px;
+			height: 120px;
+		}
+		.categoryTitle {
+			top: 30px;
+			left: 170px;
+			width: 150px;
+			height: 150px;
+			font-weight: 900;
+			font-size: 20px;
+		}
+		.categoryBottomMenu {
+			bottom: 40px;
+			width: 100%;
+			border-top: 1px solid #e3e3e3;
+		}
+		.categoryByBoard a {
+			float: left;
+			height: 40px;
+		}
+		.categoryByBoard a:active {
+			color: orange;
+		}
 	}
 	@media screen and (min-width: 1200px) and (max-width: 1300px) {
 		.mainBody {
@@ -508,6 +562,33 @@
 			height: 150px;
 			margin-left: 25px;
 			padding: 50px;
+		}
+		.categoryImage {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			width: 120px;
+			height: 120px;
+		}
+		.categoryTitle {
+			top: 30px;
+			left: 170px;
+			width: 150px;
+			height: 150px;
+			font-weight: 900;
+			font-size: 20px;
+		}
+		.categoryBottomMenu {
+			bottom: 40px;
+			width: 100%;
+			border-top: 1px solid #e3e3e3;
+		}
+		.categoryByBoard a {
+			float: left;
+			height: 40px;
+		}
+		.categoryByBoard a:active {
+			color: orange;
 		}
 	}
 	@media screen and (min-width: 1300px) and (max-width: 1400px){
@@ -575,6 +656,33 @@
 			margin-left: 25px;
 			padding: 50px;
 		}
+		.categoryImage {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			width: 120px;
+			height: 120px;
+		}
+		.categoryTitle {
+			top: 30px;
+			left: 170px;
+			width: 150px;
+			height: 150px;
+			font-weight: 900;
+			font-size: 20px;
+		}
+		.categoryBottomMenu {
+			bottom: 40px;
+			width: 100%;
+			border-top: 1px solid #e3e3e3;
+		}
+		.categoryByBoard a {
+			float: left;
+			height: 40px;
+		}
+		.categoryByBoard a:active {
+			color: orange;
+		}
 	}
 	@media screen and (min-width: 1400px) {
 		.mainBody {
@@ -639,6 +747,33 @@
 			margin-left: 25px;
 			padding: 50px;
 		}
+		.categoryImage {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			width: 120px;
+			height: 120px;
+		}
+		.categoryTitle {
+			top: 30px;
+			left: 170px;
+			width: 150px;
+			height: 150px;
+			font-weight: 900;
+			font-size: 20px;
+		}
+		.categoryBottomMenu {
+			bottom: 40px;
+			width: 100%;
+			border-top: 1px solid #e3e3e3;
+		}
+		.categoryByBoard a {
+			float: left;
+			height: 40px;
+		}
+		.categoryByBoard a:active {
+			color: orange;
+		}
 	}
 	img {
 		border-radius: 10%;
@@ -692,7 +827,12 @@
 						"category_no": category_no
 					},
 					success: (data) => {
-						console.log(data);
+						var result = JSON.parse(data);
+						
+						console.log(result);
+						
+						$(".categoryImage").attr("src", "${pageContext.request.contextPath}/resources/image/" + result.category_image);
+						$(".categoryTitle").html(result.category_title);
 					}
 				})
 			}
@@ -724,7 +864,7 @@
 			<div class="currnetCategory">
 				<img class="categoryImage" src="${pageContext.request.contextPath}/resources/image/questionMark2.png">
 				<div class="categoryTitle">
-					타이틀
+					전체
 				</div>
 				<div class="categoryBottomMenu">
 					<div class="categoryByBoard list-group">

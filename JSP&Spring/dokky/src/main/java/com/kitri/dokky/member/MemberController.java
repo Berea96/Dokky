@@ -43,7 +43,8 @@ public class MemberController {
 	public String goHome(HttpSession session) {
 
 		if(session.getAttribute("facebookProfile") == null &&
-		   session.getAttribute("googleProfile") == null) {
+		   session.getAttribute("googleProfile") == null && 
+		   session.getAttribute("loginInfo") == null) {
 			return "redirect:/main/login";
 		}
 

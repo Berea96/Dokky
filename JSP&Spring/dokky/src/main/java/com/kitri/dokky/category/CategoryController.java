@@ -47,13 +47,7 @@ public class CategoryController {
 		
 		Category categoryInfo = service.getCategoryByNum(category_no);
 		
-		System.out.println(categoryInfo.getCategory_no());
-		System.out.println(categoryInfo.getCategory_title());
-		System.out.println(categoryInfo.getCategory_image());
-		
 		String result = categoryInfo.toString();
-		
-		System.out.println(result);
 		
 		return result;
 	}
