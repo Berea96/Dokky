@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 //게시물 카테고리에 대한 컨트롤러
@@ -33,6 +34,10 @@ public class CategoryController {
 		
 		ArrayList<Category> categoryList = service.getCategory();
 		
+		System.out.println(categoryList.get(0).getCategory_no());
+		System.out.println(categoryList.get(0).getCategory_title());
+		System.out.println(categoryList.get(0).getCategory_image());
+		
 		mav.addObject("categoryList", categoryList);
 		mav.setViewName("json/categoryJson");
 		
@@ -40,12 +45,13 @@ public class CategoryController {
 	}
 	
 	//카테고리 번호에 따른 카테고리 정보 불러오기 메소드
+	@ResponseBody
 	@RequestMapping("/getCategoryByNum")
 	public String getCategorybyNum(@RequestParam("category_no")int category_no) {
 		
 		Category categoryInfo = service.getCategoryByNum(category_no);
 		
-		return "";
+		return categoryInfo.toString();
 	}
 	
 	//카테고리 수정 메소드

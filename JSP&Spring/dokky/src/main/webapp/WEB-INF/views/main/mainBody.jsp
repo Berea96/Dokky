@@ -613,10 +613,41 @@
 			padding: 50px;
 		}
 	}
+	img {
+		border-radius: 10%;
+	}
 </style>
 <script type="text/javascript">
-	$(document).ready(() => {
+	$.showCategoryList = function() {
+		var leftCategory = $(".leftCategory");
+		var addTarget = $(leftCategory).children();
 		
+		$.ajax({
+			type: "GET",
+			url: "${pageContext.request.contextPath}/category/getCategory",
+			data: {},
+			success: (data) => {
+				console.log(data);
+				var result = JSON.parse(data);
+				console.log(result);
+				
+				var str = "";
+				$.each(result, (id, it) => {
+					str += "<a class='list-group-item list-group-item-action list-group-item-warning' href=''>" + 
+						   "<img src='${pageContext.request.contextPath}/resources/image/"+ 
+						   it.category_image + "' width='15px' height='15px'>" +
+						   it.category_title +
+						   "</a>";
+				})
+				
+				$(addTarget).empty
+				$(addTarget).append(str);
+			}
+		});
+	}
+
+	$(document).ready(() => {
+		$.showCategoryList();
 	});
 </script>
 <title>Home</title>
@@ -625,6 +656,8 @@
 	<div class="mainBody">
 		<div>
 			<div class="leftCategory">
+				<div class="list-group list-group-flush" style="width: 100%">
+				</div>
 			</div>
 			<div class="rightCategory"></div>
 			<div class="currnetCategory">메인</div>

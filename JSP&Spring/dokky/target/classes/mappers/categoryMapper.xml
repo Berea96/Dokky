@@ -15,7 +15,7 @@
 	</insert>
 	
 	<select id="selectCategory" resultMap="categoryResult">
-		select category_title from category_tb
+		select * from category_tb
 	</select>
 	
 	<select id="selectCategoryByNum" parameterType="int" resultMap="categoryResult">

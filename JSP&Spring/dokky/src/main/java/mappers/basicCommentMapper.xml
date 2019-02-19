@@ -19,7 +19,7 @@
 										  #{basic_comment_writer}, now())
 	</insert>
 	
-	<select id="selectComment" parameterType="String" resultMap="BasicCommentResult">
+	<select id="selectByNum" parameterType="String" resultMap="basicCommentResult">
 		select * from basic_comment_tb where basic_board_no=#{basic_board_no}
 	</select>
 	

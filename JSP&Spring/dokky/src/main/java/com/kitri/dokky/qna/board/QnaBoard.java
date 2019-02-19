@@ -33,73 +33,73 @@ public class QnaBoard {
 		this.qna_board_scrap = qna_board_scrap;
 	}
 
-	final int getQna_board_no() {
+	public final int getQna_board_no() {
 		return qna_board_no;
 	}
-	final void setQna_board_no(int qna_board_no) {
+	public final void setQna_board_no(int qna_board_no) {
 		this.qna_board_no = qna_board_no;
 	}
 
-	final String getQna_board_category_1() {
+	public final String getQna_board_category_1() {
 		return qna_board_category_1;
 	}
-	final void setQna_board_category_1(String qna_board_category_1) {
+	public final void setQna_board_category_1(String qna_board_category_1) {
 		this.qna_board_category_1 = qna_board_category_1;
 	}
 
-	final String getQna_board_category_2() {
+	public final String getQna_board_category_2() {
 		return qna_board_category_2;
 	}
-	final void setQna_board_category_2(String qna_board_category_2) {
+	public final void setQna_board_category_2(String qna_board_category_2) {
 		this.qna_board_category_2 = qna_board_category_2;
 	}
 
-	final String getQna_board_title() {
+	public final String getQna_board_title() {
 		return qna_board_title;
 	}
-	final void setQna_board_title(String qna_board_title) {
+	public final void setQna_board_title(String qna_board_title) {
 		this.qna_board_title = qna_board_title;
 	}
 
-	final String getQna_board_writer() {
+	public final String getQna_board_writer() {
 		return qna_board_writer;
 	}
-	final void setQna_board_writer(String qna_board_writer) {
+	public final void setQna_board_writer(String qna_board_writer) {
 		this.qna_board_writer = qna_board_writer;
 	}
 
-	final String getQna_board_tags() {
+	public final String getQna_board_tags() {
 		return qna_board_tags;
 	}
-	final void setQna_board_tags(String qna_board_tags) {
+	public final void setQna_board_tags(String qna_board_tags) {
 		this.qna_board_tags = qna_board_tags;
 	}
 
-	final String getQna_board_content() {
+	public final String getQna_board_content() {
 		return qna_board_content;
 	}
-	final void setQna_board_content(String qna_board_content) {
+	public final void setQna_board_content(String qna_board_content) {
 		this.qna_board_content = qna_board_content;
 	}
 
-	final int getQna_board_like_cnt() {
+	public final int getQna_board_like_cnt() {
 		return qna_board_like_cnt;
 	}
-	final void setQna_board_like_cnt(int qna_board_like_cnt) {
+	public final void setQna_board_like_cnt(int qna_board_like_cnt) {
 		this.qna_board_like_cnt = qna_board_like_cnt;
 	}
 
-	final Date getQna_board_date() {
+	public final Date getQna_board_date() {
 		return qna_board_date;
 	}
-	final void setQna_board_date(Date qna_board_date) {
+	public final void setQna_board_date(Date qna_board_date) {
 		this.qna_board_date = qna_board_date;
 	}
 
-	final int getQna_board_scrap() {
+	public final int getQna_board_scrap() {
 		return qna_board_scrap;
 	}
-	final void setQna_board_scrap(int qna_board_scrap) {
+	public final void setQna_board_scrap(int qna_board_scrap) {
 		this.qna_board_scrap = qna_board_scrap;
 	}
 
