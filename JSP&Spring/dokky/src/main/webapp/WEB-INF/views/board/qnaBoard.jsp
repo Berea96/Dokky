@@ -692,8 +692,6 @@
 					<div class="qnaCategoryContentTitle">
 						
 					</div>
-					<div class="qnaCategoryContentDescription">
-					</div>
 				</div>
 			</div>
 			<div class="community"></div>

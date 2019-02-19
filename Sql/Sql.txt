@@ -1,4 +1,4 @@
-#MySql
+﻿#MySql
 
 #데이터 베이스 생성
 create database dokky;
@@ -56,15 +56,17 @@ insert into sequence values(1000000, 'likrap_seq);
 
 #category테이블 생성
 create table category_tb(
-	category_1 varchar(50) unique,
-	category_2 varchar(50)
+	category_no int primary key auto_increment,
+	category_title varchar(50) unique,
+	category_image varchar(100) not null
 );
 
 #category데이터 추가
-insert into category_tb values('qna', '프로그래밍');
-insert into category_tb values('tech', '프로그래밍');
-insert into category_tb values('comm', 'blog');
-insert into category_tb values('jobs', '프로그래머');
+insert into category_tb values(0, '프로그래밍', 'programmingImage.jpg');
+insert into category_tb values(0, '과학', 'sienceImage.jpg');
+insert into category_tb values(0, '여행', 'travleImage.jpg');
+insert into category_tb values(0, '독서', 'readingImage.jpg');
+insert into category_tb values(0, '철학', 'philosophyImage.jpg');
 
 #basic_board테이블 생성
 create table basic_board_tb(
