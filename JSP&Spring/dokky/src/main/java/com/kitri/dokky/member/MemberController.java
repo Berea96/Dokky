@@ -124,7 +124,7 @@ public class MemberController {
 
 		model.addAttribute("memberInfo", getMemberInfoData);
 
-		return "member/info";
+		return "member/profile";
 	}
 
 	//정보 수정
@@ -137,7 +137,7 @@ public class MemberController {
 		Member editMemberData = service.getMember(member.getMem_id());
 
 		String result = 
-				editMemberData.getMem_nickname().equals(member.getMem_nickname()) ?
+				editMemberData.getMem_name().equals(member.getMem_name()) ?
 						"{'result':'sucess'}" : "{'result':'fail'}";
 
 		return result;

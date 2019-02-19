@@ -84,18 +84,20 @@ public class SNSController {
             
             if (expireTime != null && expireTime < System.currentTimeMillis()) {
                 accessToken = accessGrant.getRefreshToken();
-            };
-        
+            }
+            
             Connection<Facebook> connection = connectionFactory.createConnection(accessGrant);
             Facebook facebook = connection == null ? new FacebookTemplate(accessToken) : connection.getApi();
             UserOperations userOperations = facebook.userOperations();
             
-            try {            
+            try {
                 String [] fields = { "id", "email",  "name"};
                 User userProfile = facebook.fetchObject("me", User.class, fields);
                 System.out.println("유저이메일 : " + userProfile.getEmail());
                 System.out.println("유저 id : " + userProfile.getId());
                 System.out.println("유저 name : " + userProfile.getName());
+                
+                
                 
                 session.setAttribute("facebookProfile", userProfile);
                 

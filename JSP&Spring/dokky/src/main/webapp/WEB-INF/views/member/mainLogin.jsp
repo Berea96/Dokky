@@ -812,10 +812,9 @@ body {
 		var mem_pw = $("#joinPw").val();
 		var mem_name = $("#joinName").val();
 		var mem_email = $("#joinEmail").val();
-		var mem_nickname = $("#joinNickName").val();
 		
 		if(mem_id == "" || mem_pw == "" || mem_name == "" || 
-		   mem_email == "" || mem_nickname == "") {
+		   mem_email == "") {
 			alert("빈칸없이 입력해주세요.");
 		}
 		else {
@@ -827,7 +826,6 @@ body {
 					"mem_pw": mem_pw,
 					"mem_name": mem_name,
 					"mem_email": mem_email,
-					"mem_nickname": mem_nickname,
 					"mem_image": "googleProfile.jpg"
 				},
 				success: (data) => {
@@ -941,7 +939,6 @@ body {
 						<input class="form-control" type="password" id="joinPw" name="mem_pw" placeholder="Password">
 						<input class="form-control" type="text" id="joinName" name="mem_name" placeholder="Name">
 						<input class="form-control" type="text" id="joinEmail" name="mem_email" placeholder="Email">
-						<input class="form-control" type="text" id="joinNickName" name="mem_nickname" placeholder="NickName">
 						<div><a href="#">취소</a></div>
 						<input id="joinButton" class="btn btn-primary" type="button" value="가입">
 					</div>

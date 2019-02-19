@@ -8,20 +8,18 @@ public class Member {
 	private String mem_pw;
 	private String mem_email;
 	private String mem_name;
-	private String mem_nickname;
 	private String mem_image;
 	private int mem_exp;
 	private Date mem_date;
 	
 	public Member() {}
 
-	public Member(String mem_id, String mem_pw, String mem_email, String mem_name, String mem_nickname,
+	public Member(String mem_id, String mem_pw, String mem_email, String mem_name,
 			String mem_image, int mem_exp, Date mem_date) {
 		this.mem_id = mem_id;
 		this.mem_pw = mem_pw;
 		this.mem_email = mem_email;
 		this.mem_name = mem_name;
-		this.mem_nickname = mem_nickname;
 		this.mem_image = mem_image;
 		this.mem_exp = mem_exp;
 		this.mem_date = mem_date;
@@ -55,13 +53,6 @@ public class Member {
 		this.mem_name = mem_name;
 	}
 	
-	public final String getMem_nickname() {
-		return mem_nickname;
-	}
-	public final void setMem_nickname(String mem_nickname) {
-		this.mem_nickname = mem_nickname;
-	}
-	
 	public final String getMem_image() {
 		return mem_image;
 	}
@@ -86,7 +77,7 @@ public class Member {
 	@Override
 	public String toString() {
 		return "Member [mem_id=" + mem_id + ", mem_pw=" + mem_pw + ", mem_email=" + mem_email + ", mem_name=" + mem_name
-				+ ", mem_nickname=" + mem_nickname + ", mem_image=" + mem_image + ", mem_exp=" + mem_exp + ", mem_date="
+				+ ", mem_image=" + mem_image + ", mem_exp=" + mem_exp + ", mem_date="
 				+ mem_date + "]";
 	}
 }

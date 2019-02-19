@@ -1409,7 +1409,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="memberNickName">${sessionScope.loginInfo.mem_nickname}</div>
+							<div class="memberNickName">${sessionScope.loginInfo.mem_name}</div>
 							<div class="quickWrite">
 								<a class="btn btn-danger write-board" data-toggle="modal"
 									data-target="#exampleModal"> <i
