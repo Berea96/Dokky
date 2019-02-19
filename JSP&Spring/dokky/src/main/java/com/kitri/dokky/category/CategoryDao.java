@@ -5,7 +5,8 @@ import java.util.ArrayList;
 //카테고리 Dao Interface
 public interface CategoryDao {
 	void insertCategory(Category category);
-	ArrayList<Category> selectCategory(String category_1);
+	ArrayList<Category> selectCategory();
+	Category selectCategoryByNum(int category_no);
 	void updateCategory(Category category);
-	void deleteCategory(Category category);
+	void deleteCategory(int cateogyr_no);
 }

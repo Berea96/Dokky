@@ -5,25 +5,29 @@
 <mapper namespace="com.kitri.dokky.category.CategoryDao">
 
 	<resultMap id="categoryResult" type="com.kitri.dokky.category.Category">
-		<result column="category_1" property="category_1" />
-		<result column="category_2" property="category_2" />
+		<result column="category_no" property="category_no" />
+		<result column="category_title" property="category_title" />
+		<result column="category_image" property="category_image" />
 	</resultMap>
 	
 	<insert id="insertCategory" parameterType="com.kitri.dokky.category.Category">
-		insert into category_tb values(#{category_1}, #{category_2})
+		insert into category_tb values(0, #{category_title}, #{category_image})
 	</insert>
 	
-	<select id="selectCategory" parameterType="String" resultMap="categoryResult">
-		select * from category_tb where category_1=#{category_1}
+	<select id="selectCategory" resultMap="categoryResult">
+		select category_title from category_tb
+	</select>
+	
+	<select id="selectCategoryByNum" parameterType="int" resultMap="categoryResult">
+		select * from category_tb where category_no=#{category_no}
 	</select>
 	
 	<update id="updateCategory" parameterType="com.kitri.dokky.category.Category">
-		update category_tb set category_2=#{category_2}
-						   where category_1=#{category_1}
+		update category_tb set category_no=#{category_no}
+						   where category_title=#{category_title}
 	</update>
 	
-	<delete id="deleteCategory" parameterType="com.kitri.dokky.category.Category">
-		delete from category_tb where category_1=#{category_1}
-								and category_2=#{category_2}
+	<delete id="deleteCategory" parameterType="int">
+		delete from category_tb where category_no=#{category_no}
 	</delete>
 </mapper>

@@ -614,7 +614,11 @@
 		}
 	}
 </style>
-
+<script type="text/javascript">
+	$(document).ready(() => {
+		
+	});
+</script>
 <title>Home</title>
 </head>
 <body>
@@ -623,7 +627,7 @@
 			<div class="leftCategory">
 			</div>
 			<div class="rightCategory"></div>
-			<div class="currnetCategory"></div>
+			<div class="currnetCategory">메인</div>
 			<div class="community"></div>
 			<div class="adBoard"></div>
 			<div class="sideAdBoard"></div>

@@ -5,7 +5,8 @@ import java.util.ArrayList;
 //카테고리 Service Interface
 public interface CategoryService {
 	void addCategory(Category category);
-	ArrayList<Category> getCategory(String category_1);
+	ArrayList<Category> getCategory();
+	Category getCategoryByNum(int category_no);
 	void editCategory(Category category);
-	void delCategory(Category category);
+	void delCategory(int category_no);
 }

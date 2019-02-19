@@ -263,7 +263,7 @@
 	}
 	.memberDiv {
 		position: absolute;
-		left: 1000px;
+		left: 804px;
 	}
 	.memberAct {
 		top: 11px;
@@ -285,7 +285,7 @@
 		left: 480px;
 	}
 	.googleSearch input {
-		width: 300px;
+		width: 200px;
 	}
 	.memberInfo {
 		top: 8px;
@@ -344,6 +344,13 @@
 	.memberExp {
 		display: none;
 	}
+	.quickWrite {
+		left: -56px;
+	}
+	.quickWrite a {
+		width: 100px;
+		height: 30px;
+	}
 	.act {
 		top: 8px;
 		left: 150px;
@@ -353,7 +360,7 @@
 	}
 }
 
-@media screen and (min-width: 870px) and (max-width: 1070px) {
+@media screen and (min-width: 870px) and (max-width: 960px) {
 	.main-menu {
 		position: fixed;
 		top: 0px;
@@ -377,7 +384,7 @@
 	}
 	.memberDiv {
 		position: absolute;
-		left: 1000px;
+		right: 50px;
 	}
 	.memberAct {
 		top: 11px;
@@ -399,7 +406,133 @@
 		left: 480px;
 	}
 	.googleSearch input {
-		width: 300px;
+		width: 200px;
+	}
+	.memberInfo {
+		top: 8px;
+		left: 0px;
+	}
+	.memberInfo div:nth-child(3) {
+		right: 4px;
+	}
+	.memberInfo div:nth-child(4) {
+		right: 0px;
+	}
+	.memberInfo div, .memberAct div {
+		float: left;
+	}
+	.memberInfo>div:nth-child(n + 2) a {
+		background-color: #ff9966;
+	}
+	.memberImage {
+		top: -5px;
+		right: 60px;
+	}
+	.memberImage img {
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+	}
+	.memberMenuList {
+		top: 60px;
+		right: -25px;
+		width: 100px;
+		height: 200px;
+		text-align: center;
+		font-size: 16px;
+		background-color: #e4e4e4;
+		box-shadow: 2px 2px 2px gray;
+	}
+	.memberMenuList div:nth-child(1) {
+		top: 10px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(2) {
+		top: 30px;
+		width: 100%;
+	}
+	.memberMenuList div:nth-child(3) {
+		top: 50px;
+		left: 1px;
+		width: 100%;
+	}
+	.memberMenuList div a {
+		background-color: #e4e4e4;
+	}
+	.memberNickName {
+		display: none;
+	}
+	.memberExp {
+		display: none;
+	}
+	.quickWrite {
+		left: -56px;
+	}
+	.quickWrite a {
+		width: 100px;
+		height: 30px;
+	}
+	.sign-out, .mem-info {
+		width: 45px;
+		font-size: 20px;
+		background-color: #ff9966;
+	}
+	.act {
+		top: 8px;
+		left: 150px;
+	}
+	.act a {
+		background-color: #ff9966;
+	}
+}
+
+@media screen and (min-width: 960px) and (max-width: 1070px) {
+	.main-menu {
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		height: 50px;
+		align-content: center;
+		z-index: 1;
+		background-color: white;
+		box-shadow: 1px 1px 3px gray;
+	}
+	.main-menu div div {
+		position: absolute;
+	}
+	.brand {
+		text-align: center;
+	}
+	.brand a {
+		margin-left: 5px;
+		font-size: 30px;
+		color: #ff9966;
+	}
+	.memberDiv {
+		position: absolute;
+		right: 50px;
+	}
+	.memberAct {
+		top: 11px;
+		right: 36px;
+	}
+	.memberAct div:nth-child(1) {
+		right: 3px;
+	}
+	.memberAct div a {
+		background-color: #ff9966;
+	}
+	.sign-in, .sign-up {
+		font-size: 20px;
+		background-color: #ff9966;
+	}
+	.googleSearch {
+		position: absolute;
+		top: 10px;
+		left: 480px;
+	}
+	.googleSearch input {
+		width: 250px;
 	}
 	.memberInfo {
 		top: 8px;

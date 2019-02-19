@@ -673,6 +673,11 @@
 		}
 	}
 </style>
+<script type="text/javascript">
+	$(document).ready(() => {
+		
+	});
+</script>
 
 <title>Home</title>
 </head>

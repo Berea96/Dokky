@@ -25,9 +25,15 @@ public class CategoryServiceImpl implements CategoryService {
 
 	//큰 카테고리에 따른 작은 카테고리를 불러오는 메소드
 	@Override
-	public ArrayList<Category> getCategory(String category_1) {
+	public ArrayList<Category> getCategory() {
 		dao = sqlSession.getMapper(CategoryDao.class);
-		return dao.selectCategory(category_1);
+		return dao.selectCategory();
+	}
+	
+	@Override
+	public Category getCategoryByNum(int category_no) {
+		dao = sqlSession.getMapper(CategoryDao.class);
+		return dao.selectCategoryByNum(category_no);
 	}
 
 	//카테고리 수정 메소드
@@ -39,8 +45,8 @@ public class CategoryServiceImpl implements CategoryService {
 
 	//카테고리 삭제 메소드
 	@Override
-	public void delCategory(Category category) {
+	public void delCategory(int category_no) {
 		dao = sqlSession.getMapper(CategoryDao.class);
-		dao.deleteCategory(category);
+		dao.deleteCategory(category_no);
 	}
 }

@@ -29,15 +29,23 @@ public class CategoryController {
 	
 	//큰 카테고리에 따른 작은 카테고리 불러오기 메소드
 	@RequestMapping("/getCategory")
-	public ModelAndView getCategory(@RequestParam("category_1")String category_1,
-			ModelAndView mav) {
+	public ModelAndView getCategory(ModelAndView mav) {
 		
-		ArrayList<Category> categoryList = service.getCategory(category_1);
+		ArrayList<Category> categoryList = service.getCategory();
 		
 		mav.addObject("categoryList", categoryList);
 		mav.setViewName("json/categoryJson");
 		
 		return mav;
+	}
+	
+	//카테고리 번호에 따른 카테고리 정보 불러오기 메소드
+	@RequestMapping("/getCategoryByNum")
+	public String getCategorybyNum(@RequestParam("category_no")int category_no) {
+		
+		Category categoryInfo = service.getCategoryByNum(category_no);
+		
+		return "";
 	}
 	
 	//카테고리 수정 메소드
@@ -51,9 +59,9 @@ public class CategoryController {
 	
 	//카테고리 삭제 메소드
 	@RequestMapping("/delCategory")
-	public String delCategory(Category category) {
+	public String delCategory(@RequestParam("category_no")int category_no) {
 		
-		service.delCategory(category);
+		service.delCategory(category_no);
 		
 		return "";
 	}
