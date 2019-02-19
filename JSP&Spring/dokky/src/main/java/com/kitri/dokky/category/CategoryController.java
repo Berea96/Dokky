@@ -34,10 +34,6 @@ public class CategoryController {
 		
 		ArrayList<Category> categoryList = service.getCategory();
 		
-		System.out.println(categoryList.get(0).getCategory_no());
-		System.out.println(categoryList.get(0).getCategory_title());
-		System.out.println(categoryList.get(0).getCategory_image());
-		
 		mav.addObject("categoryList", categoryList);
 		mav.setViewName("json/categoryJson");
 		
@@ -51,7 +47,15 @@ public class CategoryController {
 		
 		Category categoryInfo = service.getCategoryByNum(category_no);
 		
-		return categoryInfo.toString();
+		System.out.println(categoryInfo.getCategory_no());
+		System.out.println(categoryInfo.getCategory_title());
+		System.out.println(categoryInfo.getCategory_image());
+		
+		String result = categoryInfo.toString();
+		
+		System.out.println(result);
+		
+		return result;
 	}
 	
 	//카테고리 수정 메소드

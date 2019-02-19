@@ -287,6 +287,33 @@
 			margin-left: 25px;
 			padding: 50px;
 		}
+		.categoryImage {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			width: 120px;
+			height: 120px;
+		}
+		.categoryTitle {
+			top: 30px;
+			left: 170px;
+			width: 150px;
+			height: 150px;
+			font-weight: 900;
+			font-size: 20px;
+		}
+		.categoryBottomMenu {
+			bottom: 40px;
+			width: 100%;
+			border-top: 1px solid #e3e3e3;
+		}
+		.categoryByBoard a {
+			float: left;
+			height: 40px;
+		}
+		.categoryByBoard a:active {
+			color: orange;
+		}
 	}
 	@media screen and (min-width: 970px) and (max-width: 1070px) {
 		.mainBody {
@@ -631,9 +658,9 @@
 				var result = JSON.parse(data);
 				console.log(result);
 				
-				var str = "";
+				var str = "<a  val='0'  class='bodyA list-group-item list-group-item-action list-group-item-warning' href='#'><i class='fa fa-television'></i>전체</a>";
 				$.each(result, (id, it) => {
-					str += "<a class='list-group-item list-group-item-action list-group-item-warning' href=''>" + 
+					str += "<a val='" + it.category_no + "' class='bodyA list-group-item list-group-item-action list-group-item-warning' href='#'>" + 
 						   "<img src='${pageContext.request.contextPath}/resources/image/"+ 
 						   it.category_image + "' width='15px' height='15px'>" +
 						   it.category_title +
@@ -642,12 +669,46 @@
 				
 				$(addTarget).empty
 				$(addTarget).append(str);
+				
+				$.addCategoryListAction();
 			}
+		});
+	}
+	
+	$.addCategoryListAction = function() {
+		$(".bodyA").click((e) => {
+			var target = $(e.target)
+			console.log(target);
+			var category_no = $(target).attr("val");
+			
+			if(category_no == 0) {
+				location.href = "${pageContext.request.contextPath}/member/home";
+			}
+			else {
+				$.ajax({
+					type: "GET",
+					url: "${pageContext.request.contextPath}/category/getCategoryByNum",
+					data: {
+						"category_no": category_no
+					},
+					success: (data) => {
+						console.log(data);
+					}
+				})
+			}
+		});
+	}
+	
+	$.getBoardListAction = function() {
+		$(".categoryByBoard a").click((e) => {
+			var target = $(e.target);
+			$(target).attr("disabled");
 		});
 	}
 
 	$(document).ready(() => {
 		$.showCategoryList();
+		$.getBoardListAction();
 	});
 </script>
 <title>Home</title>
@@ -660,7 +721,18 @@
 				</div>
 			</div>
 			<div class="rightCategory"></div>
-			<div class="currnetCategory">메인</div>
+			<div class="currnetCategory">
+				<img class="categoryImage" src="${pageContext.request.contextPath}/resources/image/questionMark2.png">
+				<div class="categoryTitle">
+					타이틀
+				</div>
+				<div class="categoryBottomMenu">
+					<div class="categoryByBoard list-group">
+						<a class="list-group-item" href="#">소통</a>
+						<a class="list-group-item" href="#">질문</a>
+					</div>
+				</div>
+			</div>
 			<div class="community"></div>
 			<div class="adBoard"></div>
 			<div class="sideAdBoard"></div>
@@ -676,6 +748,9 @@
 				그외 ...
 			</footer>
 		</div>
+	</div>
+	<div class="boardListForm" style="display: none;">
+		<div></div>
 	</div>
 </body>
 </html>
