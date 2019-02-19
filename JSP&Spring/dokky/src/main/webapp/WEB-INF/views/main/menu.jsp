@@ -1183,7 +1183,7 @@
 		if(selectedItem != "none") {
 			$.ajax({
 				type: "GET",
-				url: "${pageContext.request.conetxtPath}/category/getCategory",
+				url: "${pageContext.request.contextPath}/category/getCategory",
 				data: {},
 				success: (data) => {
 					console.log(data);
@@ -1288,10 +1288,11 @@
 				</c:if>
 			</div>
 			<div class="act">
-				<a
-					href="${pageContext.request.contextPath}/board/getBoardByCategory?cate=qna"
-					class="btn btn-danger">Qna</a> <a class="btn btn-danger">Tech</a> <a
-					class="btn btn-danger">Community</a> <a class="btn btn-danger">Jobs</a>
+				<a href="${pageContext.request.contextPath}/qnArticle/getBoardByCategory?cate=qna"
+					class="btn btn-danger">Qna</a> 
+				<a href="${pageContext.request.contextPath}/article/getBoardByCategory?cate=tech" class="btn btn-danger">Tech</a> 
+				<a href="${pageContext.request.contextPath}/article/getBoardByCategory?cate=comm" class="btn btn-danger">Community</a>
+				<a href="${pageContext.request.contextPath}/article/getBoardByCategory?cate=jobs" class="btn btn-danger">Jobs</a>
 				<a href="https://github.com/Berea96/Dokky" class="btn btn-danger"><i
 					class="fa fa-github"></i></a>
 			</div>

@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -18,8 +19,17 @@ public class QnaBoardController {
 	@Resource(name="qnaBoardService")
 	private QnaBoardService service;
 	
+	//카테고리에 따른 게시판 이동 메소드
+	@RequestMapping(value="/getBoardByCategory", method=RequestMethod.GET)
+	public String getBoardByCategory(@RequestParam("cate")String category) {
+		
+		//ArrayList<QnaBoard> boardList = service.getBoardByCategory(category);
+		
+		return "board/qnaBoard";
+	}
+	
 	//카테고리에 따른 게시판 목록 불러오기 메소드
-	@RequestMapping("/getBoardByCategory")
+	@RequestMapping(value="/getBoardByCategory", method=RequestMethod.POST)
 	public ModelAndView getBoardByCategory(@RequestParam("cate")String category,
 			ModelAndView mav) {
 		

@@ -18,32 +18,14 @@
 	}
 </style>
 
-<script type="text/javascript">
-		$(document).ready(() => {
-			$("#loginButton").click(() => {
-				location.href = "${pageContext.request.contextPath}/member/login";
-			});
-		})
-	</script>
 <title>Home</title>
 </head>
 <body class="bg-light">
-	<c:set var="home" value="/dokky/WEB-INF/views/main/home.jsp"></c:set>
-	<c:set var="login" value="/dokky/WEB-INF/views/member/login.jsp"></c:set>
-	<c:set var="join" value="/dokky/WEB-INF/views/member/join.jsp"></c:set>
 	<div class="menu">
 		<%@ include file="menu.jsp" %>
 	</div>
 	<div class="body">
-		<c:if test="${pageContext.request.requestURI eq home}">
-			<%@ include file="mainBody.jsp" %>
-		</c:if>
-		<c:if test="${pageContext.request.requestURI eq login}">
-			<%@ include file="../member/mainLogin.jsp" %>
-		</c:if>
-		<c:if test="${pageContext.request.requestURI eq join}">
-			<%@ include file="../member/join.jsp" %>
-		</c:if>
+		<%@ include file="mainBody.jsp" %>
 	</div>
 </body>
 </html>

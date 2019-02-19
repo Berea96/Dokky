@@ -14,7 +14,7 @@
 
 <style>
 	body {
-		background-image: url("${pageContext.request.contextPath}/resources/OCIA6716.JPG");
+		background-image: url("${pageContext.request.contextPath}/resources/image/OCIA6716.JPG");
 		background-repeat: repeat;
 		background-size: 50%;
 	}

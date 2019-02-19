@@ -616,13 +616,16 @@
 <title>Home</title>
 </head>
 <body>
+	<div class="menu">
+		<%@ include file="../main/menu.jsp" %>
+	</div>
 	<div class="mainBody">
 		<div>
 			<div class="leftCategory">
 			<a class="btn btn-primary"><i class="fa fa-github"></i></a>
 			</div>
 			<div class="rightCategory"></div>
-			<div class="currnetCategory"></div>
+			<div class="currnetCategory">tech</div>
 			<div class="community"></div>
 			<div class="adBoard"></div>
 			<div class="sideAdBoard"></div>

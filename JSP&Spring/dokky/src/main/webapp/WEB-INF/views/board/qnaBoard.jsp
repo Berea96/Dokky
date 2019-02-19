@@ -13,8 +13,8 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <style>
-	body {
-			background-color: #fbf0db;
+	.body {
+		background-color: #fbf0db;
 	}
 	@media screen and (max-width: 630px) {
 		.mainBody {
@@ -615,14 +615,17 @@
 
 <title>Home</title>
 </head>
-<body>
+<body class="body">
+	<div class="menu">
+		<%@ include file="../main/menu.jsp" %>
+	</div>
 	<div class="mainBody">
 		<div>
 			<div class="leftCategory">
 			<a class="btn btn-primary"><i class="fa fa-github"></i></a>
 			</div>
 			<div class="rightCategory"></div>
-			<div class="currnetCategory"></div>
+			<div class="currnetCategory">qna</div>
 			<div class="community"></div>
 			<div class="adBoard"></div>
 			<div class="sideAdBoard"></div>
