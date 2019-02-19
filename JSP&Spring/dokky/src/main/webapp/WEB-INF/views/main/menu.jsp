@@ -1337,6 +1337,13 @@
 		$("#category_1").change((e) => {
 			changeCategory(e);
 		});
+		
+		$(".body").click(() => {
+			
+			if($(".memberMenuList").css("display") == "block") {
+				$(".memberMenuList").css("display", "none");
+			}
+		})
 	});
 </script>
 <title>Insert title here</title>
@@ -1384,6 +1391,10 @@
 								<c:if test="${!empty sessionScope.googleProfile}">
 									<a class="memberMenu" href=""><img
 										src='${sessionScope.googleProfile.getImageUrl()}'> </a>
+								</c:if>
+								<c:if test="${!empty sessionScope.loginInfo}">
+									<a class="memberMenu" href=""><img
+										src='${pageContext.request.contextPath}/resources/memImage/${sessionScope.loginInfo.mem_image}'> </a>
 								</c:if>
 								<div class="memberMenuList" style="display: none;">
 									<div>

@@ -195,13 +195,27 @@ body {
 		padding-top: 3px;
 	}
 	
-	.emailSignUpForm input:nth-child(5) {
+	.emailSignUpForm input:nth-child(7) {
 		position: relative;
 		top: 75px;
 		width: 40%;
 		margin-left: 5%;
 		margin-right: 5%;
 		margin-top: 5px;
+	}
+	
+	#idCheckOk {
+		position: absolute;
+		top: 90px;
+		right: 30px;
+		color: green;
+	}
+	
+	#idCheckNo {
+		position: absolute;
+		top: 90px;
+		right: 30px;
+		color: red;
 	}
 	
 	.footer {
@@ -353,11 +367,25 @@ body {
 		margin-top: 8px;
 	}
 	
-	.emailSignUpForm input:nth-child(5) {
+	.emailSignUpForm input:nth-child(7) {
 		position: relative;
 		top: 75px;
 		width: 140px;
 		margin-top: 5px;
+	}
+	
+	#idCheckOk {
+		position: absolute;
+		top: 90px;
+		right: 20px;
+		color: green;
+	}
+	
+	#idCheckNo {
+		position: absolute;
+		top: 90px;
+		right: 20px;
+		color: red;
 	}
 	
 	.footer {
@@ -510,11 +538,25 @@ body {
 		margin-top: 8px;
 	}
 	
-	.emailSignUpForm input:nth-child(5) {
+	.emailSignUpForm input:nth-child(7) {
 		position: relative;
 		top: 75px;
 		width: 140px;
 		margin-top: 5px;
+	}
+	
+	#idCheckOk {
+		position: absolute;
+		top: 90px;
+		right: 20px;
+		color: green;
+	}
+	
+	#idCheckNo {
+		position: absolute;
+		top: 90px;
+		right: 20px;
+		color: red;
 	}
 	
 	.footer {
@@ -524,15 +566,6 @@ body {
 		background-color: #d9d9d9;
 		border-radius: 5px;
 		text-align: center;
-	}
-	
-	footer {
-		position: absolute;
-		border-top: 1px solid;
-		bottom: 0px;
-		width: 900px;
-		height: 150px;
-		padding: 50px;
 	}
 }
 
@@ -676,11 +709,25 @@ body {
 		margin-top: 8px;
 	}
 	
-	.emailSignUpForm input:nth-child(5) {
+	.emailSignUpForm input:nth-child(7) {
 		position: relative;
 		top: 75px;
 		width: 140px;
 		margin-top: 5px;
+	}
+	
+	#idCheckOk {
+		position: absolute;
+		top: 90px;
+		right: 20px;
+		color: green;
+	}
+	
+	#idCheckNo {
+		position: absolute;
+		top: 90px;
+		right: 20px;
+		color: red;
 	}
 	
 	.footer {
@@ -690,15 +737,6 @@ body {
 		background-color: #d9d9d9;
 		border-radius: 5px;
 		text-align: center;
-	}
-	
-	footer {
-		position: absolute;
-		border-top: 1px solid;
-		bottom: 0px;
-		width: 900px;
-		height: 150px;
-		padding: 50px;
 	}
 }
 </style>
@@ -768,6 +806,71 @@ body {
 		e.preventDefault();
 		console.log("성공");
 	}
+	
+	$.joinAction = function() {
+		var mem_id = $("#joinId").val();
+		var mem_pw = $("#joinPw").val();
+		var mem_name = $("#joinName").val();
+		var mem_email = $("#joinEmail").val();
+		var mem_nickname = $("#joinNickName").val();
+		
+		if(mem_id == "" || mem_pw == "" || mem_name == "" || 
+		   mem_email == "" || mem_nickname == "") {
+			alert("빈칸없이 입력해주세요.");
+		}
+		else {
+			$.ajax({
+				type: "POST",
+				url: "${pageContext.request.contextPath}/member/join",
+				data: {
+					"mem_id": mem_id,
+					"mem_pw": mem_pw,
+					"mem_name": mem_name,
+					"mem_email": mem_email,
+					"mem_nickname": mem_nickname,
+					"mem_image": "googleProfile.jpg"
+				},
+				success: (data) => {
+					console.log(data);
+					
+					var result = eval("(" + data + ")");
+					if(result.result == "success") {
+						alert("가입 성공! 로그인 해주세요!");
+						location.href = "${pageContext.request.contextPath}/main/login";
+					}
+					else {
+						alert("가입 실패! 다시 확인해주세요.");
+					}
+				}
+			});
+		}
+	}
+	
+	$.checkExsistId = function(mem_id) {
+		$.ajax({
+			type: "POST",
+			url: "${pageContext.request.contextPath}/member/checkId",
+			data: {
+				"mem_id": mem_id
+			},
+			success: (data) => {
+				var result = eval('(' + data + ')');
+				
+				if(mem_id == "") {
+					$("#idCheckOk").css("display", "none");
+					$("#idCheckNo").css("display", "none");
+				}
+				else if(result.result == "none") {
+					$("#idCheckOk").css("display", "block");
+					$("#idCheckNo").css("display", "none");
+				}
+				else {
+					$("#idCheckOk").css("display", "none");
+					$("#idCheckNo").css("display", "block");
+				}
+			}
+		});
+	}
 
 	$(document).ready(() => {
 		$("#loginButton").click(() => {
@@ -781,6 +884,14 @@ body {
 		$(".emailSignUpForm a").click((e) => {
 			$.ContinueWithSNS(e);
 		})
+		
+		$("#joinButton").click(() => {
+			$.joinAction();
+		});
+		
+		$("#joinId").on("keyup", () => {
+			$.checkExsistId($("#joinId").val());
+		});
 	})
 </script>
 <title>Login</title>
@@ -799,21 +910,9 @@ body {
 				<div class="loginInputForm">
 					<form id="loginAction" action="${pageContext.request.contextPath}/member/login" method="POST">
 						<div class="form-group">
-							<c:if test="${!empty sessionScope.facebookProfile}">
-							<input class="form-control" type="text" id="loginId" name="mem_id" placeholder="이메일" value="${facebookProfile.email}">
-							<input class="form-control" type="text" id="loginPw" name="mem_pw" placeholder="비밀번호">
+							<input class="form-control" type="text" id="loginId" name="mem_id" placeholder="아이디">
+							<input class="form-control" type="password" id="loginPw" name="mem_pw" placeholder="비밀번호">
 							<input id="loginButton" type="button" class="btn btn-primary" value="로그인">
-							</c:if>
-							<c:if test="${!empty sessionScope.googleProfile}">
-							<input class="form-control" type="text" id="loginId" name="mem_id" placeholder="이메일" value="${googleProfile.getAccountEmail()}">
-							<input class="form-control" type="text" id="loginPw" name="mem_pw" placeholder="비밀번호">
-							<input id="loginButton" type="button" class="btn btn-primary" value="로그인">
-							</c:if>
-							<c:if test="${empty googleProfile && empty facebookProfile}">
-							<input class="form-control" type="text" id="loginId" name="mem_id" placeholder="이메일">
-							<input class="form-control" type="text" id="loginPw" name="mem_pw" placeholder="비밀번호">
-							<input id="loginButton" type="button" class="btn btn-primary" value="로그인">
-							</c:if>
 						</div>
 					</form>
 				</div>
@@ -838,13 +937,17 @@ body {
 				<div class="emailSignUpLogo">회원가입</div>
 				<form action="">
 					<div class="form-group">
-						<input class="form-control" type="text" name="name" placeholder="Name">
-						<input class="form-control" type="text" name="email" placeholder="Email">
-						<input class="form-control" type="password" name="pass" placeholder="Password">
+						<input class="form-control" type="text" id="joinId" name="mem_id" placeholder="Id">
+						<input class="form-control" type="password" id="joinPw" name="mem_pw" placeholder="Password">
+						<input class="form-control" type="text" id="joinName" name="mem_name" placeholder="Name">
+						<input class="form-control" type="text" id="joinEmail" name="mem_email" placeholder="Email">
+						<input class="form-control" type="text" id="joinNickName" name="mem_nickname" placeholder="NickName">
 						<div><a href="#">취소</a></div>
-						<input class="btn btn-primary" type="button" value="가입">
+						<input id="joinButton" class="btn btn-primary" type="button" value="가입">
 					</div>
 				</form>
+				<i id="idCheckOk" class="fa fa-check" style="display:none;"></i>
+				<i id="idCheckNo" class="fa fa-close" style="display:none;"></i>
 			</div>
 			<div class="footer">
 				원작자: 김규정
