@@ -120,6 +120,9 @@
 			height: 150px;
 			padding: 50px;
 		}
+		.qnaCategoryImage {
+			display: none;
+		}
 	}
 	@media screen and (min-width: 630px) and (max-width: 769px) {
 		.mainBody {
@@ -223,6 +226,9 @@
 			height: 150px;
 			padding: 50px;
 		}
+		.qnaCategoryImage {
+			display: none;
+		}
 	}
 	@media screen and (min-width: 768px) and (max-width: 970px) {
 		.mainBody {
@@ -285,6 +291,36 @@
 			height: 150px;
 			margin-left: 25px;
 			padding: 50px;
+		}
+		.qnaCategoryImage {
+			position: absolute;
+			top: 25px;
+			left: 25px;
+			width: 150px;
+			height: 150px;
+			border-radius: 20%;
+		}
+		.qnaCategoryContent {
+			position: absolute;
+			top: 20px;
+			left: 200px;
+			width: 380px;
+			height: 160px;
+			background-color: orange;
+		}
+		.qnaCategoryContentTitle {
+			position: absolute;
+			top: 5px;
+			width: 100%;
+			height: 50px;
+			background-color: red;
+		}
+		.qnaCategoryContentDescription {
+			position: absolute;
+			top: 70px;
+			width: 100%;
+			height: 80px;
+			background-color: blue;
 		}
 	}
 	@media screen and (min-width: 970px) and (max-width: 1070px) {
@@ -349,6 +385,11 @@
 			height: 150px;
 			margin-left: 25px;
 			padding: 50px;
+		}
+		.qnaCategoryImage {
+			width: 150px;
+			height: 150px;
+			border-radius: 20%;
 		}
 	}
 	@media screen and (min-width: 1070px) and (max-width: 1200px) {
@@ -415,6 +456,11 @@
 			margin-left: 25px;
 			padding: 50px;
 		}
+		.qnaCategoryImage {
+			width: 150px;
+			height: 150px;
+			border-radius: 20%;
+		}
 	}
 	@media screen and (min-width: 1200px) and (max-width: 1300px) {
 		.mainBody {
@@ -479,6 +525,11 @@
 			height: 150px;
 			margin-left: 25px;
 			padding: 50px;
+		}
+		.qnaCategoryImage {
+			width: 150px;
+			height: 150px;
+			border-radius: 20%;
 		}
 	}
 	@media screen and (min-width: 1300px) and (max-width: 1400px){
@@ -546,6 +597,11 @@
 			margin-left: 25px;
 			padding: 50px;
 		}
+		.qnaCategoryImage {
+			width: 150px;
+			height: 150px;
+			border-radius: 20%;
+		}
 	}
 	@media screen and (min-width: 1400px) {
 		.mainBody {
@@ -610,6 +666,11 @@
 			margin-left: 25px;
 			padding: 50px;
 		}
+		.qnaCategoryImage {
+			width: 150px;
+			height: 150px;
+			border-radius: 20%;
+		}
 	}
 </style>
 
@@ -625,7 +686,16 @@
 			<a class="btn btn-primary"><i class="fa fa-github"></i></a>
 			</div>
 			<div class="rightCategory"></div>
-			<div class="currnetCategory">qna</div>
+			<div class="currnetCategory">
+				<img class="qnaCategoryImage" src="${pageContext.request.contextPath}/resources/image/questionMark2.png">
+				<div class="qnaCategoryContent">
+					<div class="qnaCategoryContentTitle">
+						
+					</div>
+					<div class="qnaCategoryContentDescription">
+					</div>
+				</div>
+			</div>
 			<div class="community"></div>
 			<div class="adBoard"></div>
 			<div class="sideAdBoard"></div>
