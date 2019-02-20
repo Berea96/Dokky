@@ -117,9 +117,9 @@ public class MemberController {
 	}
 
 	//정보 수정
-	//@ResponseBody
+	@ResponseBody
 	@RequestMapping("/editMember")
-	public String editMember(Member member) {
+	public String editMember(Member member, HttpSession session) {
 
 		service.editMember(member);
 
@@ -127,8 +127,12 @@ public class MemberController {
 
 		String result = 
 				editMemberData.getMem_name().equals(member.getMem_name()) ?
-						"{'result':'sucess'}" : "{'result':'fail'}";
+						"{'result':'success'}" : "{'result':'fail'}";
 
+		if(result.equals("{'result':'success'}")) {
+			session.setAttribute("loginInfo", editMemberData);
+		}
+		
 		return result;
 	}
 

@@ -136,12 +136,22 @@
 			font-size: 22px;
 		}
 		
-		.profileInfoNameEdit {
-			position: relative !important;
+		.profileInfoEditForm {
+			width: 400px;
+		}
+		
+		.profileInfoEditForm form input:nth-child(1) {
 			float: left;
-			font-size: 20px;
-			margin-top: 3px;
-			margin-left: 20px;
+			width: 70%;
+		}
+		
+		.profileInfoEditForm form input:nth-child(2) {
+			float: left;
+			width: 15%;
+		}
+		
+		.profileInfoEditForm form input:nth-child(3) {
+			width: 15%;
 		}
 		
 		.profileInfoBoardList {
@@ -570,31 +580,55 @@
 	}
 </style>
 <script type="text/javascript">
-	function profileInfoNameOut() {
-		console.log("out");
-	}
-	
-	function profileInfoNameIn() {
-		console.log("in");
-	}
-	
 	function profileNameEdit(e) {
 		e.preventDefault();
+		$(".profileInfoEditForm").css("display", "block");
+		$(".profileInfoNameBox").css("display", "none");
+	}
+	
+	function profileEditCancle() {
+		$(".profileInfoEditForm").css("display", "none");
+		$(".profileInfoNameBox").css("display", "block");
+	}
+	
+	function profileEditUpdate() {
+		var mem_name = $("#profileInfoEditName").val();
+		
+		if(mem_name == "") {
+			alert("빈칸없이");
+		}
+		else {
+			$.ajax({
+				type: "POST",
+				url: "${pageContext.request.contextPath}/member/editMember",
+				data: {
+					"mem_id": "${sessionScope.loginInfo.mem_id}",
+					"mem_name": mem_name
+				},
+				success: (data) => {
+					var result = eval('(' + data + ')');
+					
+					if(result.result == "success") {
+						location.href = "${pageContext.request.contextPath}/member/profile/${sessionScope.loginInfo.mem_id}";
+					}
+					else {
+					}
+				}
+			});
+		}
 	}
 	
 	$(document).ready(() => {
-		$(".profileInfoName").hover(() => {
-			profileInfoNameIn();
-			$(".profileInfoNameEdit").css("display", "block");
-		}, () => {
-			profileInfoNameOut();
-			$(".profileInfoNameEdit").css("display", "none");
+		$(".profileInfoName a").click((e) => {
+			profileNameEdit(e);
+		})
+		
+		$("#profileInfoEditCancle").click(() => {
+			profileEditCancle();
 		});
 		
-		$(".profileInfoNameEditA").click((e) => {
-			profileNameEdit(e);
-			$(".profileInfoEditForm").css("display", "block");
-			$(".profileInfoNameBox").css("display", "none");
+		$("#profileInfoEditUpdate").click(() => {
+			profileEditUpdate();
 		});
 	});
 </script>
@@ -621,16 +655,17 @@
 					<img src="${pageContext.request.contextPath}/resources/memImage/${sessionScope.loginInfo.mem_image}">
 				</div>
 				<div class="profileInfoName">
-					<div class="profileInfoNameBox">${sessionScope.loginInfo.mem_name}</div>
+					<div class="profileInfoNameBox">
+						<a href="">
+						${sessionScope.loginInfo.mem_name}
+						</a>
+					</div>
 					<div class="profileInfoEditForm" style="display: none;">
 						<form class="form-group">
-							<input class="form-control" type="text">
-							<input class="btn btn-light" type="button" value="취소">
-							<input class="btn btn-primary" type="button" value="수정">
+							<input id="profileInfoEditName" class="form-control" type="text" value="${sessionScope.loginInfo.mem_name}">
+							<input id="profileInfoEditCancle" class="btn btn-light" type="button" value="취소">
+							<input id="profileInfoEditUpdate" class="btn btn-primary" type="button" value="수정">
 						</form>
-					</div>
-					<div class="profileInfoNameEdit" style="display:none;">
-					<a class="profileInfoNameEditA" href="">Edit</a>
 					</div>
 				</div>
 				<div class="profileInfoBoardList">
