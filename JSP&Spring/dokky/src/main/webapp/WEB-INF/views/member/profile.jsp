@@ -127,10 +127,21 @@
 		.profileInfoName {
 			top: 30px;
 			left: 240px;
+			width: 400px;
 		}
 		
 		.profileInfoNameBox {
+			position: relative !important;
+			float: left;
 			font-size: 22px;
+		}
+		
+		.profileInfoNameEdit {
+			position: relative !important;
+			float: left;
+			font-size: 20px;
+			margin-top: 3px;
+			margin-left: 20px;
 		}
 		
 		.profileInfoBoardList {
@@ -559,7 +570,32 @@
 	}
 </style>
 <script type="text/javascript">
+	function profileInfoNameOut() {
+		console.log("out");
+	}
+	
+	function profileInfoNameIn() {
+		console.log("in");
+	}
+	
+	function profileNameEdit(e) {
+		e.preventDefault();
+	}
+	
 	$(document).ready(() => {
+		$(".profileInfoName").hover(() => {
+			profileInfoNameIn();
+			$(".profileInfoNameEdit").css("display", "block");
+		}, () => {
+			profileInfoNameOut();
+			$(".profileInfoNameEdit").css("display", "none");
+		});
+		
+		$(".profileInfoNameEditA").click((e) => {
+			profileNameEdit(e);
+			$(".profileInfoEditForm").css("display", "block");
+			$(".profileInfoNameBox").css("display", "none");
+		});
 	});
 </script>
 <title>Home</title>
@@ -586,6 +622,16 @@
 				</div>
 				<div class="profileInfoName">
 					<div class="profileInfoNameBox">${sessionScope.loginInfo.mem_name}</div>
+					<div class="profileInfoEditForm" style="display: none;">
+						<form class="form-group">
+							<input class="form-control" type="text">
+							<input class="btn btn-light" type="button" value="취소">
+							<input class="btn btn-primary" type="button" value="수정">
+						</form>
+					</div>
+					<div class="profileInfoNameEdit" style="display:none;">
+					<a class="profileInfoNameEditA" href="">Edit</a>
+					</div>
 				</div>
 				<div class="profileInfoBoardList">
 					<div class="profileInfoBoardListBasicBox">
