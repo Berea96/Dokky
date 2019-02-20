@@ -195,7 +195,7 @@ body {
 		padding-top: 3px;
 	}
 	
-	.emailSignUpForm input:nth-child(7) {
+	.emailSignUpForm input:nth-child(6) {
 		position: relative;
 		top: 75px;
 		width: 40%;
@@ -367,7 +367,7 @@ body {
 		margin-top: 8px;
 	}
 	
-	.emailSignUpForm input:nth-child(7) {
+	.emailSignUpForm input:nth-child(6) {
 		position: relative;
 		top: 75px;
 		width: 140px;
@@ -538,7 +538,7 @@ body {
 		margin-top: 8px;
 	}
 	
-	.emailSignUpForm input:nth-child(7) {
+	.emailSignUpForm input:nth-child(6) {
 		position: relative;
 		top: 75px;
 		width: 140px;
@@ -709,7 +709,7 @@ body {
 		margin-top: 8px;
 	}
 	
-	.emailSignUpForm input:nth-child(7) {
+	.emailSignUpForm input:nth-child(6) {
 		position: relative;
 		top: 75px;
 		width: 140px;

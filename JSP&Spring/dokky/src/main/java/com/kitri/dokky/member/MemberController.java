@@ -146,23 +146,32 @@ public class MemberController {
 	@ResponseBody
 	@RequestMapping("/deleteMember") 
 	public String deleteMember(@RequestParam("mem_id")String mem_id,
+			@RequestParam("mem_pw")String mem_pw,
 			HttpSession session) {
-
-		service.deleteMember(mem_id);
-
-		Member deleteMemberData = service.getMember(mem_id);
+		
+		Member getMemberData = service.getMember(mem_id);
 
 		String result = "";
-
-		if(deleteMemberData != null) {
-			//result = "error/error";
-			result = "{'result':'fail'}";
+		
+		if(getMemberData.getMem_pw().equals(mem_pw)) {
+			service.deleteMember(mem_id);
+			
+			Member deleteMemberData = service.getMember(mem_id);
+			
+			
+			if(deleteMemberData != null) {
+				//result = "error/error";
+				result = "{'result':'fail'}";
+			}
+			else {
+				sessionInvalidate(session);
+				
+				//result = "redirect:/main/home";
+				result = "{'result':'success'}";
+			}
 		}
 		else {
-			sessionInvalidate(session);
-
-			//result = "redirect:/main/home";
-			result = "{'result':'success'}";
+			result = "{'result':'passNo'}";
 		}
 
 		return result;

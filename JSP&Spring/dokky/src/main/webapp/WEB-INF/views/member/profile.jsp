@@ -653,21 +653,28 @@
 	
 	function deletePass() {
 		var deletePass = $("#delete-pass").val();
+		var deletePassCheck = $("#delete-passCheck").val();
 		
 		if(deletePass == "") {
 			$("#delete-pass-span").html("빈칸없이").css("color", "red");
+			passCheckPoint = 0;
 		}
 		else {
-			$("#delete-pass-span").html("").css("color", "green");
+			if(deletePass == deletePassCheck) {
+				$("#delete-pass-span").html("").css("color", "green");
+				passCheckPoint = 3;
+			}
+			else {
+				$("#delete-pass-span").html("").css("color", "green");
+				$("#delete-passCheck-span").html("불일치").css("color", "red");
+				passCheckPoint = 2;
+			}
 		}
 	}
 	
 	function deletePassCheck() {
 		var deletePass = $("#delete-pass").val();
 		var deletePassCheck = $("#delete-passCheck").val();
-		
-		console.log(deletePass);
-		console.log(deletePassCheck);
 		
 		if(deletePass == "") {
 			$("#delete-passCheck-span").html("빈칸없이").css("color", "red");
@@ -696,14 +703,26 @@
 			$("#delete-passCheck-span").html("불일치").css("color", "red");
 		}
 		else if(passCheckPoint == 3) {
+			var deletePass = $("#delete-pass").val();
 			$.ajax({
 				type: "POST",
 				url: "${pageContext.request.contextPath}/member/deleteMember",
 				data: {
-					
+					"mem_id": "${sessionScope.loginInfo.mem_id}",
+					"mem_pw": deletePass
 				},
 				success: (data) => {
-					console.log(data);
+					var result = eval('(' + data + ')');
+					if(result.result == "passNo") {
+						alert("비밀번호를 잘못 입력하셨습니다.");
+					}
+					else if(result.result == "fail") {
+						alert("탈퇴 실패 다시 시도해주세요.");
+					}
+					else {
+						alert("탈퇴되었습니다.");
+						location.href = "${pageContext.request.contextPath}/main/login";
+					}
 				}
 			});
 		}
