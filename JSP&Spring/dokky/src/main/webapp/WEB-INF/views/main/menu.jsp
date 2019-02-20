@@ -1360,6 +1360,30 @@ body {
 		}
 	}
 	
+	function writeFormAction() {
+		$("#write-title").on("keydown", (e) => {
+			if(e.keyCode == 13) {
+				return false;
+			}
+		});
+		
+		$("#write-title").on("keyup", (e) => {
+			$("#title-span").html("");
+		});
+		
+		$("#write-category-1").change(() => {
+			$("#category-1-span").html("");
+		});
+		
+		$("#write-category-2").change(() => {
+			$("#category-2-span").html("");
+		});
+		
+		$("#write-content").on("keyup", () => {
+			$("#content-span").html("");
+		});
+	}
+	
 	$(document).ready(() => {
 		console.log("${sessionScope.loginInfo.mem_image}");
 		$("#googleSearchText").keydown((key) => {
@@ -1382,27 +1406,7 @@ body {
 			boardWrite();
 		});
 		
-		$("#write-title").on("keydown", (e) => {
-			if(e.keyCode == 13) {
-				return false;
-			}
-		});
-		
-		$("#write-title").on("keyup", (e) => {
-			$("#title-span").html("");
-		});
-		
-		$("#write-category-1").change(() => {
-			$("#category-1-span").html("");
-		});
-		
-		$("#write-category-2").change(() => {
-			$("#category-2-span").html("");
-		});
-		
-		$("#write-content").on("keyup", () => {
-			$("#content-span").html("");
-		});
+		writeFormAction();
 	});
 </script>
 <title>Insert title here</title>
