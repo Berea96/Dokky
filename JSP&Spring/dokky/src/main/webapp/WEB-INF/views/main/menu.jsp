@@ -75,7 +75,8 @@
 		border-radius: 50%;
 	}
 	.memberMenuList {
-		position: absolute; top : 60px;
+		position: absolute;
+		top: 60px;
 		right: -25px;
 		width: 100px;
 		height: 200px;
@@ -187,7 +188,8 @@
 		border-radius: 50%;
 	}
 	.memberMenuList {
-		position: absolute; top : 60px;
+		position: absolute;
+		top: 60px;
 		right: -25px;
 		width: 100px;
 		height: 200px;
@@ -1281,6 +1283,7 @@
 		background-color: #ff9966;
 	}
 }
+
 body {
 	background-color: #fbf0db;
 }
@@ -1363,46 +1366,16 @@ body {
 				<input id="googleSearchText" type="text" placeholder="Google 검색">
 			</div>
 			<div class="memberDiv">
-				<c:if
-					test="${empty sessionScope.loginInfo && empty sessionScope.facebookProfile && empty sessionScope.googleProfile}">
-					<div class="memberAct">
-						<div>
-							<a class="btn btn-danger sign-in"
-								href="${pageContext.request.contextPath}/main/login"> <i
-								class="fa fa-sign-in"></i> <span class="noLogin"
-								style="font-size: 14px">로그인</span>
-							</a>
-						</div>
-						<div>
-							<a class="btn btn-danger sign-up"
-								href="${pageContext.request.contextPath}/member/join"> <i
-								class="fa fa-user"></i> <span class="noLogin"
-								style="font-size: 14px">회원가입</span>
-							</a>
-						</div>
-					</div>
-				</c:if>
-				<c:if
-					test="${!empty sessionScope.loginInfo || !empty sessionScope.facebookProfile || !empty sessionScope.googleProfile}">
+				<c:if test="${!empty sessionScope.loginInfo}">
 					<div class="memberCard">
 						<div class="memberInfo">
 							<div class="memberImage">
-								<c:if test="${!empty sessionScope.facebookProfile}">
-									<a class="memberMenu" href=""><img
-										src='http://graph.facebook.com/${sessionScope.facebookProfile.id}/picture?width=250&height=250'>
-									</a>
-								</c:if>
-								<c:if test="${!empty sessionScope.googleProfile}">
-									<a class="memberMenu" href=""><img
-										src='${sessionScope.googleProfile.getImageUrl()}'> </a>
-								</c:if>
-								<c:if test="${!empty sessionScope.loginInfo}">
 									<a class="memberMenu" href=""><img
 										src='${sessionScope.loginInfo.mem_image}'> </a>
-								</c:if>
 								<div class="memberMenuList" style="display: none;">
 									<div>
-										<a href="${pageContext.request.contextPath}/member/profile/${sessionScope.loginInfo.mem_id}">프로필</a>
+										<a
+											href="${pageContext.request.contextPath}/member/profile/${sessionScope.loginInfo.mem_id}">프로필</a>
 									</div>
 									<div>
 										<a
@@ -1433,12 +1406,16 @@ body {
 				</c:if>
 			</div>
 			<div class="act">
-				<a href="${pageContext.request.contextPath}/qnArticle/getBoardByCategory?cate=qna"
-					class="btn btn-danger">Qna</a> 
-				<a href="${pageContext.request.contextPath}/article/getBoardByCategory?cate=tech" class="btn btn-danger">Tech</a> 
-				<a href="${pageContext.request.contextPath}/article/getBoardByCategory?cate=comm" class="btn btn-danger">Community</a>
-				<a href="${pageContext.request.contextPath}/article/getBoardByCategory?cate=jobs" class="btn btn-danger">Jobs</a>
-				<a href="https://github.com/Berea96/Dokky" class="btn btn-danger"><i
+				<a
+					href="${pageContext.request.contextPath}/qnArticle/getBoardByCategory?cate=qna"
+					class="btn btn-danger">Qna</a> <a
+					href="${pageContext.request.contextPath}/article/getBoardByCategory?cate=tech"
+					class="btn btn-danger">Tech</a> <a
+					href="${pageContext.request.contextPath}/article/getBoardByCategory?cate=comm"
+					class="btn btn-danger">Community</a> <a
+					href="${pageContext.request.contextPath}/article/getBoardByCategory?cate=jobs"
+					class="btn btn-danger">Jobs</a> <a
+					href="https://github.com/Berea96/Dokky" class="btn btn-danger"><i
 					class="fa fa-github"></i></a>
 			</div>
 		</div>
@@ -1457,22 +1434,19 @@ body {
 				<div class="modal-body">
 					<form action="" method="POST">
 						<div class="form-group">
-							<label for="write-title">제목</label>
-							<input id="write-title" class="form-control" type="text" placeholder="title">
-							<label for="write-category-1">게시판</label>
-							<select id="category_1" class="form-control" name="category_1">
-								<option value="none"> 선택
-								<option value="qna"> Q&A
-								<option value="tech"> Tech
-								<option value="comm"> Community
-								<option value="jobs"> Jobs
-							</select>
-							<label for="write-category-2">카테고리</label>
-							<select id="category_2" class="form-control" name="category_2">
-							</select>
-							<label for="write-tags">태그</label>
-							<input class="form-control" type="text" placeholder="">
-							<label for="write-title">제목</label>
+							<label for="write-title">제목</label> <input id="write-title"
+								class="form-control" type="text" placeholder="title"> <label
+								for="write-category-1">게시판</label> <select id="category_1"
+								class="form-control" name="category_1">
+								<option value="none">선택
+								<option value="qna">Q&A
+								<option value="tech">Tech
+								<option value="comm">Community
+								<option value="jobs">Jobs
+							</select> <label for="write-category-2">카테고리</label> <select
+								id="category_2" class="form-control" name="category_2">
+							</select> <label for="write-tags">태그</label> <input class="form-control"
+								type="text" placeholder=""> <label for="write-title">제목</label>
 							<textarea class="form-control" rows="10px" placeholder="content"></textarea>
 						</div>
 					</form>
