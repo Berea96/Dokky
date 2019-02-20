@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 //기본 게시판에 대한 컨트롤러
@@ -32,6 +33,7 @@ public class BasicBoardController {
 	}
 	
 	//글작성에 대한 메소드
+	@ResponseBody
 	@RequestMapping("/writeBoard")
 	public String writeBoard(BasicBoard board) {
 		

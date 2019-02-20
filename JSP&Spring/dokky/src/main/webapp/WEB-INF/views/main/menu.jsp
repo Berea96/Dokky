@@ -1337,17 +1337,26 @@ body {
 		}
 		else if(category_1 == "none") {
 			$("#category-1-span").html("게시판을 선택하세요").css("color", "red");
-			
 		}
 		else if(category_2 == "none") {
 			$("#category-2-span").html("카테고리를 선택하세요").css("color", "red");
-			
 		}
 		else if(content == "") {
 			$("#content-span").html("빈칸없이 입력해주세요").css("color", "red");
 		}
 		else {
+			var boardTarget = category_1 == "comm" ? "comm" : "qna";
 			
+			$.ajax({
+				type: "POST",
+				url: "${pageContext.request.contextPath}/" + boardTarget + "/writeBoard",
+				data: {
+					
+				},
+				success: (data) => {
+						
+				}
+			});
 		}
 	}
 	
@@ -1358,7 +1367,7 @@ body {
 		});
 		
 		$(".memberMenu").click((e) => {
-			memberMenu(e)
+			memberMenu(e);
 		});
 		
 		$(".body").click(() => {

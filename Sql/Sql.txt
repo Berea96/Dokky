@@ -47,7 +47,7 @@ create table basic_board_tb(
 	basic_board_scrap_cnt int,
 	primary key(basic_board_no),
 	constraint basic_board_writer_fk foreign key(basic_board_writer)
-	references member_td(mem_id) on delete cascade
+	references member_tb(mem_id) on delete cascade
 );
 
 #basic_comment테이블 생성
