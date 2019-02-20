@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +27,11 @@ import org.springframework.social.oauth2.GrantType;
 import org.springframework.social.oauth2.OAuth2Operations;
 import org.springframework.social.oauth2.OAuth2Parameters;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.kitri.dokky.member.Member;
+import com.kitri.dokky.member.MemberService;
 
 @Controller
 @RequestMapping("/main")
@@ -47,6 +50,9 @@ public class SNSController {
 	private OAuth2Parameters googleOAuth2Parameters;
 	
 	private OAuth2Operations oauthOperations;
+	
+	@Resource(name="memberService")
+	private MemberService service;
 	
 	@RequestMapping("/login")
 	public String goLogin(HttpSession session) {
@@ -92,14 +98,30 @@ public class SNSController {
             
             try {
                 String [] fields = { "id", "email",  "name"};
-                User userProfile = facebook.fetchObject("me", User.class, fields);
-                System.out.println("유저이메일 : " + userProfile.getEmail());
-                System.out.println("유저 id : " + userProfile.getId());
-                System.out.println("유저 name : " + userProfile.getName());
+                User profile = facebook.fetchObject("me", User.class, fields);
+                System.out.println("유저이메일 : " + profile.getEmail());
+                System.out.println("유저 id : " + profile.getId());
+                System.out.println("유저 name : " + profile.getName());
                 
+                Member getFacebookMember = service.getMember(profile.getId());
                 
-                
-                session.setAttribute("facebookProfile", userProfile);
+                if(getFacebookMember == null) {
+                	Member facebookMember = new Member();
+                    facebookMember.setMem_id(profile.getId());
+                    facebookMember.setMem_name(profile.getName());
+                    facebookMember.setMem_email(profile.getEmail());
+                    facebookMember.setMem_image("http://graph.facebook.com/" + profile.getId() + "/picture?width=250&height=250");
+                    facebookMember.setMem_type("facebook");
+                    
+                    service.joinMember(facebookMember);
+                    
+                    facebookMember = service.getMember(facebookMember.getMem_id());
+                    
+                    loginSession(session, facebookMember);
+                }
+                else {
+                	loginSession(session, getFacebookMember);
+                }
                 
             } catch (MissingAuthorizationException e) {
                 e.printStackTrace();
@@ -124,7 +146,6 @@ public class SNSController {
         if (expireTime != null && expireTime < System.currentTimeMillis()) {
             accessToken = accessGrant.getRefreshToken();
             System.out.printf("accessToken is expired. refresh token = {}", accessToken);
- 
         }
  
         Connection<Google> connection = googleConnectionFactory.createConnection(accessGrant);
@@ -138,8 +159,26 @@ public class SNSController {
         System.out.println("User Email : " + profile.getAccountEmail());
         System.out.println("User Profile : " + profile.getImageUrl());
         
-        session.setAttribute("googleProfile", profile);
- 
+        Member getGoogleMember = service.getMember(profile.getId());
+        
+        if(getGoogleMember == null) {
+        	Member googleMember = new Member();
+        	googleMember.setMem_id(profile.getId());
+        	googleMember.setMem_name(profile.getDisplayName());
+        	googleMember.setMem_email(profile.getAccountEmail());
+        	googleMember.setMem_image(profile.getImageUrl());
+        	googleMember.setMem_type("google");
+        	
+        	service.joinMember(googleMember);
+        	
+        	googleMember = service.getMember(googleMember.getMem_id());
+        	
+        	loginSession(session, googleMember);
+        }
+        else {
+        	loginSession(session, getGoogleMember);
+        }
+        
         // Access Token 취소
         try {
             System.out.println("Closing Token....");
@@ -160,5 +199,10 @@ public class SNSController {
             e.printStackTrace();
         }
 		return "redirect:/member/home";
+	}
+	
+	//loginInfo session set Attribute
+	public void loginSession(HttpSession session, Member loginInfo) {
+		session.setAttribute("loginInfo", loginInfo);
 	}
 }

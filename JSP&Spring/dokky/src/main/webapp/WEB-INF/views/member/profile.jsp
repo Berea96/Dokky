@@ -283,8 +283,22 @@
 			left: 8px;
 			width: 200px;
 			height: 590px;
-			
-			background-color: #fae3b6;
+			background-color: white;
+		}
+		
+		.profileBoardMenuLogo {
+			width: 100%;
+			padding: 10px;
+			border-bottom: 1px solid;
+		}
+		
+		.profileBoardMenu div:nth-child(2) {
+			top: 41px;
+			width: 100%;
+		}
+		
+		.profileBoardMenu div:nth-child(2) a {
+			height: 40px;
 		}
 		
 		.profileAddBox {
@@ -293,8 +307,7 @@
 			left: 824px;
 			width: 200px;
 			height: 590px;
-			
-			background-color: #fae3b6;
+			background-color: white;
 		}
 		
 		.profileInfoBox {
@@ -306,6 +319,127 @@
 			background-color: white;
 		}
 		
+		.profileInfoImage {
+			top: 20px;
+			left: 20px;
+		}
+		
+		.profileInfoImage img {
+			width: 170px;
+			height: 170px;
+		}
+		
+		.profileInfoName {
+			top: 30px;
+			left: 240px;
+			width: 400px;
+		}
+		
+		.profileInfoNameBox {
+			position: relative !important;
+			float: left;
+			font-size: 22px;
+		}
+		
+		.profileInfoEditForm {
+			width: 400px;
+		}
+		
+		.profileInfoEditForm form input:nth-child(1) {
+			float: left;
+			width: 70%;
+		}
+		
+		.profileInfoEditForm form input:nth-child(2) {
+			float: left;
+			width: 15%;
+		}
+		
+		.profileInfoEditForm form input:nth-child(3) {
+			width: 15%;
+		}
+		
+		.profileInfoBoardList {
+			top: 130px;
+			left: 240px;
+		}
+		
+		.profileInfoBoardListBasicBox {
+			left: 0px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoBoardListBasiclabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoBoardListBasicCnt {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoBoardListQnaBox {
+			left: 100px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoBoardListQnalabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoBoardListQnaCnt {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoExpBox {
+			left: 200px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoExpLabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoExp {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoDeleteBox {
+			right: 30px;
+			bottom: 30px;
+		}
+		
+		.profileInfoDeleteBox a {
+			color: red;
+			font-size: 20px;
+		}
+		
 		.boardListBox {
 			top: 260px;
 			left: 216px;
@@ -313,6 +447,12 @@
 			height: 800px;
 			border-radius: 5px;
 			background-color: white;
+		}
+		
+		.boardListBoxLogo {
+			width: 100%;
+			padding: 10px;
+			border-bottom: 1px solid;
 		}
 		
 		footer {
@@ -346,10 +486,25 @@
 		.profileBoardMenu {
 			position: absolute;
 			top: 260px;
+			left: 8px;
 			width: 200px;
 			height: 590px;
-			
-			background-color: #fae3b6;
+			background-color: white;
+		}
+		
+		.profileBoardMenuLogo {
+			width: 100%;
+			padding: 10px;
+			border-bottom: 1px solid;
+		}
+		
+		.profileBoardMenu div:nth-child(2) {
+			top: 41px;
+			width: 100%;
+		}
+		
+		.profileBoardMenu div:nth-child(2) a {
+			height: 40px;
 		}
 		
 		.profileAddBox {
@@ -358,8 +513,7 @@
 			left: 824px;
 			width: 200px;
 			height: 590px;
-			
-			background-color: #fae3b6;
+			background-color: white;
 		}
 		
 		.profileInfoBox {
@@ -371,6 +525,127 @@
 			background-color: white;
 		}
 		
+		.profileInfoImage {
+			top: 20px;
+			left: 20px;
+		}
+		
+		.profileInfoImage img {
+			width: 170px;
+			height: 170px;
+		}
+		
+		.profileInfoName {
+			top: 30px;
+			left: 240px;
+			width: 400px;
+		}
+		
+		.profileInfoNameBox {
+			position: relative !important;
+			float: left;
+			font-size: 22px;
+		}
+		
+		.profileInfoEditForm {
+			width: 400px;
+		}
+		
+		.profileInfoEditForm form input:nth-child(1) {
+			float: left;
+			width: 70%;
+		}
+		
+		.profileInfoEditForm form input:nth-child(2) {
+			float: left;
+			width: 15%;
+		}
+		
+		.profileInfoEditForm form input:nth-child(3) {
+			width: 15%;
+		}
+		
+		.profileInfoBoardList {
+			top: 130px;
+			left: 240px;
+		}
+		
+		.profileInfoBoardListBasicBox {
+			left: 0px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoBoardListBasiclabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoBoardListBasicCnt {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoBoardListQnaBox {
+			left: 100px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoBoardListQnalabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoBoardListQnaCnt {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoExpBox {
+			left: 200px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoExpLabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoExp {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoDeleteBox {
+			right: 30px;
+			bottom: 30px;
+		}
+		
+		.profileInfoDeleteBox a {
+			color: red;
+			font-size: 20px;
+		}
+		
 		.boardListBox {
 			top: 260px;
 			left: 216px;
@@ -378,6 +653,12 @@
 			height: 800px;
 			border-radius: 5px;
 			background-color: white;
+		}
+		
+		.boardListBoxLogo {
+			width: 100%;
+			padding: 10px;
+			border-bottom: 1px solid;
 		}
 		
 		footer {
@@ -414,8 +695,22 @@
 			left: 8px;
 			width: 200px;
 			height: 590px;
-			
-			background-color: #fae3b6;
+			background-color: white;
+		}
+		
+		.profileBoardMenuLogo {
+			width: 100%;
+			padding: 10px;
+			border-bottom: 1px solid;
+		}
+		
+		.profileBoardMenu div:nth-child(2) {
+			top: 41px;
+			width: 100%;
+		}
+		
+		.profileBoardMenu div:nth-child(2) a {
+			height: 40px;
 		}
 		
 		.profileAddBox {
@@ -424,7 +719,7 @@
 			left: 824px;
 			width: 200px;
 			height: 590px;
-			background-color: #fae3b6;
+			background-color: white;
 		}
 		
 		.profileInfoBox {
@@ -436,6 +731,127 @@
 			background-color: white;
 		}
 		
+		.profileInfoImage {
+			top: 20px;
+			left: 20px;
+		}
+		
+		.profileInfoImage img {
+			width: 170px;
+			height: 170px;
+		}
+		
+		.profileInfoName {
+			top: 30px;
+			left: 240px;
+			width: 400px;
+		}
+		
+		.profileInfoNameBox {
+			position: relative !important;
+			float: left;
+			font-size: 22px;
+		}
+		
+		.profileInfoEditForm {
+			width: 400px;
+		}
+		
+		.profileInfoEditForm form input:nth-child(1) {
+			float: left;
+			width: 70%;
+		}
+		
+		.profileInfoEditForm form input:nth-child(2) {
+			float: left;
+			width: 15%;
+		}
+		
+		.profileInfoEditForm form input:nth-child(3) {
+			width: 15%;
+		}
+		
+		.profileInfoBoardList {
+			top: 130px;
+			left: 240px;
+		}
+		
+		.profileInfoBoardListBasicBox {
+			left: 0px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoBoardListBasiclabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoBoardListBasicCnt {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoBoardListQnaBox {
+			left: 100px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoBoardListQnalabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoBoardListQnaCnt {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoExpBox {
+			left: 200px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoExpLabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoExp {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoDeleteBox {
+			right: 30px;
+			bottom: 30px;
+		}
+		
+		.profileInfoDeleteBox a {
+			color: red;
+			font-size: 20px;
+		}
+		
 		.boardListBox {
 			top: 260px;
 			left: 216px;
@@ -443,6 +859,12 @@
 			height: 800px;
 			border-radius: 5px;
 			background-color: white;
+		}
+		
+		.boardListBoxLogo {
+			width: 100%;
+			padding: 10px;
+			border-bottom: 1px solid;
 		}
 		
 		footer {
@@ -479,8 +901,22 @@
 			left: 8px;
 			width: 200px;
 			height: 590px;
-			
-			background-color: #fae3b6;
+			background-color: white;
+		}
+		
+		.profileBoardMenuLogo {
+			width: 100%;
+			padding: 10px;
+			border-bottom: 1px solid;
+		}
+		
+		.profileBoardMenu div:nth-child(2) {
+			top: 41px;
+			width: 100%;
+		}
+		
+		.profileBoardMenu div:nth-child(2) a {
+			height: 40px;
 		}
 		
 		.profileAddBox {
@@ -489,8 +925,7 @@
 			left: 824px;
 			width: 200px;
 			height: 590px;
-			
-			background-color: #fae3b6;
+			background-color: white;
 		}
 		
 		.profileInfoBox {
@@ -502,6 +937,127 @@
 			background-color: white;
 		}
 		
+		.profileInfoImage {
+			top: 20px;
+			left: 20px;
+		}
+		
+		.profileInfoImage img {
+			width: 170px;
+			height: 170px;
+		}
+		
+		.profileInfoName {
+			top: 30px;
+			left: 240px;
+			width: 400px;
+		}
+		
+		.profileInfoNameBox {
+			position: relative !important;
+			float: left;
+			font-size: 22px;
+		}
+		
+		.profileInfoEditForm {
+			width: 400px;
+		}
+		
+		.profileInfoEditForm form input:nth-child(1) {
+			float: left;
+			width: 70%;
+		}
+		
+		.profileInfoEditForm form input:nth-child(2) {
+			float: left;
+			width: 15%;
+		}
+		
+		.profileInfoEditForm form input:nth-child(3) {
+			width: 15%;
+		}
+		
+		.profileInfoBoardList {
+			top: 130px;
+			left: 240px;
+		}
+		
+		.profileInfoBoardListBasicBox {
+			left: 0px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoBoardListBasiclabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoBoardListBasicCnt {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoBoardListQnaBox {
+			left: 100px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoBoardListQnalabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoBoardListQnaCnt {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoExpBox {
+			left: 200px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoExpLabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoExp {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoDeleteBox {
+			right: 30px;
+			bottom: 30px;
+		}
+		
+		.profileInfoDeleteBox a {
+			color: red;
+			font-size: 20px;
+		}
+		
 		.boardListBox {
 			top: 260px;
 			left: 216px;
@@ -509,6 +1065,12 @@
 			height: 800px;
 			border-radius: 5px;
 			background-color: white;
+		}
+		
+		.boardListBoxLogo {
+			width: 100%;
+			padding: 10px;
+			border-bottom: 1px solid;
 		}
 		
 		footer {
@@ -545,7 +1107,22 @@
 			left: 8px;
 			width: 200px;
 			height: 590px;
-			background-color: #fae3b6;
+			background-color: white;
+		}
+		
+		.profileBoardMenuLogo {
+			width: 100%;
+			padding: 10px;
+			border-bottom: 1px solid;
+		}
+		
+		.profileBoardMenu div:nth-child(2) {
+			top: 41px;
+			width: 100%;
+		}
+		
+		.profileBoardMenu div:nth-child(2) a {
+			height: 40px;
 		}
 		
 		.profileAddBox {
@@ -554,7 +1131,7 @@
 			left: 824px;
 			width: 200px;
 			height: 590px;
-			background-color: #fae3b6;
+			background-color: white;
 		}
 		
 		.profileInfoBox {
@@ -566,6 +1143,127 @@
 			background-color: white;
 		}
 		
+		.profileInfoImage {
+			top: 20px;
+			left: 20px;
+		}
+		
+		.profileInfoImage img {
+			width: 170px;
+			height: 170px;
+		}
+		
+		.profileInfoName {
+			top: 30px;
+			left: 240px;
+			width: 400px;
+		}
+		
+		.profileInfoNameBox {
+			position: relative !important;
+			float: left;
+			font-size: 22px;
+		}
+		
+		.profileInfoEditForm {
+			width: 400px;
+		}
+		
+		.profileInfoEditForm form input:nth-child(1) {
+			float: left;
+			width: 70%;
+		}
+		
+		.profileInfoEditForm form input:nth-child(2) {
+			float: left;
+			width: 15%;
+		}
+		
+		.profileInfoEditForm form input:nth-child(3) {
+			width: 15%;
+		}
+		
+		.profileInfoBoardList {
+			top: 130px;
+			left: 240px;
+		}
+		
+		.profileInfoBoardListBasicBox {
+			left: 0px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoBoardListBasiclabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoBoardListBasicCnt {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoBoardListQnaBox {
+			left: 100px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoBoardListQnalabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoBoardListQnaCnt {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoExpBox {
+			left: 200px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoExpLabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
+		
+		.profileInfoExp {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
+		}
+		
+		.profileInfoDeleteBox {
+			right: 30px;
+			bottom: 30px;
+		}
+		
+		.profileInfoDeleteBox a {
+			color: red;
+			font-size: 20px;
+		}
+		
 		.boardListBox {
 			top: 260px;
 			left: 216px;
@@ -573,6 +1271,12 @@
 			height: 800px;
 			border-radius: 5px;
 			background-color: white;
+		}
+		
+		.boardListBoxLogo {
+			width: 100%;
+			padding: 10px;
+			border-bottom: 1px solid;
 		}
 		
 		footer {

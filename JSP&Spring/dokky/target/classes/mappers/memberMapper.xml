@@ -12,12 +12,13 @@
 		<result column="mem_image" property="mem_image" />
 		<result column="mem_exp" property="mem_exp" />
 		<result column="mem_date" property="mem_date" />
+		<result column="mem_type" property="mem_type" />
 	</resultMap>
 	
 	<insert id="insertMember" parameterType="com.kitri.dokky.member.Member">
 		insert into member_tb values(#{mem_id}, #{mem_pw}, #{mem_email}, 
 									 #{mem_name}, #{mem_image}, 
-									 #{mem_exp}, now())
+									 #{mem_exp}, now(), #{mem_type})
 	</insert>
 	
 	<select id="selectMember" parameterType="String" resultMap="memberResult">

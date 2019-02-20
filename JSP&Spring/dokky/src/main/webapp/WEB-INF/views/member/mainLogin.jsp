@@ -826,7 +826,8 @@ body {
 					"mem_pw": mem_pw,
 					"mem_name": mem_name,
 					"mem_email": mem_email,
-					"mem_image": "googleProfile.jpg"
+					"mem_image": "googleProfile.jpg",
+					"mem_type": "email"
 				},
 				success: (data) => {
 					console.log(data);

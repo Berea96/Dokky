@@ -11,11 +11,12 @@ public class Member {
 	private String mem_image;
 	private int mem_exp;
 	private Date mem_date;
+	private String mem_type;
 	
 	public Member() {}
 
 	public Member(String mem_id, String mem_pw, String mem_email, String mem_name,
-			String mem_image, int mem_exp, Date mem_date) {
+			String mem_image, int mem_exp, Date mem_date, String mem_type) {
 		this.mem_id = mem_id;
 		this.mem_pw = mem_pw;
 		this.mem_email = mem_email;
@@ -23,6 +24,7 @@ public class Member {
 		this.mem_image = mem_image;
 		this.mem_exp = mem_exp;
 		this.mem_date = mem_date;
+		this.mem_type = mem_type;
 	}
 	
 	public final String getMem_id() {
@@ -74,10 +76,17 @@ public class Member {
 		this.mem_date = mem_date;
 	}
 	
+	public final String getMem_type() {
+		return mem_type;
+	}
+	public final void setMem_type(String mem_type) {
+		this.mem_type = mem_type;
+	}
+
 	@Override
 	public String toString() {
 		return "Member [mem_id=" + mem_id + ", mem_pw=" + mem_pw + ", mem_email=" + mem_email + ", mem_name=" + mem_name
-				+ ", mem_image=" + mem_image + ", mem_exp=" + mem_exp + ", mem_date="
-				+ mem_date + "]";
+				+ ", mem_image=" + mem_image + ", mem_exp=" + mem_exp + ", mem_date=" + mem_date + ", mem_type="
+				+ mem_type + "]";
 	}
 }

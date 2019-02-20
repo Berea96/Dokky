@@ -1329,6 +1329,7 @@ body {
 	}
 	
 	$(document).ready(() => {
+		console.log("${sessionScope.loginInfo.mem_image}");
 		$("#googleSearchText").keydown((key) => {
 			googleSearch(key);
 		});
@@ -1397,7 +1398,7 @@ body {
 								</c:if>
 								<c:if test="${!empty sessionScope.loginInfo}">
 									<a class="memberMenu" href=""><img
-										src='${pageContext.request.contextPath}/resources/memImage/${sessionScope.loginInfo.mem_image}'> </a>
+										src='${sessionScope.loginInfo.mem_image}'> </a>
 								</c:if>
 								<div class="memberMenuList" style="display: none;">
 									<div>
