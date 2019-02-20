@@ -1310,24 +1310,44 @@ body {
 		}
 	}
 	
-	function changeCategory(e) {
+	function getCategoryListForSelect() {
+		$.ajax({
+			type: "GET",
+			url: "${pageContext.request.contextPath}/category/getCategory",
+			data: {},
+			success: (data) => {
+				var result = JSON.parse(data);
+				var str = "<option value='none'>선택";
+				$.each(result, (id, it) => {
+					str += "<option value='" + it.category_title +"'>" + it.category_title;
+				});
+				$("#write-category-2").append(str);
+			}
+		});
+	}
+	
+	function boardWrite() {
+		var title = $("#write-title").val();
+		var category_1 = $("#write-category-1").val();
+		var category_2 = $("#write-category-2").val();
+		var content = $("#write-content").val();
 		
-		var target = $(e.target);
-		
-		var selectedItem = $("#category_1 option:selected").val();
-		
-		console.log("바꼈다!");
-		console.log(target);
-		
-		if(selectedItem != "none") {
-			$.ajax({
-				type: "GET",
-				url: "${pageContext.request.contextPath}/category/getCategory",
-				data: {},
-				success: (data) => {
-					console.log(data);
-				}
-			});
+		if(title == "") {
+			$("#title-span").html("빈칸없이 입력해주세요").css("color", "red");
+		}
+		else if(category_1 == "none") {
+			$("#category-1-span").html("게시판을 선택하세요").css("color", "red");
+			
+		}
+		else if(category_2 == "none") {
+			$("#category-2-span").html("카테고리를 선택하세요").css("color", "red");
+			
+		}
+		else if(content == "") {
+			$("#content-span").html("빈칸없이 입력해주세요").css("color", "red");
+		}
+		else {
+			
 		}
 	}
 	
@@ -1341,16 +1361,39 @@ body {
 			memberMenu(e)
 		});
 		
-		$("#category_1").change((e) => {
-			changeCategory(e);
-		});
-		
 		$(".body").click(() => {
-			
 			if($(".memberMenuList").css("display") == "block") {
 				$(".memberMenuList").css("display", "none");
 			}
 		})
+		
+		getCategoryListForSelect();
+		
+		$("#boardWriteButton").click(() => {
+			boardWrite();
+		});
+		
+		$("#write-title").on("keydown", (e) => {
+			if(e.keyCode == 13) {
+				return false;
+			}
+		});
+		
+		$("#write-title").on("keyup", (e) => {
+			$("#title-span").html("");
+		});
+		
+		$("#write-category-1").change(() => {
+			$("#category-1-span").html("");
+		});
+		
+		$("#write-category-2").change(() => {
+			$("#category-2-span").html("");
+		});
+		
+		$("#write-content").on("keyup", () => {
+			$("#content-span").html("");
+		});
 	});
 </script>
 <title>Insert title here</title>
@@ -1434,27 +1477,30 @@ body {
 				<div class="modal-body">
 					<form action="" method="POST">
 						<div class="form-group">
-							<label for="write-title">제목</label> <input id="write-title"
-								class="form-control" type="text" placeholder="title"> <label
-								for="write-category-1">게시판</label> <select id="category_1"
+							<label for="write-title">제목</label><span id="title-span"></span>
+							<input id="write-title"
+								class="form-control" type="text"> 
+							<label for="write-category-1">게시판</label><span id="category-1-span"></span> 
+							<select id="write-category-1"
 								class="form-control" name="category_1">
 								<option value="none">선택
-								<option value="qna">Q&A
-								<option value="tech">Tech
-								<option value="comm">Community
-								<option value="jobs">Jobs
-							</select> <label for="write-category-2">카테고리</label> <select
-								id="category_2" class="form-control" name="category_2">
-							</select> <label for="write-tags">태그</label> <input class="form-control"
-								type="text" placeholder=""> <label for="write-title">제목</label>
-							<textarea class="form-control" rows="10px" placeholder="content"></textarea>
+								<option value="qna">질문
+								<option value="comm">소통
+							</select> 
+							<label for="write-category-2">카테고리</label><span id="category-2-span"></span>
+							<select id="write-category-2" class="form-control" name="category_2">
+							</select>
+							<!-- <label for="write-tags">태그</label>
+							 <input class="form-control" type="text" placeholder="">  -->
+							 <label for="write-content">내용</label><span id="content-span"></span>
+							<textarea id="write-content" class="form-control" name=content rows="10px"></textarea>
 						</div>
 					</form>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary"
-						data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
+						data-dismiss="modal">닫기</button>
+					<button id="boardWriteButton" type="button" class="btn btn-primary">작성</button>
 				</div>
 			</div>
 		</div>

@@ -1494,7 +1494,7 @@
 			<div class="profileAddBox"></div>
 			<div class="profileInfoBox">
 				<div class="profileInfoImage">
-					<img src="${pageContext.request.contextPath}/resources/memImage/${sessionScope.loginInfo.mem_image}">
+					<img src="${sessionScope.loginInfo.mem_image}">
 				</div>
 				<div class="profileInfoName">
 					<div class="profileInfoNameBox">

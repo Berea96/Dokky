@@ -35,7 +35,7 @@ insert into category_tb values(0, '철학', 'philosophyImage.jpg');
 
 #basic_board테이블 생성
 create table basic_board_tb(
-	basic_board_no int,
+	basic_board_no int auto_increment,
 	basic_board_category_1 varchar(50),
 	basic_board_category_2 varchar(50),
 	basic_board_title varchar(100),
