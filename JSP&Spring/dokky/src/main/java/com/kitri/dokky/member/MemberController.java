@@ -143,9 +143,10 @@ public class MemberController {
 	}
 
 	//회원 탈퇴
+	@ResponseBody
 	@RequestMapping("/deleteMember") 
 	public String deleteMember(@RequestParam("mem_id")String mem_id,
-			HttpServletRequest req) {
+			HttpSession session) {
 
 		service.deleteMember(mem_id);
 
@@ -153,13 +154,15 @@ public class MemberController {
 
 		String result = "";
 
-		if(deleteMemberData == null) {
-			result = "error/error";
+		if(deleteMemberData != null) {
+			//result = "error/error";
+			result = "{'result':'fail'}";
 		}
 		else {
-			sessionInvalidate(req);
+			sessionInvalidate(session);
 
-			result = "redirect:/main/home";
+			//result = "redirect:/main/home";
+			result = "{'result':'success'}";
 		}
 
 		return result;
@@ -168,17 +171,15 @@ public class MemberController {
 	//로그아웃
 	//@ResponseBody
 	@RequestMapping("/logoutMember")
-	public String logoutMember(HttpServletRequest req) {
+	public String logoutMember(HttpSession session) {
 
-		sessionInvalidate(req);
+		sessionInvalidate(session);
 
 		return "redirect:/main/login";
 	}
 
 	//로그아웃, 회원 탈퇴시 세션 비워주는 기능
-	public void sessionInvalidate(HttpServletRequest req) {
-
-		HttpSession session = req.getSession(false);
+	public void sessionInvalidate(HttpSession session) {
 
 		if(session != null) {
 			session.removeAttribute("loginInfo");

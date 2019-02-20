@@ -591,8 +591,14 @@
 	.active {
 		background-color: gray !important;
 	}
+	.modal-body span{
+		color: red;
+	}
 </style>
 <script type="text/javascript">
+
+	var passCheckPoint = 0;
+
 	function profileNameEdit(e) {
 		e.preventDefault();
 		$(".profileInfoEditForm").css("display", "block");
@@ -645,6 +651,64 @@
 		$(".boardListBoxLogo").html(logo);
 	}
 	
+	function deletePass() {
+		var deletePass = $("#delete-pass").val();
+		
+		if(deletePass == "") {
+			$("#delete-pass-span").html("빈칸없이").css("color", "red");
+		}
+		else {
+			$("#delete-pass-span").html("").css("color", "green");
+		}
+	}
+	
+	function deletePassCheck() {
+		var deletePass = $("#delete-pass").val();
+		var deletePassCheck = $("#delete-passCheck").val();
+		
+		console.log(deletePass);
+		console.log(deletePassCheck);
+		
+		if(deletePass == "") {
+			$("#delete-passCheck-span").html("빈칸없이").css("color", "red");
+			passCheckPoint = 1;
+		}
+		else {
+			if(deletePass == deletePassCheck) {
+				$("#delete-passCheck-span").html("일치").css("color", "green");
+				passCheckPoint = 3;
+			}
+			else {
+				$("#delete-passCheck-span").html("불일치").css("color", "red");
+				passCheckPoint = 2;
+			}
+		}
+	}
+	
+	function deleteMember() {
+		if(passCheckPoint == 0) {
+			alert("빈칸 없이 입력해주세요.");
+		}
+		else if(passCheckPoint == 1) {
+			$("#delete-passCheck-span").html("빈칸없이").css("color", "red");
+		}
+		else if(passCheckPoint == 2) {
+			$("#delete-passCheck-span").html("불일치").css("color", "red");
+		}
+		else if(passCheckPoint == 3) {
+			$.ajax({
+				type: "POST",
+				url: "${pageContext.request.contextPath}/member/deleteMember",
+				data: {
+					
+				},
+				success: (data) => {
+					console.log(data);
+				}
+			});
+		}
+	}
+	
 	$(document).ready(() => {
 		$(".profileInfoName a").click((e) => {
 			profileNameEdit(e);
@@ -674,11 +738,19 @@
 			changeBoardListBoxLogo(e, "${sessionScope.loginInfo.mem_name}의 답변");
 		});
 		
-		$(".profileInfoDeleteBox").click((e) => {
-			
-		})
+		$("#delete-pass").on("keyup", () => {
+			deletePass()
+		});
+		
+		$("#delete-passCheck").on("keyup", () => {
+			deletePassCheck()
+		});
+		
+		$("#deleteMemberButton").click(() => {
+			deleteMember();
+		});
 	});
-<script>
+</script>
 <title>Home</title>
 </head>
 <body>
@@ -730,7 +802,9 @@
 					</div>
 				</div>
 				<div class="profileInfoDeleteBox">
-					<a class="btn btn-light"><i class="fa fa-trash-o"></i></a>
+					<a class="btn btn-light" data-toggle="modal"
+					data-target="#deleteModal">
+					<i class="fa fa-trash-o"></i></a>
 				</div>
 			</div>
 			<div class="boardListBox">
@@ -738,6 +812,38 @@
 					${sessionScope.loginInfo.mem_name}의 Feeds
 				</div>
 				<div class="boardListContent"></div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h5 class="modal-title" id="exampleModalLabel">회원탈퇴</h5>
+				</div>
+				<div class="modal-body">
+					<form action="" method="POST">
+						<div class="form-group">
+							<label for="#delete-pass">비밀번호</label>
+							<span id="delete-pass-span">빈칸없이</span>
+							<input id="delete-pass" class="form-control" type="password">
+							<br>
+							<label for="#delete-passCheck">비밀번호 확인</label>
+							<span id="delete-passCheck-span">빈칸없이</span>
+							<input id="delete-passCheck" class="form-control" type="password">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">닫기</button>
+					<button id="deleteMemberButton" type="button" class="btn btn-primary">탈퇴</button>
+				</div>
 			</div>
 		</div>
 	</div>
