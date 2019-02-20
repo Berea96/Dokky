@@ -72,14 +72,28 @@
 			position: absolute;
 		}
 		
-		.prifileBoardMenu {
+		.profileBoardMenu {
 			position: absolute;
 			top: 260px;
 			left: 8px;
 			width: 200px;
 			height: 590px;
-			
-			background-color: #fae3b6;
+			background-color: white;
+		}
+		
+		.profileBoardMenuLogo {
+			width: 100%;
+			padding: 10px;
+			border-bottom: 1px solid;
+		}
+		
+		.profileBoardMenu div:nth-child(2) {
+			top: 41px;
+			width: 100%;
+		}
+		
+		.profileBoardMenu div:nth-child(2) a {
+			height: 40px;
 		}
 		
 		.profileAddBox {
@@ -88,8 +102,7 @@
 			left: 824px;
 			width: 200px;
 			height: 590px;
-			
-			background-color: #fae3b6;
+			background-color: white;
 		}
 		
 		.profileInfoBox {
@@ -121,30 +134,74 @@
 		}
 		
 		.profileInfoBoardList {
-			top: 120px;
+			top: 130px;
 			left: 240px;
 		}
 		
 		.profileInfoBoardListBasicBox {
 			left: 0px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoBoardListBasiclabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
 		}
 		
 		.profileInfoBoardListBasicCnt {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
 		}
 		
 		.profileInfoBoardListQnaBox {
 			left: 100px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
 		}
 		
+		.profileInfoBoardListQnalabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
+		}
 		
 		.profileInfoBoardListQnaCnt {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
 		}
 		
 		.profileInfoExpBox {
 			left: 200px;
+			width: 50px;
+			height: 45px;
+			border-radius: 10%;
+			border: 1px solid gray;
+		}
+		
+		.profileInfoExpLabel {
+			width: 100%;
+			height: 50%;
+			text-align: center;
+			background-color: #fae3b6;
 		}
 		
 		.profileInfoExp {
+			top: 23px;
+			width: 100%;
+			height: 50%;
+			text-align: center;
 		}
 		
 		.boardListBox {
@@ -154,6 +211,12 @@
 			height: 800px;
 			border-radius: 5px;
 			background-color: white;
+		}
+		
+		.boardListBoxLogo {
+			width: 100%;
+			padding: 10px;
+			border-bottom: 1px solid;
 		}
 		
 		footer {
@@ -183,7 +246,7 @@
 			position: absolute;
 		}
 		
-		.prifileBoardMenu {
+		.profileBoardMenu {
 			position: absolute;
 			top: 260px;
 			left: 8px;
@@ -249,7 +312,7 @@
 			position: absolute;
 		}
 		
-		.prifileBoardMenu {
+		.profileBoardMenu {
 			position: absolute;
 			top: 260px;
 			width: 200px;
@@ -314,7 +377,7 @@
 			position: absolute;
 		}
 		
-		.prifileBoardMenu {
+		.profileBoardMenu {
 			position: absolute;
 			top: 260px;
 			left: 8px;
@@ -379,7 +442,7 @@
 			position: absolute;
 		}
 		
-		.prifileBoardMenu {
+		.profileBoardMenu {
 			position: absolute;
 			top: 260px;
 			left: 8px;
@@ -445,7 +508,7 @@
 			position: absolute;
 		}
 		
-		.prifileBoardMenu {
+		.profileBoardMenu {
 			position: absolute;
 			top: 260px;
 			left: 8px;
@@ -496,18 +559,7 @@
 	}
 </style>
 <script type="text/javascript">
-	$.showCategoryList = function() {
-	}
-	
-	$.addCategoryListAction = function() {
-	}
-	
-	$.getBoardListAction = function() {
-	}
-
 	$(document).ready(() => {
-		$.showCategoryList();
-		$.getBoardListAction();
 	});
 </script>
 <title>Home</title>
@@ -518,7 +570,14 @@
 	</div>
 	<div class="mainBody">
 		<div>
-			<div class="prifileBoardMenu">
+			<div class="profileBoardMenu">
+				<div class="profileBoardMenuLogo">Feeds</div>
+				<div class="list-group">
+					<a class="list-group-item list-group-item-light" href="">전체</a>
+					<a class="list-group-item list-group-item-light" href="#">게시물</a>
+					<a class="list-group-item list-group-item-light" href="#">질문</a>
+					<a class="list-group-item list-group-item-light" href="#">답변</a>
+				</div>
 			</div>
 			<div class="profileAddBox"></div>
 			<div class="profileInfoBox">
@@ -531,11 +590,11 @@
 				<div class="profileInfoBoardList">
 					<div class="profileInfoBoardListBasicBox">
 						<div class="profileInfoBoardListBasiclabel">게시물</div>
-						<div class="profileInfoBoardListBasicCnt">0</div>
+						<div class="profileInfoBoardListBasicCnt"></div>
 					</div>
 					<div class="profileInfoBoardListQnaBox">
 						<div class="profileInfoBoardListQnalabel">답변</div>
-						<div class="profileInfoBoardListQnaCnt">0</div>
+						<div class="profileInfoBoardListQnaCnt"></div>
 					</div>
 					<div class="profileInfoExpBox">
 						<div class="profileInfoExpLabel">활동치</div>
@@ -543,7 +602,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="boardListBox"></div>
+			<div class="boardListBox">
+				<div class="boardListBoxLogo">
+					${sessionScope.loginInfo.mem_name}의 Feeds
+				</div>
+				<div class="boardListContent"></div>
+			</div>
 			<footer>
 				원작자 김규정 <br>
 				그외 ...

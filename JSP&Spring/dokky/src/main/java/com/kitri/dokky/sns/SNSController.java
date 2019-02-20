@@ -157,7 +157,6 @@ public class SNSController {
             }
             in.close();
         } catch (Exception e) {
- 
             e.printStackTrace();
         }
 		return "redirect:/member/home";
