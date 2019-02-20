@@ -19,39 +19,6 @@ create table member_tb(
 	constraint mem_email_un unique(mem_email)
 );
 
-#sequence 테이블 생성
-create table sequence(
-      id int not null, 
-      seq_name varchar(50) not null
-);
-
-#sequence테이블을 증가시킬 함수 생성
-DROP FUNCTION IF EXISTS get_seq;
-delimiter $$
-
-create function get_seq(seq_name varchar(50))
-returns int reads sql database
-
-begin
-
-	declare result_id int;
-	update sequence set id = last_insert_id(id+1)
-	where seq_name = seq_name;
-	set result_id = (select last_insert_id());
-	
-	return result_id;
-end $$
-delimiter;
-
-#board쪽 sequence 생성
-insert into sequence values(1, 'board_seq');
-
-#comment쪽 sequence 생성
-insert into sequence values(500000, 'comment_seq);
-
-#like, scrap쪽 sequence 생성
-insert into sequence values(1000000, 'likrap_seq);
-
 #category테이블 생성
 create table category_tb(
 	category_no int primary key auto_increment,
