@@ -27,17 +27,23 @@ public class MemberController {
 		return "main/main";
 	}
 
+	//로그인 했니?
+	public String loginCheck(HttpSession session, String goal) {
+		if(session.getAttribute("facebookProfile") == null &&
+				session.getAttribute("googleProfile") == null && 
+				session.getAttribute("loginInfo") == null) {
+			return "redirect:/main/login";
+		}
+		else {
+			return goal;
+		}
+	}
+
 	//홈 메인으로 이동 
 	@RequestMapping("/home")
 	public String goHome(HttpSession session) {
 
-		if(session.getAttribute("facebookProfile") == null &&
-		   session.getAttribute("googleProfile") == null && 
-		   session.getAttribute("loginInfo") == null) {
-			return "redirect:/main/login";
-		}
-
-		return "main/home";
+		return loginCheck(session, "main/home");
 	}
 
 	//로그인 페이지로 이동(삭제)
@@ -107,13 +113,13 @@ public class MemberController {
 	//회원 정보
 	@RequestMapping("/profile/{mem_id}")
 	public String getMemberInfo(@PathVariable String mem_id,
-			Model model) {
+			Model model ,HttpSession session) {
 
 		Member getMemberInfoData = service.getMember(mem_id);
 
 		model.addAttribute("memberInfo", getMemberInfoData);
 
-		return "member/profile";
+		return loginCheck(session, "member/profile");
 	}
 
 	//정보 수정
@@ -132,7 +138,7 @@ public class MemberController {
 		if(result.equals("{'result':'success'}")) {
 			session.setAttribute("loginInfo", editMemberData);
 		}
-		
+
 		return result;
 	}
 

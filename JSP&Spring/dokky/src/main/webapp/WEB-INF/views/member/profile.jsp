@@ -225,6 +225,16 @@
 			text-align: center;
 		}
 		
+		.profileInfoDeleteBox {
+			right: 30px;
+			bottom: 30px;
+		}
+		
+		.profileInfoDeleteBox a {
+			color: red;
+			font-size: 20px;
+		}
+		
 		.boardListBox {
 			top: 260px;
 			left: 216px;
@@ -578,6 +588,9 @@
 	img {
 		border-radius: 50%;
 	}
+	.active {
+		background-color: gray !important;
+	}
 </style>
 <script type="text/javascript">
 	function profileNameEdit(e) {
@@ -618,6 +631,20 @@
 		}
 	}
 	
+	function clearBoardMenu() {
+		$("#profileBoardMenuAll").attr("class", "list-group-item list-group-item-light");
+		$("#profileBoardMenuComm").attr("class", "list-group-item list-group-item-light");
+		$("#profileBoardMenuQuestion").attr("class", "list-group-item list-group-item-light");
+		$("#profileBoardMenuAnswer").attr("class", "list-group-item list-group-item-light");
+	}
+	
+	function changeBoardListBoxLogo(e, logo) {
+		e.preventDefault();
+		clearBoardMenu();
+		$(e.target).attr("class", "list-group-item list-group-item-light active");
+		$(".boardListBoxLogo").html(logo);
+	}
+	
 	$(document).ready(() => {
 		$(".profileInfoName a").click((e) => {
 			profileNameEdit(e);
@@ -630,8 +657,28 @@
 		$("#profileInfoEditUpdate").click(() => {
 			profileEditUpdate();
 		});
+		
+		$("#profileBoardMenuAll").click((e) => {
+			changeBoardListBoxLogo(e, "${sessionScope.loginInfo.mem_name}의 Feeds");
+		});
+		
+		$("#profileBoardMenuComm").click((e) => {
+			changeBoardListBoxLogo(e, "${sessionScope.loginInfo.mem_name}의 게시물");
+		});
+		
+		$("#profileBoardMenuQuestion").click((e) => {
+			changeBoardListBoxLogo(e, "${sessionScope.loginInfo.mem_name}의 질문");
+		});
+		
+		$("#profileBoardMenuAnswer").click((e) => {
+			changeBoardListBoxLogo(e, "${sessionScope.loginInfo.mem_name}의 답변");
+		});
+		
+		$(".profileInfoDeleteBox").click((e) => {
+			
+		})
 	});
-</script>
+<script>
 <title>Home</title>
 </head>
 <body>
@@ -643,10 +690,10 @@
 			<div class="profileBoardMenu">
 				<div class="profileBoardMenuLogo">Feeds</div>
 				<div class="list-group">
-					<a class="list-group-item list-group-item-light" href="">전체</a>
-					<a class="list-group-item list-group-item-light" href="#">게시물</a>
-					<a class="list-group-item list-group-item-light" href="#">질문</a>
-					<a class="list-group-item list-group-item-light" href="#">답변</a>
+					<a id="profileBoardMenuAll" class="list-group-item list-group-item-light active" href="">전체</a>
+					<a id="profileBoardMenuComm" class="list-group-item list-group-item-light" href="">게시물</a>
+					<a id="profileBoardMenuQuestion" class="list-group-item list-group-item-light" href="">질문</a>
+					<a id="profileBoardMenuAnswer" class="list-group-item list-group-item-light" href="">답변</a>
 				</div>
 			</div>
 			<div class="profileAddBox"></div>
@@ -682,6 +729,9 @@
 						<div class="profileInfoExp">${sessionScope.loginInfo.mem_exp}</div>
 					</div>
 				</div>
+				<div class="profileInfoDeleteBox">
+					<a class="btn btn-light"><i class="fa fa-trash-o"></i></a>
+				</div>
 			</div>
 			<div class="boardListBox">
 				<div class="boardListBoxLogo">
@@ -689,10 +739,6 @@
 				</div>
 				<div class="boardListContent"></div>
 			</div>
-			<footer>
-				원작자 김규정 <br>
-				그외 ...
-			</footer>
 		</div>
 	</div>
 </body>
