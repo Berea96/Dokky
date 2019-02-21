@@ -105,12 +105,42 @@
 			margin-left: 2.5%;
 			margin-right: 2.5%;
 			background-color: gray;
+			border-radius: 10px;
 		}
 		
 		.boardListFormHead {
 			width: 100%;
-			height: 30px;
-			background-color: red;
+			height: 50px;
+			border-bottom: 1px solid gray;
+		}
+		.boardListFormHead div {
+			width: 100%;
+		}
+		
+		.boardListFormWriterImage {
+			top: 3px;
+			left: 10px;
+		}
+				
+		.boardListFormWriterImage img {
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+		}
+		
+		.boardListFormWriterName {
+			top: 5px;
+			left: 70px;
+		}
+		
+		.boardListFormWriterExp {
+			top: 25px;
+			left: 70px;
+		}
+		
+		.boardListFormBoardWdate {
+			top: 16px;
+			left: 480px;
 		}
 		
 		.boardListFormBody {
@@ -118,6 +148,18 @@
 			width: 100%;
 			height: 150px;
 			background-color: blue;
+		}
+		
+		.boardListFormBody div {
+			width: 100%;
+		}
+		
+		.boardListFormBoardTitle {
+			top: 5px;
+		}
+		
+		.boardListFormBoardContent {
+			top: 20px;
 		}
 		
 		.categoryImage {
@@ -642,38 +684,38 @@
 								data: {},
 								success: (data) => {
 									console.log(data);
-									var result = JSON.parse(data);
-									console.log(result);
+									var result2 = JSON.parse(data);
+									console.log(result2);
 									
 									str += "<div class='boardListFormHead'>" +
 										    "<div class='boardListFormWriterImage'>" +
-										   	 "<img src='" + result.mem_image + "'>" +
+										   	 "<img src='" + result2.mem_image + "'>" +
 										    "</div>" +
 										    "<div class='boardListFormWriterName'>" +
-										   	 "<div>" + result.mem_name + "</div>" +
+										   	 "<div>" + result2.mem_name + "</div>" +
 										    "</div>" +
 										    "<div class='boardListFormWriterExp'>" +
-										   	 "<div>" + result.mem_exp + "</div>" +
+										   	 "<div>" + result2.mem_exp + "</div>" +
 										    "</div>" +
 										    "<div class='boardListFormBoardWdate'>" +
 										   	 "<div>" + it.board_wdate + "</div>" +
 										    "</div>" +
 										   "</div>";
+										   
+									str += "<div class='boardListFormBody'>" +
+										    "<div class='boardListFormBoardTitle'>" +
+										     "<div>" + it.board_title + "</div>" +
+										    "</div>" +
+										    "<div class='boardListFormBoardContent'>" +
+										     "<div>" + it.board_content + "</div>" +
+										    "</div>" +
+										   "</div>";
+										   console.log(str);
+									str += "</div>";
+									$(".community").append(str);
 								}
 							});
-							
-							str += "<div class='boardListFormBody'>" +
-								    "<div class='boardListFormBoardTitle'>" +
-								     "<div>" + it.board_title + "</div>"
-								    "</div>" +
-								    "<div class='boardListFormBoardContent'>" +
-								     "<div>" + it.board_content + "</div>"
-								    "</div>" +
-								   "</div>";
 						})
-						str += "</div>";
-						
-						$(".community").append(str);
 					}
 				});
 			}
