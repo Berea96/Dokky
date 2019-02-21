@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 //회원에 대한 컨트롤러
 @Controller
@@ -120,6 +121,19 @@ public class MemberController {
 		model.addAttribute("memberInfo", getMemberInfoData);
 
 		return loginCheck(session, "member/profile");
+	}
+	
+	//회원 정보
+	@RequestMapping(value="/profile/{mem_id}", method=RequestMethod.POST) 
+	public ModelAndView getMemberInfo(@PathVariable String mem_id,
+			ModelAndView mav) {
+		
+		Member getMemberInfoData = service.getMember(mem_id);
+		
+		mav.addObject("member", getMemberInfoData);
+		mav.setViewName("json/memberJson");
+		
+		return mav;
 	}
 
 	//정보 수정

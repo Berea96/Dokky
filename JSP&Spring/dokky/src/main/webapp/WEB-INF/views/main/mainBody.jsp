@@ -98,6 +98,28 @@
 			background-color: white;
 		}
 		
+		.boardListForm {
+			width: 95%;
+			height: 200px;
+			margin-top: 2.5%;
+			margin-left: 2.5%;
+			margin-right: 2.5%;
+			background-color: gray;
+		}
+		
+		.boardListFormHead {
+			width: 100%;
+			height: 30px;
+			background-color: red;
+		}
+		
+		.boardListFormBody {
+			bottom: 0px;
+			width: 100%;
+			height: 150px;
+			background-color: blue;
+		}
+		
 		.categoryImage {
 			position: absolute;
 			top: 20px;
@@ -614,20 +636,44 @@
 						var str = "<div class='boardListForm'>";
 						
 						$.each(result, (id, it) => {
-							str += "<div class='boardListFormHead'>" +
-								    "<div class='board'>" +
-								   
-								    "</div>" +
-								   "</div>";
+							$.ajax({
+								type: "POST",
+								url: "${pageContext.request.contextPath}/member/profile/" + it.board_writer,
+								data: {},
+								success: (data) => {
+									console.log(data);
+									var result = JSON.parse(data);
+									console.log(result);
+									
+									str += "<div class='boardListFormHead'>" +
+										    "<div class='boardListFormWriterImage'>" +
+										   	 "<img src='" + result.mem_image + "'>" +
+										    "</div>" +
+										    "<div class='boardListFormWriterName'>" +
+										   	 "<div>" + result.mem_name + "</div>" +
+										    "</div>" +
+										    "<div class='boardListFormWriterExp'>" +
+										   	 "<div>" + result.mem_exp + "</div>" +
+										    "</div>" +
+										    "<div class='boardListFormBoardWdate'>" +
+										   	 "<div>" + it.board_wdate + "</div>" +
+										    "</div>" +
+										   "</div>";
+								}
+							});
+							
 							str += "<div class='boardListFormBody'>" +
-								    "<div>" +
-								   
+								    "<div class='boardListFormBoardTitle'>" +
+								     "<div>" + it.board_title + "</div>"
+								    "</div>" +
+								    "<div class='boardListFormBoardContent'>" +
+								     "<div>" + it.board_content + "</div>"
 								    "</div>" +
 								   "</div>";
 						})
 						str += "</div>";
 						
-						$(".community").append();
+						$(".community").append(str);
 					}
 				});
 			}
