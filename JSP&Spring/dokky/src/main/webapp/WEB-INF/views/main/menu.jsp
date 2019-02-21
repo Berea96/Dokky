@@ -1345,16 +1345,19 @@ body {
 			$("#content-span").html("빈칸없이 입력해주세요").css("color", "red");
 		}
 		else {
-			var boardTarget = category_1 == "comm" ? "comm" : "qna";
-			
 			$.ajax({
 				type: "POST",
-				url: "${pageContext.request.contextPath}/" + boardTarget + "/writeBoard",
+				url: "${pageContext.request.contextPath}/board/writeBoard",
 				data: {
-					
+					"board_title": title,
+					"board_category_1": category_1,
+					"board_category_2": category_2,
+					"board_tags": "",
+					"board_content": content,
+					"board_writer": "${sessionScope.loginInfo.mem_id}"
 				},
 				success: (data) => {
-						
+					location.href = "${pageContext.request.contextPath}/member/home";
 				}
 			});
 		}
@@ -1497,8 +1500,8 @@ body {
 							<select id="write-category-1"
 								class="form-control" name="category_1">
 								<option value="none">선택
-								<option value="qna">질문
 								<option value="comm">소통
+								<option value="qna">질문
 							</select> 
 							<label for="write-category-2">카테고리</label><span id="category-2-span"></span>
 							<select id="write-category-2" class="form-control" name="category_2">

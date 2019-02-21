@@ -19,11 +19,13 @@ public class BoardController {
 	@Resource(name="boardService")
 	private BoardService service;
 	
-	@RequestMapping("/getBoardByCategory/{category}")
-	public ModelAndView getBoardByCategory(@PathVariable String category,
+	@RequestMapping("/getBoardByCategory/{category_1}/{category_2}")
+	public ModelAndView getBoardByCategory(@PathVariable String category_1, 
+			@PathVariable String category_2,
 			ModelAndView mav) {
 		
-		ArrayList<Board> boardList = service.getBoardByCategory();
+		ArrayList<Board> boardList = 
+				service.getBoardByCategory(category_1, category_2);
 		
 		mav.addObject("boardList", boardList);
 		mav.setViewName("json/boardJson");

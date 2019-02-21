@@ -29,97 +29,6 @@
 			position: absolute;
 		}
 		
-		.adBoard {
-			top: 20px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 100px;
-			margin-right: 30px;
-			background-color: white;
-		}
-		.sideAdBoard {
-			display: none;
-		}
-		
-		.editorChice {
-			top: 180px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		.WeeklyBest {
-			top: 440px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		.qna {
-			top: 700px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 380px;
-			
-			background-color: white;
-		}
-		
-		.tech {
-			top: 1880px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		.community {
-			top: 1140px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 680px;
-			
-			background-color: white;
-		}
-		
-		.column {
-			top: 2140px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		.study {
-			top: 2400px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		footer {
-			position: absolute;
-			border-top: 1px solid;
-			bottom: 0px;
-			width: 100%;
-			height: 150px;
-			padding: 50px;
-		}
 	}
 	@media screen and (min-width: 630px) and (max-width: 769px) {
 		.mainBody {
@@ -134,95 +43,6 @@
 			position: absolute;
 		}
 		
-		.adBoard {
-			top: 20px;
-			left: 30px;
-			width: 90%;
-			height: 100px;
-			margin-right: 30px;
-			background-color: white;
-		}
-		.sideAdBoard {
-			display: none;
-		}
-		
-		.editorChice {
-			top: 180px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		.WeeklyBest {
-			top: 440px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		.qna {
-			top: 700px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 380px;
-			
-			background-color: white;
-		}
-		
-		.tech {
-			top: 1880px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		.community {
-			top: 1140px;
-			left: 30px;
-			width: 90%;
-			height: 680px;
-			
-			background-color: white;
-		}
-		
-		.column {
-			top: 2140px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		.study {
-			top: 2400px;
-			width: 90%;
-			margin-left: 5%;
-			margin-right: 5%;
-			height: 200px;
-			
-			background-color: white;
-		}
-		
-		footer {
-			position: absolute;
-			border-top: 1px solid;
-			bottom: 0px;
-			width: 100%;
-			height: 150px;
-			padding: 50px;
-		}
 	}
 	@media screen and (min-width: 768px) and (max-width: 970px) {
 		.mainBody {
@@ -815,6 +635,7 @@
 			var target = $(e.target)
 			console.log(target);
 			var category_no = $(target).attr("val");
+			var category_2 = $(target).text();
 			
 			if(category_no == 0) {
 				location.href = "${pageContext.request.contextPath}/member/home";
@@ -834,7 +655,15 @@
 						$(".categoryImage").attr("src", "${pageContext.request.contextPath}/resources/image/" + result.category_image);
 						$(".categoryTitle").html(result.category_title);
 					}
-				})
+				});
+				$.ajax({
+					type: "GET",
+					url: "${pageContext.request.contextPath}/board/getBoardByCategory/comm/" + category_2,
+					data: {},
+					success: (data) => {
+						console.log(data);
+					}
+				});
 			}
 		});
 	}

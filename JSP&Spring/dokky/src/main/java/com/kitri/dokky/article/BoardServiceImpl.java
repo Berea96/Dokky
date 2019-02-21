@@ -25,9 +25,9 @@ public class BoardServiceImpl implements BoardService {
 	
 	//카테고리에 따른 게시물 리스트 가져오기 메소드
 	@Override
-	public ArrayList<Board> getBoardByCategory() {
+	public ArrayList<Board> getBoardByCategory(String category_1, String category_2) {
 		dao = sqlSession.getMapper(BoardDao.class);
-		return dao.selectBoardByCategory();
+		return dao.selectBoardByCategory(category_1, category_2);
 	}
 
 	//게시물 번호에 따른 정보 가져오기 메소드
