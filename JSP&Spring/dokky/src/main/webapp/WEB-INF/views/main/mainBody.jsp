@@ -99,13 +99,15 @@
 		}
 		
 		.boardListForm {
+			position: relative !important;
 			width: 95%;
 			height: 200px;
 			margin-top: 2.5%;
 			margin-left: 2.5%;
 			margin-right: 2.5%;
-			background-color: gray;
+			border: 1px solid gray;
 			border-radius: 10px;
+			box-shadow: 2px 2px 5px gray;
 		}
 		
 		.boardListFormHead {
@@ -147,7 +149,6 @@
 			bottom: 0px;
 			width: 100%;
 			height: 150px;
-			background-color: blue;
 		}
 		
 		.boardListFormBody div {
@@ -155,11 +156,14 @@
 		}
 		
 		.boardListFormBoardTitle {
-			top: 5px;
+			top: 25px;
+			left: 20px;
+			font-size: 25px;
 		}
 		
 		.boardListFormBoardContent {
-			top: 20px;
+			top: 60px;
+			left: 25px;
 		}
 		
 		.categoryImage {
@@ -674,8 +678,8 @@
 					success: (data) => {
 						var result = JSON.parse(data);
 						console.log(result);
+						$(".community").empty();
 						
-						var str = "<div class='boardListForm'>";
 						
 						$.each(result, (id, it) => {
 							$.ajax({
@@ -683,6 +687,7 @@
 								url: "${pageContext.request.contextPath}/member/profile/" + it.board_writer,
 								data: {},
 								success: (data) => {
+									var str = "<div class='boardListForm'>";
 									console.log(data);
 									var result2 = JSON.parse(data);
 									console.log(result2);

@@ -27,6 +27,7 @@
 	<select id="selectBoardByCategory" parameterType="String" resultMap="boardResult">
 		select * from board_tb where board_category_1=#{param1}
 							   and board_category_2=#{param2}
+		order by board_wdate desc;
 	</select>
 	
 	<select id="selectBoardByNum" parameterType="int" resultMap="boardResult">
