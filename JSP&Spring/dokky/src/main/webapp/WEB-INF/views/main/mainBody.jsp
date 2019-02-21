@@ -66,7 +66,6 @@
 			left: 8px;
 			width: 200px;
 			height: 590px;
-			
 			background-color: #fae3b6;
 		}
 		
@@ -93,7 +92,6 @@
 			top: 260px;
 			left: 216px;
 			width: 600px;
-			height: 800px;
 			border-radius: 5px;
 			background-color: white;
 		}
@@ -250,6 +248,74 @@
 			background-color: white;
 		}
 		
+		.boardListForm {
+			position: relative !important;
+			width: 95%;
+			height: 200px;
+			margin-top: 2.5%;
+			margin-left: 2.5%;
+			margin-right: 2.5%;
+			border: 1px solid gray;
+			border-radius: 10px;
+			box-shadow: 2px 2px 5px gray;
+		}
+		
+		.boardListFormHead {
+			width: 100%;
+			height: 50px;
+			border-bottom: 1px solid gray;
+		}
+		.boardListFormHead div {
+			width: 100%;
+		}
+		
+		.boardListFormWriterImage {
+			top: 3px;
+			left: 10px;
+		}
+				
+		.boardListFormWriterImage img {
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+		}
+		
+		.boardListFormWriterName {
+			top: 5px;
+			left: 70px;
+		}
+		
+		.boardListFormWriterExp {
+			top: 25px;
+			left: 70px;
+		}
+		
+		.boardListFormBoardWdate {
+			top: 16px;
+			left: 480px;
+		}
+		
+		.boardListFormBody {
+			bottom: 0px;
+			width: 100%;
+			height: 150px;
+		}
+		
+		.boardListFormBody div {
+			width: 100%;
+		}
+		
+		.boardListFormBoardTitle {
+			top: 25px;
+			left: 20px;
+			font-size: 25px;
+		}
+		
+		.boardListFormBoardContent {
+			top: 60px;
+			left: 25px;
+		}
+		
 		.categoryImage {
 			position: absolute;
 			top: 20px;
@@ -333,6 +399,74 @@
 			background-color: white;
 		}
 		
+		.boardListForm {
+			position: relative !important;
+			width: 95%;
+			height: 200px;
+			margin-top: 2.5%;
+			margin-left: 2.5%;
+			margin-right: 2.5%;
+			border: 1px solid gray;
+			border-radius: 10px;
+			box-shadow: 2px 2px 5px gray;
+		}
+		
+		.boardListFormHead {
+			width: 100%;
+			height: 50px;
+			border-bottom: 1px solid gray;
+		}
+		.boardListFormHead div {
+			width: 100%;
+		}
+		
+		.boardListFormWriterImage {
+			top: 3px;
+			left: 10px;
+		}
+				
+		.boardListFormWriterImage img {
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+		}
+		
+		.boardListFormWriterName {
+			top: 5px;
+			left: 70px;
+		}
+		
+		.boardListFormWriterExp {
+			top: 25px;
+			left: 70px;
+		}
+		
+		.boardListFormBoardWdate {
+			top: 16px;
+			left: 480px;
+		}
+		
+		.boardListFormBody {
+			bottom: 0px;
+			width: 100%;
+			height: 150px;
+		}
+		
+		.boardListFormBody div {
+			width: 100%;
+		}
+		
+		.boardListFormBoardTitle {
+			top: 25px;
+			left: 20px;
+			font-size: 25px;
+		}
+		
+		.boardListFormBoardContent {
+			top: 60px;
+			left: 25px;
+		}
+		
 		.categoryImage {
 			position: absolute;
 			top: 20px;
@@ -414,6 +548,74 @@
 			height: 800px;
 			border-radius: 5px;
 			background-color: white;
+		}
+		
+		.boardListForm {
+			position: relative !important;
+			width: 95%;
+			height: 200px;
+			margin-top: 2.5%;
+			margin-left: 2.5%;
+			margin-right: 2.5%;
+			border: 1px solid gray;
+			border-radius: 10px;
+			box-shadow: 2px 2px 5px gray;
+		}
+		
+		.boardListFormHead {
+			width: 100%;
+			height: 50px;
+			border-bottom: 1px solid gray;
+		}
+		.boardListFormHead div {
+			width: 100%;
+		}
+		
+		.boardListFormWriterImage {
+			top: 3px;
+			left: 10px;
+		}
+				
+		.boardListFormWriterImage img {
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+		}
+		
+		.boardListFormWriterName {
+			top: 5px;
+			left: 70px;
+		}
+		
+		.boardListFormWriterExp {
+			top: 25px;
+			left: 70px;
+		}
+		
+		.boardListFormBoardWdate {
+			top: 16px;
+			left: 480px;
+		}
+		
+		.boardListFormBody {
+			bottom: 0px;
+			width: 100%;
+			height: 150px;
+		}
+		
+		.boardListFormBody div {
+			width: 100%;
+		}
+		
+		.boardListFormBoardTitle {
+			top: 25px;
+			left: 20px;
+			font-size: 25px;
+		}
+		
+		.boardListFormBoardContent {
+			top: 60px;
+			left: 25px;
 		}
 		
 		.categoryImage {
@@ -500,6 +702,74 @@
 			background-color: white;
 		}
 		
+		.boardListForm {
+			position: relative !important;
+			width: 95%;
+			height: 200px;
+			margin-top: 2.5%;
+			margin-left: 2.5%;
+			margin-right: 2.5%;
+			border: 1px solid gray;
+			border-radius: 10px;
+			box-shadow: 2px 2px 5px gray;
+		}
+		
+		.boardListFormHead {
+			width: 100%;
+			height: 50px;
+			border-bottom: 1px solid gray;
+		}
+		.boardListFormHead div {
+			width: 100%;
+		}
+		
+		.boardListFormWriterImage {
+			top: 3px;
+			left: 10px;
+		}
+				
+		.boardListFormWriterImage img {
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+		}
+		
+		.boardListFormWriterName {
+			top: 5px;
+			left: 70px;
+		}
+		
+		.boardListFormWriterExp {
+			top: 25px;
+			left: 70px;
+		}
+		
+		.boardListFormBoardWdate {
+			top: 16px;
+			left: 480px;
+		}
+		
+		.boardListFormBody {
+			bottom: 0px;
+			width: 100%;
+			height: 150px;
+		}
+		
+		.boardListFormBody div {
+			width: 100%;
+		}
+		
+		.boardListFormBoardTitle {
+			top: 25px;
+			left: 20px;
+			font-size: 25px;
+		}
+		
+		.boardListFormBoardContent {
+			top: 60px;
+			left: 25px;
+		}
+		
 		.categoryImage {
 			position: absolute;
 			top: 20px;
@@ -580,6 +850,74 @@
 			height: 800px;
 			border-radius: 5px;
 			background-color: white;
+		}
+		
+		.boardListForm {
+			position: relative !important;
+			width: 95%;
+			height: 200px;
+			margin-top: 2.5%;
+			margin-left: 2.5%;
+			margin-right: 2.5%;
+			border: 1px solid gray;
+			border-radius: 10px;
+			box-shadow: 2px 2px 5px gray;
+		}
+		
+		.boardListFormHead {
+			width: 100%;
+			height: 50px;
+			border-bottom: 1px solid gray;
+		}
+		.boardListFormHead div {
+			width: 100%;
+		}
+		
+		.boardListFormWriterImage {
+			top: 3px;
+			left: 10px;
+		}
+				
+		.boardListFormWriterImage img {
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+		}
+		
+		.boardListFormWriterName {
+			top: 5px;
+			left: 70px;
+		}
+		
+		.boardListFormWriterExp {
+			top: 25px;
+			left: 70px;
+		}
+		
+		.boardListFormBoardWdate {
+			top: 16px;
+			left: 480px;
+		}
+		
+		.boardListFormBody {
+			bottom: 0px;
+			width: 100%;
+			height: 150px;
+		}
+		
+		.boardListFormBody div {
+			width: 100%;
+		}
+		
+		.boardListFormBoardTitle {
+			top: 25px;
+			left: 20px;
+			font-size: 25px;
+		}
+		
+		.boardListFormBoardContent {
+			top: 60px;
+			left: 25px;
 		}
 		
 		.categoryImage {
