@@ -98,15 +98,6 @@
 			background-color: white;
 		}
 		
-		footer {
-			position: absolute;
-			border-top: 1px solid;
-			bottom: 0px;
-			width: 800px;
-			height: 150px;
-			margin-left: 25px;
-			padding: 50px;
-		}
 		.categoryImage {
 			position: absolute;
 			top: 20px;
@@ -114,6 +105,7 @@
 			width: 120px;
 			height: 120px;
 		}
+		
 		.categoryTitle {
 			top: 30px;
 			left: 170px;
@@ -190,15 +182,6 @@
 			background-color: white;
 		}
 		
-		footer {
-			position: absolute;
-			border-top: 1px solid;
-			bottom: 0px;
-			width: 800px;
-			height: 150px;
-			margin-left: 25px;
-			padding: 50px;
-		}
 		.categoryImage {
 			position: absolute;
 			top: 20px;
@@ -282,15 +265,6 @@
 			background-color: white;
 		}
 		
-		footer {
-			position: absolute;
-			border-top: 1px solid;
-			bottom: 0px;
-			width: 800px;
-			height: 150px;
-			margin-left: 25px;
-			padding: 50px;
-		}
 		.categoryImage {
 			position: absolute;
 			top: 20px;
@@ -374,15 +348,6 @@
 			background-color: white;
 		}
 		
-		footer {
-			position: absolute;
-			border-top: 1px solid;
-			bottom: 0px;
-			width: 800px;
-			height: 150px;
-			margin-left: 25px;
-			padding: 50px;
-		}
 		.categoryImage {
 			position: absolute;
 			top: 20px;
@@ -467,15 +432,6 @@
 			background-color: white;
 		}
 		
-		footer {
-			position: absolute;
-			border-top: 1px solid;
-			bottom: 0px;
-			width: 800px;
-			height: 150px;
-			margin-left: 25px;
-			padding: 50px;
-		}
 		.categoryImage {
 			position: absolute;
 			top: 20px;
@@ -558,15 +514,6 @@
 			background-color: white;
 		}
 		
-		footer {
-			position: absolute;
-			border-top: 1px solid;
-			bottom: 0px;
-			width: 800px;
-			height: 150px;
-			margin-left: 25px;
-			padding: 50px;
-		}
 		.categoryImage {
 			position: absolute;
 			top: 20px;
@@ -661,7 +608,26 @@
 					url: "${pageContext.request.contextPath}/board/getBoardByCategory/comm/" + category_2,
 					data: {},
 					success: (data) => {
-						console.log(data);
+						var result = JSON.parse(data);
+						console.log(result);
+						
+						var str = "<div class='boardListForm'>";
+						
+						$.each(result, (id, it) => {
+							str += "<div class='boardListFormHead'>" +
+								    "<div class='board'>" +
+								   
+								    "</div>" +
+								   "</div>";
+							str += "<div class='boardListFormBody'>" +
+								    "<div>" +
+								   
+								    "</div>" +
+								   "</div>";
+						})
+						str += "</div>";
+						
+						$(".community").append();
 					}
 				});
 			}
@@ -703,23 +669,7 @@
 				</div>
 			</div>
 			<div class="community"></div>
-			<div class="adBoard"></div>
-			<div class="sideAdBoard"></div>
-			<div class="editorChice"></div>
-			<div class="WeeklyBest"></div>
-			<div class="qna"></div>
-			<div class="tech"></div>
-			<div class="column"></div>
-			<div class="study"></div>
-			
-			<footer>
-				원작자 김규정 <br>
-				그외 ...
-			</footer>
 		</div>
-	</div>
-	<div class="boardListForm" style="display: none;">
-		<div></div>
 	</div>
 </body>
 </html>
