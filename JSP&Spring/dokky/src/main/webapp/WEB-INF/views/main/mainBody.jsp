@@ -49,7 +49,7 @@
 			position: absolute;
 			top: 30px;
 			left: 10px;
-			height: 1850px;
+			width: 855px;
 		}
 		
 		.mainBody div {
@@ -113,6 +113,7 @@
 			height: 50px;
 			border-bottom: 1px solid gray;
 		}
+		
 		.boardListFormHead div {
 			width: 100%;
 		}
@@ -199,7 +200,6 @@
 			top: 30px;
 			left: 10px;
 			width: 855px;
-			height: 1850px;
 		}
 		
 		.mainBody > div {
@@ -216,7 +216,6 @@
 			left: 8px;
 			width: 200px;
 			height: 590px;
-			
 			background-color: #fae3b6;
 		}
 		
@@ -243,7 +242,6 @@
 			top: 260px;
 			left: 216px;
 			width: 600px;
-			height: 800px;
 			border-radius: 5px;
 			background-color: white;
 		}
@@ -350,7 +348,6 @@
 			top: 30px;
 			left: 23%;
 			width: 800px;
-			height: 1850px;
 		}
 		
 		.mainBody > div {
@@ -394,7 +391,6 @@
 			top: 260px;
 			left: 216px;
 			width: 600px;
-			height: 800px;
 			border-radius: 5px;
 			background-color: white;
 		}
@@ -501,7 +497,6 @@
 			top: 30px;
 			left: 32%;
 			width: 780px;
-			height: 1850px;
 		}
 		
 		.mainBody > div {
@@ -545,7 +540,6 @@
 			top: 260px;
 			left: 216px;
 			width: 600px;
-			height: 800px;
 			border-radius: 5px;
 			background-color: white;
 		}
@@ -652,7 +646,6 @@
 			top: 30px;
 			left: 27%;
 			width: 800px;
-			height: 1850px;
 		}
 		
 		.mainBody > div {
@@ -697,7 +690,6 @@
 			top: 260px;
 			left: 216px;
 			width: 600px;
-			height: 800px;
 			border-radius: 5px;
 			background-color: white;
 		}
@@ -804,7 +796,6 @@
 			top: 30px;
 			left: 29%;
 			width: 800px;
-			height: 1850px;
 		}
 		
 		.mainBody > div {
@@ -847,7 +838,6 @@
 			top: 260px;
 			left: 216px;
 			width: 600px;
-			height: 800px;
 			border-radius: 5px;
 			background-color: white;
 		}
@@ -1017,7 +1007,6 @@
 						var result = JSON.parse(data);
 						console.log(result);
 						$(".community").empty();
-						
 						
 						$.each(result, (id, it) => {
 							$.ajax({
