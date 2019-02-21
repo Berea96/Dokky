@@ -24,7 +24,11 @@
 								 	#{board_content}, 0, now(), 0)
 	</insert>
 	
-	<select id="selectByNum" parameterType="String" resultMap="boardResult">
+	<select id="selectByCategory" resultMap="boardResult">
+		select * from board_tb
+	</select>
+	
+	<select id="selectByNum" parameterType="int" resultMap="boardResult">
 		select * from board_tb where board_no=#{board_no}
 	</select>
 	
