@@ -33,6 +33,23 @@ insert into category_tb values(0, '여행', 'travleImage.jpg');
 insert into category_tb values(0, '독서', 'readingImage.jpg');
 insert into category_tb values(0, '철학', 'philosophyImage.jpg');
 
+#board테이블 생성
+create table board_tb(
+	board_no int auto_increment,
+	board_category_1 varchar(50),
+	board_category_2 varchar(50),
+	board_title varchar(100),
+	board_writer varchar(50),
+	board_tags varchar(150),
+	board_content varchar(3003),
+	board_like_cnt int,
+	board_wdate timestamp default current_timestamp,
+	board_scrap_cnt int,
+	primary key(board_no),
+	constraint board_writer_fk foreign key(board_writer)
+	references member_tb(mem_id) on delete cascade
+);
+
 #basic_board테이블 생성
 create table basic_board_tb(
 	basic_board_no int auto_increment,

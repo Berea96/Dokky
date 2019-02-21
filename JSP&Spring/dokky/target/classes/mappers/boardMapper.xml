@@ -2,33 +2,40 @@
 <!DOCTYPE mapper
 	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.kitri.dokky.basic.board.BasicBoardDao">
+<mapper namespace="com.kitri.dokky.article.BoardDao">
 
-	<resultMap id="basicCommentResult" type="com.kitri.dokky.basic.comment.BasicComment">
-		<result column="basic_comment_no" property="basic_comment_no" />
-		<result column="basic_board_no" property="basic_board_no" />
-		<result column="basic_comment_like_cnt" property="basic_comment_like_cnt" />
-		<result column="basic_comment_content" property="basic_comment_content" />
-		<result column="basic_comment_writer" property="basic_comment_writer" />
-		<result column="basic_comment_date" property="basic_comment_date" />
+	<resultMap id="boardResult" type="com.kitri.dokky.article.Board">
+		<result column="board_no" property="board_no" />
+		<result column="board_category_1" property="board_category_1" />
+		<result column="board_category_2" property="board_category_2" />
+		<result column="board_title" property="board_title" />
+		<result column="board_writer" property="board_writer" />
+		<result column="board_tags" property="board_tags" />
+		<result column="board_content" property="board_content" />
+		<result column="board_like_cnt" property="board_like_cnt" />
+		<result column="board_wdate" property="board_wdate" />
+		<result column="board_scrap" property="board_scrap" />
 	</resultMap>
 	
-	<insert id="insertComment" parameterType="com.kitri.dokky.basic.comment.BasicComment">
-		insert into basic_comment_tb values(0, #{basic_board_no}, 
-										  0, #{basic_comment_content},
-										  #{basic_comment_writer}, now())
+	<insert id="insertBoard" parameterType="com.kitri.dokky.article.Board">
+		insert into board_tb values(0, #{board_category_1},
+								 	#{board_category_2}, #{board_title},
+									#{board_writer}, #{board_tags},
+								 	#{board_content}, 0, now(), 0)
 	</insert>
 	
-	<select id="selectByNum" parameterType="String" resultMap="basicCommentResult">
-		select * from basic_comment_tb where basic_board_no=#{basic_board_no}
+	<select id="selectByNum" parameterType="String" resultMap="boardResult">
+		select * from board_tb where board_no=#{board_no}
 	</select>
 	
-	<delete id="deleteComment" parameterType="int">
-		delete from basic_comment_tb where basic_comment_no=#{basic_comment_no}
-	</delete>
-	
-	<update id="updateComment" parameterType="com.kitri.dokky.basic.comment.BasicComment">
-		update basic_comment_tb set basic_comment_content=#{basic_comment_content},
-							  where basic_comment_no=#{basic_comment_no}
+	<update id="updateBoard" parameterType="com.kitri.dokky.article.Board">
+		update board_tb set board_title=#{board_title}, 
+							board_content=#{board_content},
+							board_wdate=now()
+						where board_no=#{board_no}
 	</update>
+	
+	<delete id="deleteBoard" parameterType="int">
+		delete from board_tb where board_no=#{board_no}
+	</delete>
 </mapper>

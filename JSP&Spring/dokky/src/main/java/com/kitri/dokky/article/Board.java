@@ -8,27 +8,27 @@ public class Board {
 	private String board_category_1;
 	private String board_category_2;
 	private String board_title;
-	private String board_write;
+	private String board_writer;
 	private String board_tags;
 	private String board_content;
 	private int board_like_cnt;
-	private Date board_date;
+	private Date board_wdate;
 	private int board_scrap_cnt;
 	
 	public Board() {
 	}
 
-	public Board(int board_no, String board_category_1, String board_category_2, String board_title, String board_write,
-			String board_tags, String board_content, int board_like_cnt, Date board_date, int board_scrap_cnt) {
+	public Board(int board_no, String board_category_1, String board_category_2, String board_title, String board_writer,
+			String board_tags, String board_content, int board_like_cnt, Date board_wdate, int board_scrap_cnt) {
 		this.board_no = board_no;
 		this.board_category_1 = board_category_1;
 		this.board_category_2 = board_category_2;
 		this.board_title = board_title;
-		this.board_write = board_write;
+		this.board_writer = board_writer;
 		this.board_tags = board_tags;
 		this.board_content = board_content;
 		this.board_like_cnt = board_like_cnt;
-		this.board_date = board_date;
+		this.board_wdate = board_wdate;
 		this.board_scrap_cnt = board_scrap_cnt;
 	}
 
@@ -60,11 +60,11 @@ public class Board {
 		this.board_title = board_title;
 	}
 
-	public final String getBoard_write() {
-		return board_write;
+	public final String getBoard_writer() {
+		return board_writer;
 	}
-	public final void setBoard_write(String board_write) {
-		this.board_write = board_write;
+	public final void setBoard_writer(String board_writer) {
+		this.board_writer = board_writer;
 	}
 
 	public final String getBoard_tags() {
@@ -88,11 +88,11 @@ public class Board {
 		this.board_like_cnt = board_like_cnt;
 	}
 
-	public final Date getBoard_date() {
-		return board_date;
+	public final Date getBoard_wdate() {
+		return board_wdate;
 	}
-	public final void setBoard_date(Date board_date) {
-		this.board_date = board_date;
+	public final void setBoard_wdate(Date board_wdate) {
+		this.board_wdate = board_wdate;
 	}
 
 	public final int getBoard_scrap_cnt() {
@@ -105,8 +105,8 @@ public class Board {
 	@Override
 	public String toString() {
 		return "Board [board_no=" + board_no + ", board_category_1=" + board_category_1 + ", board_category_2="
-				+ board_category_2 + ", board_title=" + board_title + ", board_write=" + board_write + ", board_tags="
+				+ board_category_2 + ", board_title=" + board_title + ", board_writer=" + board_writer + ", board_tags="
 				+ board_tags + ", board_content=" + board_content + ", board_like_cnt=" + board_like_cnt
-				+ ", board_date=" + board_date + ", board_scrap_cnt=" + board_scrap_cnt + "]";
+				+ ", board_wdate=" + board_wdate + ", board_scrap_cnt=" + board_scrap_cnt + "]";
 	}
 }
