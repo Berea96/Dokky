@@ -5,8 +5,8 @@ import java.util.ArrayList;
 //모든 게시판에 대한 Dao Interface
 public interface BoardDao {
 	void insertBoard(Board board);
-	ArrayList<Board> selectByCategory();
-	Board selectByNum(int board_no);
+	ArrayList<Board> selectBoardByCategory();
+	Board selectBoardByNum(int board_no);
 	void updateBoard(Board board);
 	void deleteBoard(int board_no);
 }
